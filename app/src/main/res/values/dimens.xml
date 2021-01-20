@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="status_bar_height">0dp</dimen>
+
+  <dimen name="extra_small_padding">4dp</dimen>
+  <dimen name="small_padding">8dp</dimen>
+  <dimen name="normal_padding">16dp</dimen>
+  <dimen name="triple_padding">24dp</dimen>
+  <dimen name="large_padding">32dp</dimen>
+  <dimen name="extra_large_padding">36dp</dimen>
+  <dimen name="extrax_large_padding">42dp</dimen>
+
+  <dimen name="margin_tiny">4dp</dimen>
+  <dimen name="margin_small">8dp</dimen>
+  <dimen name="margin_normal">16dp</dimen>
+  <dimen name="margin_normal_plus">20dp</dimen>
+  <dimen name="margin_large">24dp</dimen>
+
+  <dimen name="text_size_big">16sp</dimen>
+  <dimen name="text_size_big1">17sp</dimen>
+  <dimen name="text_size_big2">18sp</dimen>
+  <dimen name="text_size_big3">20sp</dimen>
+  <dimen name="text_size_big4">24sp</dimen>
+  <dimen name="text_size_big5">28sp</dimen>
+  <dimen name="text_size_norma1_1">10sp</dimen>
+  <dimen name="text_size_normal">12sp</dimen>
+  <dimen name="text_size_normal_2">14sp</dimen>
+  <dimen name="text_size_normal_3">15sp</dimen>
+  <dimen name="text_size_small">11sp</dimen>
+  <dimen name="text_size_extra_small">9sp</dimen>
+  <dimen name="text_size_tiny">8sp</dimen>
+  <dimen name="text_size_extra_tiny">7sp</dimen>
+  <dimen name="text_size_product_name">11sp</dimen>
+  <dimen name="text_size_pillar_name">9sp</dimen>
+  <dimen name="text_size_category_name">7sp</dimen>
+  <dimen name="size_product_icon">24dp</dimen>
+  <dimen name="grid_expected_size">80dp</dimen>
+  <dimen name="ah_bottom_bar_offset">30dp</dimen>
+</resources>

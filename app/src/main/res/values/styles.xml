@@ -1,0 +1,255 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Dialog.Alert">
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:textColorPrimary">@color/textColorPrimary</item>
+    <item name="android:textColorSecondary">@color/textColorSecondary</item>
+    <item name="android:background">@color/colorPrimary</item>
+  </style>
+
+  <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+    <!--<item name="tabIndicatorColor">@color/textColorPrimary</item>-->
+    <!--<item name="tabSelectedTextColor">@color/white</item>-->
+    <item name="tabTextAppearance">@style/MyCustomTextAppearance</item>
+    <!--<item name="tabIndicatorHeight">3dp</item>-->
+    <!--<item name="tabPaddingStart">16dp</item>-->
+    <!--<item name="tabPaddingEnd">16dp</item>-->
+  </style>
+
+  <style name="MyCustomRatingBar" parent="Widget.AppCompat.RatingBar.Small">
+    <item name="android:minHeight">20dp</item>
+    <item name="android:maxHeight">20dp</item>
+  </style>
+
+  <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+    <!--<item name="textAllCaps">false</item>-->
+    <!--<item name="android:textSize">14sp</item>-->
+    <item name="android:textColor">@color/colorPrimaryTransparent</item>
+  </style>
+
+  <style name="EditTextWhite" parent="TextAppearance.AppCompat">
+    <item name="android:textColorHint">@color/white</item>
+    <item name="android:textSize">16sp</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="colorControlNormal">@color/white</item>
+    <item name="colorControlActivated">@color/colorAccent</item>
+  </style>
+
+  <style name="MyRadioButton" parent="Theme.AppCompat.Light">
+    <item name="colorControlNormal">@color/white</item>
+    <item name="colorControlActivated">@color/colorAccent</item>
+  </style>
+
+  <style name="MyRadioButtonAccent" parent="Theme.AppCompat.Light">
+    <item name="colorControlNormal">@color/dividerColor</item>
+    <item name="colorControlActivated">@color/colorAccentDark</item>
+  </style>
+
+  <style name="TextInputStyle" parent="TextAppearance.AppCompat">
+    <item name="android:textColorHint">@color/textColorSecondary</item>
+    <item name="android:textSize">16sp</item>
+    <item name="colorAccent">@color/colorAccentDark</item>
+    <item name="colorControlNormal">@color/textColorSecondary</item>
+    <item name="colorControlActivated">@color/colorAccentDark</item>
+  </style>
+
+  <style name="ButtonStyle" parent="TextAppearance.AppCompat.Caption">
+    <item name="android:background">@color/colorAccent</item>
+    <item name="android:textAllCaps">true</item>
+    <item name="fontPath">@string/fonts_Lato_Bold</item>
+    <item name="android:gravity">center</item>
+    <item name="android:layout_height">56dp</item>
+    <item name="android:textColor">@color/white</item>
+  </style>
+
+  <style name="ButtonBorderStyle" parent="TextAppearance.AppCompat.Caption">
+    <item name="android:background">@drawable/rectangle_border_accent</item>
+    <item name="android:textAllCaps">true</item>
+    <item name="fontPath">@string/fonts_Lato_Bold</item>
+    <item name="android:gravity">center</item>
+    <item name="android:layout_height">56dp</item>
+    <item name="android:textColor">@color/colorAccent</item>
+  </style>
+
+  <style name="TabStyle">
+    <item name="android:elevation" tools:targetApi="lollipop">4dp</item>
+  </style>
+
+  <style name="Toolbar">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">?actionBarSize</item>
+    <item name="android:elevation" tools:targetApi="lollipop">4dp</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:paddingLeft">4dp</item>
+    <item name="android:paddingRight">4dp</item>
+  </style>
+
+  <style name="ToolbarSmallElevation">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">?actionBarSize</item>
+    <item name="android:elevation" tools:targetApi="lollipop">3dp</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:paddingLeft">4dp</item>
+    <item name="android:paddingRight">4dp</item>
+  </style>
+
+  <style name="ToolbarNoElevation">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">?actionBarSize</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:paddingLeft">4dp</item>
+    <item name="android:paddingRight">4dp</item>
+  </style>
+
+  <style name="ToolbarIcon">
+    <item name="android:layout_width">48dp</item>
+    <item name="android:layout_height">48dp</item>
+    <item name="android:padding">16dp</item>
+    <item name="android:scaleType">fitCenter</item>
+  </style>
+
+  <style name="ToolbarBigIcon">
+    <item name="android:layout_width">48dp</item>
+    <item name="android:layout_height">48dp</item>
+    <item name="android:padding">11dp</item>
+    <item name="android:scaleType">fitCenter</item>
+  </style>
+
+  <style name="ToolbarMiddleIcon">
+    <item name="android:layout_width">44dp</item>
+    <item name="android:layout_height">44dp</item>
+    <item name="android:padding">12dp</item>
+    <item name="android:scaleType">fitCenter</item>
+  </style>
+
+  <style name="ToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textColor">@color/textTitleColor</item>
+    <item name="fontPath">@string/fonts_Adobe_Garamond_Pro_Regular</item>
+  </style>
+  <style name="fontsAdobeGaramondProRegular" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+    <item name="android:textColor">#FF000000</item>
+    <item name="fontPath">@string/fonts_Adobe_Garamond_Pro_Regular</item>
+  </style>
+
+  <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <style name="DialogTheme" parent="AppTheme.NoActionBar">
+    <!-- No backgrounds, titles or window float -->
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsFloating">false</item>
+  </style>
+
+  <style name="DialogThemeNull" parent="Theme.AppCompat.Light.Dialog">
+    <!-- No backgrounds, titles or window float -->
+    <item name="android:windowBackground">@null</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsFloating">false</item>
+  </style>
+
+  <style name="MyDialogFragmentStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">false</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:windowNoTitle">false</item>
+  </style>
+
+  <style name="BottomSheetTheme" parent="Theme.AppCompat.NoActionBar">
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowBackground">@color/darkTransparentBlack</item>
+    <item name="android:backgroundDimEnabled">true</item>
+  </style>
+
+
+  <style name="Theme.AppCompat.Transparent.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowIsTranslucent">false</item>
+    <item name="android:windowBackground">@color/darkTransparentBlack</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsFloating">false</item>
+    <item name="android:backgroundDimEnabled">false</item>
+  </style>
+
+  <style name="TextStyleEanFieldValue">
+    <item name="android:paddingLeft">@dimen/margin_small</item>
+    <item name="android:textAllCaps">false</item>
+    <item name="android:textColor">@color/textColorPrimary</item>
+    <item name="fontPath" tools:ignore="MissingPrefix">@string/fonts_Lato_Medium</item>
+    <item name="android:foreground">?attr/selectableItemBackground</item>
+    <item name="android:clickable">true</item>
+    <item name="android:focusable">true</item>
+  </style>
+
+  <style name="TextStyleEanFieldBoldValue">
+    <item name="android:textAllCaps">false</item>
+    <item name="android:textColor">@color/textColorPrimary</item>
+    <item name="fontPath" tools:ignore="MissingPrefix">@string/fonts_Lato_Bold</item>
+    <item name="android:foreground">?attr/selectableItemBackground</item>
+    <item name="android:clickable">true</item>
+    <item name="android:focusable">true</item>
+  </style>
+
+
+  <style name="TextStyleDateHint">
+    <item name="android:textAllCaps">false</item>
+    <item name="android:textColor">@color/textColorGrey</item>
+    <item name="fontPath" tools:ignore="MissingPrefix">@string/fonts_Lato_Medium</item>
+    <item name="android:foreground">?attr/selectableItemBackground</item>
+    <item name="android:clickable">true</item>
+    <item name="android:focusable">true</item>
+  </style>
+
+  <style name="TextStyleDate">
+    <item name="android:textAllCaps">false</item>
+    <item name="android:textColor">@color/textColorPrimary</item>
+    <item name="fontPath" tools:ignore="MissingPrefix">@string/fonts_Lato_Medium</item>
+    <item name="android:foreground">?attr/selectableItemBackground</item>
+    <item name="android:clickable">true</item>
+    <item name="android:focusable">true</item>
+  </style>
+
+  <style name="TextStyleEanFieldLabel">
+    <item name="android:paddingLeft">@dimen/margin_small</item>
+    <item name="android:textAllCaps">true</item>
+    <item name="android:textColor">@color/orchid</item>
+    <item name="fontPath" tools:ignore="MissingPrefix">@string/fonts_Lato_Bold</item>
+    <item name="android:textSize">@dimen/text_size_tiny</item>
+    <item name="android:letterSpacing" tools:targetApi="lollipop">0.1</item>
+  </style>
+
+  <style name="TextStyleFieldLabel">
+    <item name="android:textAllCaps">true</item>
+    <item name="android:textColor">@color/orchid</item>
+    <item name="fontPath" tools:ignore="MissingPrefix">@string/fonts_Lato_Bold</item>
+    <item name="android:textSize">@dimen/text_size_tiny</item>
+    <item name="android:letterSpacing" tools:targetApi="lollipop">0.1</item>
+  </style>
+
+  <style name="TextStyleEanFieldBoldLabel">
+    <item name="android:paddingLeft">@dimen/margin_small</item>
+    <item name="android:textAllCaps">true</item>
+    <item name="android:textColor">@color/orchid</item>
+    <item name="fontPath" tools:ignore="MissingPrefix">@string/fonts_Lato_Bold</item>
+    <item name="android:textSize">@dimen/text_size_small</item>
+    <item name="android:letterSpacing" tools:targetApi="lollipop">0.05</item>
+  </style>
+
+  <style name="DialogAnimation">
+    <item name="android:windowEnterAnimation">@anim/show_in</item>
+    <item name="android:windowExitAnimation">@anim/show_out</item>
+  </style>
+
+  <style name="Clickable">
+    <item name="android:clickable">true</item>
+    <item name="android:foreground">?attr/selectableItemBackground</item>
+  </style>
+
+  <dimen name="text_size_large">20sp</dimen>
+</resources>

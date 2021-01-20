@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <include layout="@layout/include_order_toolbar"/>
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="?attr/actionBarSize"
+      >
+
+    <RelativeLayout
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:ignore="MissingPrefix"
+        >
+
+      <RelativeLayout
+          android:id="@+id/layout_thank_you"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+          android:layout_alignParentTop="true"
+          android:padding="@dimen/normal_padding"
+          >
+
+
+        <TextView
+            android:id="@+id/tv_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="@dimen/extra_small_padding"
+            android:background="@drawable/ripple_effect"
+            android:letterSpacing="0.07"
+            android:text="@string/txt_print"
+            android:textAllCaps="true"
+            android:textColor="@color/greyTransparent"
+            android:textSize="10sp"
+            fontPath="@string/fonts_Lato_Bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_title_payment_by"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_print"
+            android:layout_marginBottom="10dp"
+            android:letterSpacing="0.06"
+            android:text="@string/booking_detail_payment_by_label"
+            android:textAllCaps="true"
+            android:textColor="@color/orchid"
+            android:textSize="8sp"
+            fontPath="@string/fonts_Lato_Bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_credit_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title_payment_by"
+            android:letterSpacing="0.05"
+            fontPath="@string/fonts_Lato_Regular"
+            tools:text="@string/txt_visa_number"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            />
+
+        <ImageView
+            android:id="@+id/img_visa"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tv_title_payment_by"
+            android:layout_marginLeft="@dimen/normal_padding"
+            android:layout_toRightOf="@+id/tv_credit_card"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/ic_visa_blue_background"
+            />
+
+        <TextView
+            android:id="@+id/tv_processing_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tv_title_payment_by"
+            android:background="@drawable/rectangle_border_grey"
+            android:gravity="right"
+            android:paddingBottom="@dimen/extra_small_padding"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="@dimen/extra_small_padding"
+            android:text="@string/successful_label"
+            android:textColor="@color/textColorPrimary"
+            fontPath="@string/fonts_Lato_Regular"
+            style="@style/TextAppearance.AppCompat.Caption"
+            />
+
+      </RelativeLayout>
+
+
+      <View
+          android:id="@+id/horizontal_line1"
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:layout_below="@+id/layout_thank_you"
+          android:background="@color/lightGrey"
+          />
+
+      <TextView
+          android:id="@+id/tv_order_status"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/horizontal_line1"
+          android:layout_margin="@dimen/margin_normal"
+          android:background="#c2b2b6"
+          android:clickable="true"
+          android:focusable="true"
+          android:foreground="?attr/selectableItemBackground"
+          android:gravity="center"
+          android:padding="@dimen/margin_small"
+          android:textColor="@color/white"
+          tools:text="Confirmed"
+          />
+
+      <TextView
+          android:id="@+id/tv_next"
+          android:layout_width="match_parent"
+          android:layout_alignParentBottom="true"
+          android:layout_below="@id/layout_thank_you"
+          android:letterSpacing="0.2"
+          android:text="@string/btn_done"
+          android:visibility="gone"
+          tools:ignore="MissingPrefix"
+          style="@style/ButtonStyle"
+          />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tv_order_status"
+          android:orientation="vertical"
+          >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="@string/booking_summary_hotel_label"
+            style="@style/TextStyleEanFieldLabel"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_hotel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/margin_normal"
+            android:paddingRight="@dimen/margin_normal"
+            android:textColor="@color/textColorPrimary"
+            fontPath="@string/fonts_Lato_Heavy"
+            tools:ignore="MissingPrefix"
+            tools:text="The Aviary Hotel"
+            />
+          <TextView
+              android:layout_alignParentEnd="true"
+              android:layout_gravity="right"
+              android:gravity="right"
+              android:id="@+id/tv_cancel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="@dimen/margin_normal"
+              android:background="@drawable/booking_history_cancel_btn_bg"
+              android:clickable="true"
+              android:enabled="true"
+              android:focusable="true"
+              android:foreground="?attr/selectableItemBackground"
+              android:paddingBottom="@dimen/margin_tiny"
+              android:paddingEnd="@dimen/normal_padding"
+              android:paddingStart="@dimen/normal_padding"
+              android:paddingTop="@dimen/margin_tiny"
+              android:text="@string/txt_cancelbookingbutton"
+              style="@style/TextStyleEanFieldLabel"
+              />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_hotel_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            tools:text="Cambodia"
+            style="@style/TextStyleEanFieldValue"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            >
+          <TextView
+              android:id="@+id/tv_room_type_label"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/margin_small"
+              android:layout_marginTop="@dimen/margin_normal"
+              android:text="@string/booking_summary_room_type_label"
+              style="@style/TextStyleEanFieldLabel"
+              />
+
+          <TextView
+              android:id="@+id/tv_room_type"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_below="@+id/tv_room_type_label"
+              android:layout_toStartOf="@+id/center0"
+              android:paddingLeft="@dimen/margin_normal"
+              android:paddingRight="@dimen/margin_normal"
+              android:textColor="@color/textColorPrimary"
+              fontPath="@string/fonts_Lato_Heavy"
+              tools:ignore="MissingPrefix"
+              tools:text="Tailorbird Standard Double Suite"
+              />
+
+          <TextView
+              android:id="@+id/tv_bed_type"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_below="@+id/tv_room_type"
+              android:layout_marginStart="@dimen/margin_small"
+              android:layout_toStartOf="@+id/center0"
+              tools:text="Single / Double Twin"
+              style="@style/TextStyleEanFieldValue"
+              />
+          <View
+              android:id="@+id/center0"
+              android:layout_width="1dp"
+              android:layout_height="1dp"
+              android:layout_centerInParent="true"
+              />
+
+          <ImageView
+              android:id="@+id/iv_room"
+              android:layout_width="80dp"
+              android:layout_height="50dp"
+              android:layout_alignTop="@+id/tv_room_type"
+              android:layout_marginStart="@dimen/margin_small"
+              android:layout_toEndOf="@+id/center0"
+              android:scaleType="centerCrop"
+              />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            >
+
+          <TextView
+              android:id="@+id/tv_booking_date_label"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/margin_small"
+              android:layout_marginTop="@dimen/margin_normal"
+              android:text="@string/booking_date_lablel"
+              style="@style/TextStyleEanFieldLabel"
+              />
+
+          <TextView
+              android:id="@+id/tv_booking_date_range"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_below="@+id/tv_booking_date_label"
+              android:layout_toStartOf="@+id/center1"
+              android:paddingLeft="@dimen/margin_normal"
+              android:paddingRight="@dimen/margin_normal"
+              android:textColor="@color/textColorPrimary"
+              fontPath="@string/fonts_Lato_Heavy"
+              tools:ignore="MissingPrefix"
+              tools:text="10 - 12 Aug 2017"
+              />
+
+          <TextView
+              android:id="@+id/tv_day_count"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_below="@+id/tv_booking_date_range"
+              android:layout_marginStart="@dimen/margin_small"
+              android:layout_toStartOf="@+id/center1"
+              tools:text="2 Nights"
+              style="@style/TextStyleEanFieldValue"
+              />
+          <View
+              android:id="@+id/center1"
+              android:layout_width="1dp"
+              android:layout_height="1dp"
+              android:layout_centerInParent="true"
+              />
+
+          <TextView
+              android:id="@+id/tv_occupancy_label"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/margin_normal"
+              android:layout_toEndOf="@id/center1"
+              android:text="@string/booking_summary_occupancy_label"
+              style="@style/TextStyleEanFieldLabel"
+              />
+
+          <TextView
+              android:id="@+id/tv_occupancy"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/tv_occupancy_label"
+              android:layout_marginStart="@dimen/margin_small"
+              android:layout_toEndOf="@+id/center1"
+              android:paddingRight="@dimen/margin_normal"
+              android:textColor="@color/textColorPrimary"
+              fontPath="@string/fonts_Lato_Heavy"
+              tools:ignore="MissingPrefix"
+              tools:text="5 Guests"
+              />
+
+          <TextView
+              android:id="@+id/tv_occupancy_detail"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/tv_occupancy"
+              android:layout_toEndOf="@+id/center1"
+              android:paddingEnd="@dimen/margin_normal"
+              tools:text="2 Adults + 3 Children"
+              style="@style/TextStyleEanFieldValue"
+              />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/order_placed_guest_details_label"
+            style="@style/TextStyleEanFieldLabel"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_guest_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_margin="@dimen/margin_normal"
+            android:background="@color/lightGrey"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="@string/benefits_and_privileges"
+            style="@style/TextStyleEanFieldLabel"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_amenity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@color/lightGrey"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="@dimen/margin_large"
+            >
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/margin_small"
+              android:text="@string/booking_summary_price_summary_label"
+              style="@style/TextStyleEanFieldLabel"
+              />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="end"
+              android:layout_marginEnd="@dimen/margin_normal"
+              android:text="@string/average_price_per_night"
+              style="@style/TextStyleEanFieldLabel"
+              />
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_room_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="visible"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lightGrey"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/margin_large"
+            android:paddingLeft="@dimen/normal_padding"
+            android:paddingRight="@dimen/normal_padding"
+            android:paddingTop="@dimen/margin_normal"
+            android:visibility="visible"
+            >
+          <TextView
+              android:id="@+id/tv_subtotal_label"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingTop="@dimen/margin_small"
+              android:text="@string/txt_subtotal"
+              android:textAllCaps="true"
+              android:textColor="@color/textColorPrimary"
+              android:textSize="@dimen/text_size_normal"
+              fontPath="@string/fonts_Lato_Bold"
+              tools:ignore="MissingPrefix"
+              />
+
+          <TextView
+              android:id="@+id/tv_subtotal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignBottom="@+id/tv_subtotal_label"
+              android:layout_alignParentEnd="true"
+              android:textAllCaps="true"
+              android:textColor="@color/textColorPrimary"
+              android:textSize="@dimen/text_size_big"
+              fontPath="@string/fonts_Lato_Heavy"
+              tools:ignore="MissingPrefix"
+              tools:text="S$1,200.00"
+              />
+
+
+
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lightGrey"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/margin_normal"
+            android:paddingEnd="@dimen/margin_normal"
+            android:paddingStart="@dimen/margin_normal"
+            android:paddingTop="@dimen/margin_large"
+            >
+
+          <TextView
+              android:id="@+id/tv_grand_total_label"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingTop="@dimen/margin_small"
+              android:text="@string/txt_grand_total"
+              android:textAllCaps="true"
+              android:textColor="@color/colorAccent"
+              android:textSize="@dimen/text_size_normal"
+              fontPath="@string/fonts_Lato_Bold"
+              tools:ignore="MissingPrefix"
+              />
+
+          <TextView
+              android:id="@+id/tv_grand_total"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignBottom="@+id/tv_grand_total_label"
+              android:layout_alignParentEnd="true"
+              android:textAllCaps="true"
+              android:textColor="@color/colorAccent"
+              android:textSize="@dimen/text_size_big"
+              fontPath="@string/fonts_Lato_Heavy"
+              tools:ignore="MissingPrefix"
+              tools:text="S$50.00"
+              />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/margin_normal"
+            android:paddingEnd="@dimen/margin_normal"
+            android:paddingStart="@dimen/margin_normal"
+            android:paddingTop="@dimen/margin_large"
+            >
+
+          <TextView
+              android:id="@+id/tv_sky_dollar_label"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingTop="@dimen/margin_small"
+              android:text="Sky Dollar Earned"
+              android:textAllCaps="false"
+              android:textColor="@color/colorAccent"
+              android:textSize="@dimen/text_size_normal"
+              fontPath="@string/fonts_Lato_Bold"
+              tools:ignore="MissingPrefix"
+              />
+
+          <TextView
+              android:id="@+id/tv_sky_dollar"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignBottom="@+id/tv_sky_dollar_label"
+              android:layout_alignParentEnd="true"
+              android:textAllCaps="true"
+              android:textColor="@color/colorAccent"
+              android:textSize="@dimen/text_size_big"
+              fontPath="@string/fonts_Lato_Heavy"
+              tools:ignore="MissingPrefix"
+              tools:text="50.00"
+              />
+          <TextView
+              android:id="@+id/tv_skyinfo"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/tv_sky_dollar_label"
+              android:layout_marginTop="50px"
+              android:drawablePadding="@dimen/margin_tiny"
+              android:text="*Sky Dollar are credited into the
+member’s account 1 calendar week after check-out."
+              android:textColor="@color/textColorPrimary"
+              android:textSize="@dimen/text_size_normal"
+              />
+
+          <TextView
+              android:id="@+id/tv_not_inlcude_in_price"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/tv_skyinfo"
+              android:drawableLeft="@drawable/ic_error_accent_16dp"
+              android:layout_marginTop="@dimen/margin_small"
+              android:drawablePadding="@dimen/margin_tiny"
+              android:text="@string/booking_summary_not_included_in_price_warning"
+              android:textColor="@color/textColorPrimary"
+              android:textSize="@dimen/text_size_normal"
+              />
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/rvTourismFees"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/tv_not_inlcude_in_price"
+              tools:listitem="@layout/item_tourism_fees"
+              android:layout_marginTop="@dimen/margin_small"
+              />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_normal"
+            android:paddingLeft="@dimen/margin_normal"
+            android:paddingRight="@dimen/margin_normal"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal"
+            tools:text="For enquiries regarding your booking, you may contact us at +65 6533 0000 or email membersg@skypremium.com.sg, from 9am to 6pm on Mondays to Fridays, except public holidays."
+            />
+
+      </LinearLayout>
+    </RelativeLayout>
+
+  </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

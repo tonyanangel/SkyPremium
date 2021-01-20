@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fpi="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:fitsSystemWindows="true"
+      >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/my_appbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+
+      <com.google.android.material.appbar.CollapsingToolbarLayout
+          android:id="@+id/collapsing_toolbar_layout"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:layout_scrollFlags="scroll|exitUntilCollapsed"
+          >
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+      </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_vertical"
+        android:fillViewport="true"
+        app:behavior_overlapTop="104dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          >
+
+        <com.flyco.pageindicator.indicator.FlycoPageIndicaor
+            android:id="@+id/fpi"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginBottom="8dp"
+            fpi:fpi_cornerRadius="5dp"
+            fpi:fpi_gap="8dp"
+            fpi:fpi_height="8dp"
+            fpi:fpi_isSnap="true"
+            fpi:fpi_selectColor="@color/colorPrimary"
+            fpi:fpi_unselectColor="@color/colorPrimaryTransparent"
+            fpi:fpi_width="8dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            >
+
+          <View
+              android:id="@+id/view"
+              android:layout_width="36dp"
+              android:layout_height="4dp"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginBottom="8dp"
+              android:layout_marginTop="12dp"
+              android:background="@drawable/scroll_indicator_grey"
+              />
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="160dp"
+              >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/map"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                >
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="The Aviary Hotel"
+                  style="@style/TextAppearance.AppCompat.Title"
+                  />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Hotels - Cambodia"
+                  fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                  tools:ignore="MissingPrefix"
+                  style="@style/TextAppearance.AppCompat.Caption"
+                  />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                >
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Hotel Room Rates"
+                  fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                  tools:ignore="MissingPrefix"
+                  style="@style/TextAppearance.AppCompat.Caption"
+                  />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="A minimum stay of 3 nights is required for Peak Season."
+                  android:textColor="@color/textColorPrimary"
+                  style="@style/TextAppearance.AppCompat.Caption"
+                  />
+
+
+            </LinearLayout>
+
+          </RelativeLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1px"
+              android:layout_marginBottom="16dp"
+              android:background="@color/colorAccent"
+              />
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/rv"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              />
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1px"
+              android:layout_marginTop="16dp"
+              android:background="@color/colorAccent"
+              />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="16dp"
+              >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/benefits_and_privileges"
+                android:textColor="@color/colorAccent"
+                fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                tools:ignore="MissingPrefix"
+                style="@style/TextAppearance.AppCompat.Body1"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="Complimentary one way airport pick up by car"
+                style="@style/TextAppearance.AppCompat.Body1"
+                />
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/circle_accent"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="Daily breakfast for two persons"
+                style="@style/TextAppearance.AppCompat.Body1"
+                />
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/circle_accent"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="Welcome beverage upon arrival"
+                style="@style/TextAppearance.AppCompat.Body1"
+                />
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/circle_accent"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="Cold towel upon arrival"
+                style="@style/TextAppearance.AppCompat.Body1"
+                />
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/circle_accent"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="Complimentary access main pool"
+                style="@style/TextAppearance.AppCompat.Body1"
+                />
+
+
+          </LinearLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1px"
+              android:background="@color/colorAccent"
+              />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="16dp"
+              >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/description"
+                android:textAllCaps="true"
+                android:textColor="@color/orchid"
+                android:textSize="10sp"
+                style="@style/TextAppearance.AppCompat.Caption"
+                />
+
+            <at.blogc.android.views.ExpandableTextView
+                android:id="@+id/etvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="Set in the heart of Siem Reap town, The Aviary Hotel is a sophisticated urban oasis that has been inspired by nature and Cambodia’s rich heritage of traditional crafts.
+
+Our 25-room eco-friendly hotel is a relaxing sanctuary filled with locally commissioned artworks, which celebrate the beauty and diversity of the Kingdom’s birdlife.
+
+Luxurious, welcoming and personal, we offer thoughtfully designed, quality accommodation in a modern environment with a uniquely Cambodian twist.
+
+The Aviary’s turquoise pool lies at the heart of the hotel, with wonderful views of the vines and flowers that drape over the balconies above.
+
+Take a refreshing dip to cool off from the heat of the day, or relax on our comfortable loungers and enjoy the urban jungle that surrounds you.
+"
+                app:animation_duration="350"
+                style="@style/TextAppearance.AppCompat.Body1"
+                />
+
+            <LinearLayout
+                android:id="@+id/llToogleDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+              <View
+                  android:layout_width="0dp"
+                  android:layout_height="1px"
+                  android:layout_weight="1"
+                  android:background="@color/dividerColor"
+                  />
+
+              <TextView
+                  android:id="@+id/tvToogleDescription"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/rectangle_border_accent"
+                  android:padding="4dp"
+                  android:text="@string/read_more"
+                  android:textAllCaps="true"
+                  android:textColor="@color/colorAccent"
+                  android:textSize="10sp"
+                  style="@style/TextAppearance.AppCompat.Caption"
+                  />
+
+              <View
+                  android:layout_width="0dp"
+                  android:layout_height="1px"
+                  android:layout_weight="1"
+                  android:background="@color/dividerColor"
+                  />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/terms_and_conditions"
+                android:textAllCaps="true"
+                android:textColor="@color/orchid"
+                android:textSize="10sp"
+                style="@style/TextAppearance.AppCompat.Caption"
+                />
+
+            <at.blogc.android.views.ExpandableTextView
+                android:id="@+id/etvTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="•  Valid till 31 Oct 2019
+Cancellation, amendment and no-show penalty charges apply
+Above mentioned rates are stated in USD, per room per night (single or double occupancy), inclusive of 10% government tax, 2% accommodation tax and 5% service charge
+Benefits cannot be used in conjunction with other promotions, discounts, packages purchased or vouchers redemption, unless otherwise specified
+Maximum of 2 rooms can be reserved per member for resort, hotel and cruise bookings
+Period of stay is strictly for the specified dates of validity
+Prices of travel packages vary according to season and customization of itineraries; Resort and hotel rates may vary according to season
+Additional T&amp;Cs may be imposed and vary with resorts and hotels
+The Aviary Hotel reserves the right to amend any Terms &amp; Conditions at its discretion"
+                android:textColor="@color/textColorPrimary"
+                app:animation_duration="350"
+                style="@style/TextAppearance.AppCompat.Caption"
+                />
+
+            <LinearLayout
+                android:id="@+id/llToogleTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+              <View
+                  android:layout_width="0dp"
+                  android:layout_height="1px"
+                  android:layout_weight="1"
+                  android:background="@color/dividerColor"
+                  />
+
+              <TextView
+                  android:id="@+id/tvToogleTerms"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/rectangle_border_accent"
+                  android:padding="4dp"
+                  android:text="@string/read_more"
+                  android:textAllCaps="true"
+                  android:textColor="@color/colorAccent"
+                  android:textSize="10sp"
+                  style="@style/TextAppearance.AppCompat.Caption"
+                  />
+
+              <View
+                  android:layout_width="0dp"
+                  android:layout_height="1px"
+                  android:layout_weight="1"
+                  android:background="@color/dividerColor"
+                  />
+
+            </LinearLayout>
+
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/tvReserveNow"
+              android:layout_width="match_parent"
+              android:layout_height="48dp"
+              android:background="@color/colorAccent"
+              android:gravity="center"
+              android:text="Reserve Now"
+              android:textAllCaps="true"
+              android:textColor="@color/white"
+              fontPath="@string/fonts_Lato_Bold"
+              tools:ignore="MissingPrefix"
+              style="@style/TextAppearance.AppCompat.Body1"
+              />
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+  <include layout="@layout/include_toolbar_menu"/>
+
+</RelativeLayout>

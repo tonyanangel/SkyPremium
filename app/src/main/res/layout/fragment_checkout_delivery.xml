@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="56dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            tools:ignore="MissingPrefix">
+
+
+            <FrameLayout
+                android:id="@+id/layout_choose_delivery_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/normal_padding"
+                android:layout_marginRight="@dimen/normal_padding"
+                android:layout_marginBottom="@dimen/normal_padding"
+                tools:ignore="MissingPrefix">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/title_choose_delivery_address" />
+
+                <ImageView
+                    android:id="@+id/img_add_delivery_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@drawable/ic_add_accent" />
+
+            </FrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_padding"
+                android:nestedScrollingEnabled="false"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/layout_no_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/img_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/normal_padding"
+                    android:layout_marginBottom="@dimen/normal_padding"
+                    android:src="@drawable/ic_map" />
+
+                <TextView
+                    android:id="@+id/txt_no_address"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_map"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/txt_no_address"
+                    android:textColor="@color/textColorLightPrimary" />
+
+                <TextView
+                    android:id="@+id/txt_continue_address"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_no_address"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/normal_padding"
+                    android:gravity="center_horizontal"
+                    android:text="@string/txt_continue_address"
+                    android:textColor="@color/textColorLightPrimary" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider_address"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_margin="@dimen/normal_padding"
+                android:background="@color/lightGrey" />
+
+            <FrameLayout
+                android:id="@+id/layout_choose_billing_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/normal_padding"
+                android:layout_marginRight="@dimen/normal_padding"
+                android:layout_marginBottom="@dimen/normal_padding"
+                tools:ignore="MissingPrefix">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/title_choose_billing_address" />
+
+                <ImageView
+                    android:id="@+id/img_add_billing_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/ic_add_accent" />
+
+            </FrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_billing_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/small_padding"
+                android:nestedScrollingEnabled="false"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/layout_no_billing_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/img_billing_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/normal_padding"
+                    android:layout_marginBottom="@dimen/normal_padding"
+                    android:src="@drawable/ic_map" />
+
+                <TextView
+                    android:id="@+id/txt_no_billing_address"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_billing_map"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/txt_no_billing_address"
+                    android:textColor="@color/textColorLightPrimary" />
+
+                <TextView
+                    android:id="@+id/txt_continue_billing_address"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_no_billing_address"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/normal_padding"
+                    android:gravity="center_horizontal"
+                    android:text="@string/txt_continue_address"
+                    android:textColor="@color/textColorLightPrimary" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider_billing_address"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_margin="@dimen/normal_padding"
+                android:background="@color/lightGrey" />
+
+            <FrameLayout
+                android:id="@+id/layout_choose_credit_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/normal_padding"
+                android:layout_marginTop="@dimen/small_padding"
+                android:layout_marginRight="@dimen/normal_padding"
+                android:layout_marginBottom="@dimen/normal_padding"
+                tools:ignore="MissingPrefix">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/title_choose_credit_card" />
+
+                <ImageView
+                    android:id="@+id/img_add_visa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@drawable/ic_add_accent" />
+
+            </FrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_credit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/normal_padding"
+                android:nestedScrollingEnabled="false"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/ll_selection_not_required"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="64dp"
+                android:paddingBottom="64dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/normal_padding"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/ic_master_card" />
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/normal_padding"
+                    android:layout_marginRight="@dimen/normal_padding"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/card_selection_not_required_title" />
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/normal_padding"
+                    android:layout_marginRight="@dimen/normal_padding"
+                    android:layout_marginBottom="@dimen/normal_padding"
+                    android:text="@string/card_selection_not_required_subtitle"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_no_credit_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/normal_padding"
+                android:gravity="center"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/img_credit_Card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/normal_padding"
+                    android:layout_marginBottom="@dimen/normal_padding"
+                    android:src="@drawable/ic_master_card" />
+
+                <TextView
+                    android:id="@+id/txt_no_credit"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_credit_Card"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/txt_no_credit"
+                    android:textColor="@color/textColorLightPrimary" />
+
+                <TextView
+                    android:id="@+id/txt_continue_credit"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_no_credit"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/normal_padding"
+                    android:gravity="center_horizontal"
+                    android:text="@string/txt_continue_credit"
+                    android:textColor="@color/textColorLightPrimary" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_next"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:letterSpacing="0.2"
+        android:text="@string/btn_next"
+        android:textAllCaps="true"
+        android:visibility="visible"
+        tools:ignore="MissingPrefix" />
+</RelativeLayout>

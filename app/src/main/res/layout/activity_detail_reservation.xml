@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <include layout="@layout/include_toolbar_title_id" />
+
+  <include layout="@layout/include_top_action_two" />
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:paddingHorizontal="@dimen/large_padding"
+      android:paddingTop="@dimen/large_padding">
+
+      <TextView
+        android:id="@+id/tv_restaurant_name"
+        fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurant Name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_big3"
+        tools:ignore="MissingPrefix" />
+
+      <TextView
+        android:id="@+id/tv_booking_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Booking Number:"
+        android:textColor="@color/brightGrey"
+        android:textSize="@dimen/text_size_normal"
+        android:layout_marginTop="@dimen/margin_tiny"
+        tools:ignore="MissingPrefix" />
+
+      <TextView
+        android:id="@+id/tv_booking_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Booking made on Wed 21 Otc 2020"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_size_normal"
+        android:layout_marginTop="@dimen/text_size_normal"
+        tools:ignore="MissingPrefix" />
+
+      <TextView
+        android:id="@+id/tv_status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/this_reservation_is_cancelled"
+        android:textAllCaps="true"
+        android:textColor="@color/brightGrey"
+        android:textSize="@dimen/text_size_normal_3"
+        android:layout_marginTop="@dimen/margin_tiny"
+        tools:ignore="MissingPrefix" />
+
+      <ImageView
+        android:id="@+id/img_food"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/grey"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wine_1"/>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margin_small">
+        <TextView
+          android:id="@+id/tv_book_again"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/rounded_cornercancelbutton"
+          android:paddingHorizontal="@dimen/normal_padding"
+          android:paddingVertical="@dimen/extra_small_padding"
+          android:layout_marginTop="@dimen/margin_normal"
+          android:text="@string/book_again"
+          android:textColor="@color/white" />
+        <TextView
+          fontPath="@string/fonts_Lato_Bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginVertical="@dimen/margin_small"
+          android:text="@string/reservation_name"
+          android:textAllCaps="true"
+          android:textColor="@color/orchid"
+          android:textSize="@dimen/text_size_extra_small"
+          android:textStyle="bold"
+          tools:ignore="MissingPrefix" />
+
+        <TextView
+          android:id="@+id/tv_reservation_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Mr. Jane Doe"
+          android:textColor="@color/black" />
+
+        <TextView
+          fontPath="@string/fonts_Lato_Bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/margin_normal"
+          android:layout_marginBottom="@dimen/margin_small"
+          android:text="@string/email_address_1"
+          android:textAllCaps="true"
+          android:textColor="@color/orchid"
+          android:textSize="@dimen/text_size_extra_small"
+          android:textStyle="bold"
+          tools:ignore="MissingPrefix" />
+
+        <TextView
+          android:id="@+id/tv_email"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="janedoe@skypremium.com"
+          android:textColor="@color/black" />
+
+        <TextView
+          fontPath="@string/fonts_Lato_Bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/margin_normal"
+          android:layout_marginBottom="@dimen/margin_small"
+          android:text="@string/contact_number_1"
+          android:textAllCaps="true"
+          android:textColor="@color/orchid"
+          android:textSize="@dimen/text_size_extra_small"
+          android:textStyle="bold"
+          tools:ignore="MissingPrefix" />
+
+        <TextView
+          android:id="@+id/tv_phone"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="(+65) 91234567"
+          android:textColor="@color/black" />
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:weightSum="2">
+
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+              fontPath="@string/fonts_Lato_Bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/margin_normal"
+              android:layout_marginBottom="@dimen/margin_small"
+              android:text="@string/reservation_date_1"
+              android:textAllCaps="true"
+              android:textColor="@color/orchid"
+              android:textSize="@dimen/text_size_extra_small"
+              android:textStyle="bold"
+              tools:ignore="MissingPrefix" />
+
+            <TextView
+              android:id="@+id/tv_reserve_date"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="26 October 2020"
+              android:textColor="@color/black" />
+          </LinearLayout>
+
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+              fontPath="@string/fonts_Lato_Bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/margin_normal"
+              android:layout_marginBottom="@dimen/margin_small"
+              android:text="@string/reservation_time_1"
+              android:textAllCaps="true"
+              android:textColor="@color/orchid"
+              android:textSize="@dimen/text_size_extra_small"
+              android:textStyle="bold"
+              tools:ignore="MissingPrefix" />
+
+            <TextView
+              android:id="@+id/tv_reserve_time"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="06.30pm"
+              android:textColor="@color/black" />
+          </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:weightSum="2">
+
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+              fontPath="@string/fonts_Lato_Bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/margin_normal"
+              android:layout_marginBottom="@dimen/margin_small"
+              android:text="adult(s)"
+              android:textAllCaps="true"
+              android:textColor="@color/orchid"
+              android:textSize="@dimen/text_size_extra_small"
+              android:textStyle="bold"
+              tools:ignore="MissingPrefix" />
+
+            <TextView
+              android:id="@+id/tv_adults"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="4"
+              android:textColor="@color/black" />
+          </LinearLayout>
+
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+              fontPath="@string/fonts_Lato_Bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/margin_normal"
+              android:layout_marginBottom="@dimen/margin_small"
+              android:text="child(ren)"
+              android:textAllCaps="true"
+              android:textColor="@color/orchid"
+              android:textSize="@dimen/text_size_extra_small"
+              android:textStyle="bold"
+              tools:ignore="MissingPrefix" />
+
+            <TextView
+              android:id="@+id/tv_childs"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="1"
+              android:textColor="@color/black" />
+          </LinearLayout>
+        </LinearLayout>
+        <TextView
+          fontPath="@string/fonts_Lato_Bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/margin_normal"
+          android:layout_marginBottom="@dimen/margin_small"
+          android:text="@string/address"
+          android:textAllCaps="true"
+          android:textColor="@color/orchid"
+          android:textSize="@dimen/text_size_extra_small"
+          android:textStyle="bold"
+          tools:ignore="MissingPrefix" />
+
+        <TextView
+          android:id="@+id/tv_address"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:maxWidth="200dp"
+          android:text="3 Temasek Boulevard, #01-455. Suntec City North Wing, Singapore 038983"
+          android:textColor="@color/black" />
+        <TextView
+          fontPath="@string/fonts_Lato_Bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/margin_normal"
+          android:layout_marginBottom="@dimen/margin_small"
+          android:text="@string/opening_hours"
+          android:textAllCaps="true"
+          android:textColor="@color/orchid"
+          android:textSize="@dimen/text_size_extra_small"
+          android:textStyle="bold"
+          tools:ignore="MissingPrefix" />
+
+        <TextView
+          android:id="@+id/tv_open_hour"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Daily, 10am to 11pm"
+          android:textColor="@color/black" />
+        <TextView
+          fontPath="@string/fonts_Lato_Bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/margin_normal"
+          android:layout_marginBottom="@dimen/margin_small"
+          android:text="@string/website"
+          android:textAllCaps="true"
+          android:textColor="@color/orchid"
+          android:textSize="@dimen/text_size_extra_small"
+          android:textStyle="bold"
+          tools:ignore="MissingPrefix" />
+
+        <TextView
+          android:id="@+id/tv_website"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="www.restaurantname.com"
+          android:textColor="@color/black" />
+        <TextView
+          fontPath="@string/fonts_Lato_Bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/margin_normal"
+          android:layout_marginBottom="@dimen/margin_small"
+          android:text="sky dollars rewarded"
+          android:textAllCaps="true"
+          android:textColor="@color/orchid"
+          android:textSize="@dimen/text_size_extra_small"
+          android:textStyle="bold"
+          tools:ignore="MissingPrefix" />
+
+        <TextView
+          android:id="@+id/tv_sky_dollar_earn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="-"
+          android:textColor="@color/black" />
+        <TextView
+          android:id="@+id/tv_note_sky_dollar_redemed"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:maxWidth="280dp"
+          android:text=""
+          android:textColor="@color/grey"
+          android:textSize="@dimen/text_size_normal"/>
+        <TextView
+          fontPath="@string/fonts_Lato_Bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/margin_normal"
+          android:layout_marginBottom="@dimen/margin_small"
+          android:text="@string/special_instructions_remarks"
+          android:textAllCaps="true"
+          android:textColor="@color/orchid"
+          android:textSize="@dimen/text_size_extra_small"
+          android:textStyle="bold"
+          tools:ignore="MissingPrefix" />
+        <TextView
+          android:id="@+id/tv_special_instruction"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Outdoor seating preferred"
+          android:textColor="@color/black" />
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:maxWidth="280dp"
+          android:text="Special requests are not guaranteed and aresubject to availability and restaurant discre on."
+          android:textColor="@color/grey"
+          android:layout_marginBottom="@dimen/margin_large"
+          android:textSize="@dimen/text_size_normal"/>
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

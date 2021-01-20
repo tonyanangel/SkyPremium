@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_top_round_white"
+    >
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="@dimen/margin_normal"
+      tools:ignore="MissingPrefix"
+      >
+
+    <TextView
+        android:id="@+id/sign_of_mandatory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/normal_padding"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:text="*"
+        android:textColor="@color/colorAccent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/extra_small_padding"
+        android:layout_marginRight="@dimen/normal_padding"
+        android:layout_toRightOf="@+id/sign_of_mandatory"
+        android:text="@string/mandatory"
+        android:textColor="@color/textColorPrimary"
+        fontPath="@string/fonts_Lato_Regular"
+        style="@style/TextAppearance.AppCompat.Caption"
+        />
+
+    <RelativeLayout
+        android:id="@+id/ly_cards_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sign_of_mandatory"
+        >
+
+      <TextView
+          android:id="@+id/tv_payment_review"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/margin_normal"
+          android:layout_marginTop="4dp"
+          android:text="@string/payment_review_credit_card_details"
+          android:textColor="@color/textColorPrimary"
+          fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+          />
+      <ImageView
+          android:id="@+id/iv_american_express"
+          android:layout_width="32dp"
+          android:layout_height="20dp"
+          android:layout_alignParentEnd="true"
+          android:layout_marginRight="@dimen/margin_normal"
+          android:src="@drawable/ic_american_express_blue_background"
+          />
+
+      <ImageView
+          android:id="@+id/iv_mc"
+          android:layout_width="32dp"
+          android:layout_height="24dp"
+          android:layout_marginRight="@dimen/margin_small"
+          android:layout_toStartOf="@+id/iv_american_express"
+          android:src="@drawable/ic_master_card_with_text"
+          />
+
+      <ImageView
+          android:id="@+id/iv_visa"
+          android:layout_width="32dp"
+          android:layout_height="24dp"
+          android:layout_marginRight="@dimen/margin_small"
+          android:layout_toStartOf="@+id/iv_mc"
+          android:src="@drawable/ic_visa_blue_background"
+          />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_processing_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ly_cards_panel"
+        android:drawableLeft="@drawable/ic_error_accent_16dp"
+        android:drawablePadding="@dimen/margin_small"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingLeft="@dimen/margin_normal"
+        android:paddingRight="@dimen/margin_normal"
+        android:paddingTop="@dimen/margin_small"
+        android:textSize="@dimen/text_size_small"
+        android:visibility="invisible"
+        />
+
+    <RelativeLayout
+        android:id="@+id/layout_credit_card_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_processing_country"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="@dimen/normal_padding"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        >
+
+      <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/edt_card_type"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/payment_review_credit_card_type_hint"
+          android:inputType="none"
+          tools:text="test1234"
+          />
+
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_marginTop="@dimen/margin_small"
+          android:paddingLeft="@dimen/small_padding"
+          android:paddingRight="@dimen/small_padding"
+          android:src="@drawable/ic_dropdown_accent"
+          />
+
+      <View
+          android:id="@+id/card_type_overlay"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_credit_card_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_credit_card_type"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="@dimen/normal_padding"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        >
+
+      <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/edt_card_number"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/credit_card_number"
+          android:imeOptions="actionNext"
+          android:inputType="number"
+          android:maxLength="16"
+          tools:text="test1234"
+          />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_expiry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_credit_card_number"
+        android:layout_marginBottom="@dimen/small_padding"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        >
+
+      <RelativeLayout
+          android:id="@+id/layout_month"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="@dimen/extra_small_padding"
+          android:layout_weight="1"
+          >
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/edt_exp_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/expiry_month"
+            android:inputType="none"
+            tools:text="test1234"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/small_padding"
+            android:paddingRight="@dimen/small_padding"
+            android:src="@drawable/ic_dropdown_accent"
+            />
+        <View
+            android:id="@+id/month_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            />
+
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/layout_year"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/extra_small_padding"
+          android:layout_weight="1"
+          >
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/edt_exp_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/expiry_year"
+            android:inputType="none"
+            tools:text="test1234"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/small_padding"
+            android:paddingRight="@dimen/small_padding"
+            android:src="@drawable/ic_dropdown_accent"
+            />
+
+        <View
+            android:id="@+id/year_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            />
+
+      </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_security"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_expiry"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        >
+
+      <RelativeLayout
+          android:id="@+id/layout_security_code"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_marginRight="@dimen/extra_small_padding"
+          android:layout_weight="1"
+          >
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/edt_cvc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/security_code"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            tools:text="test1234"
+            />
+
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/horizontal_line0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layout_security"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@color/lightGrey"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_line0"
+        android:orientation="vertical"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/margin_small"
+          android:layout_marginStart="@dimen/margin_normal"
+          android:text="@string/payment_review_billing_address_label"
+          android:textColor="@color/textColorPrimary"
+          fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+          />
+
+      <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/edt_first_name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginStart="@dimen/margin_normal"
+          android:hint="@string/first_name"
+          android:imeOptions="actionNext"
+          android:inputType="textPersonName"
+          android:maxLength="50"
+          tools:text="test1234"
+          />
+
+      <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/edt_last_name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginStart="@dimen/margin_normal"
+          android:layout_marginTop="@dimen/margin_small"
+          android:hint="@string/last_name"
+          android:imeOptions="actionNext"
+          android:inputType="textPersonName"
+          android:maxLength="50"
+          tools:text="test1234"
+          />
+
+      <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/edt_email"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginStart="@dimen/margin_normal"
+          android:layout_marginTop="@dimen/margin_small"
+          android:hint="@string/email_address_with_star"
+          android:imeOptions="actionNext"
+          android:inputType="textEmailAddress"
+          android:visibility="visible"
+          tools:text="test1234"
+          />
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginStart="@dimen/margin_normal"
+          android:visibility="visible"
+          >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_phone_code_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/edt_phone_number"
+            android:letterSpacing="0.1"
+            android:text="@string/all_country_code_error"
+            android:textAllCaps="true"
+            android:textColor="@color/wineRed"
+            android:textSize="8sp"
+            android:visibility="invisible"
+            fontPath="@string/fonts_Lato_Bold"
+            tools:visibility="visible"
+            style="@style/TextAppearance.AppCompat.Caption"
+            />
+
+        <TextView
+            android:id="@+id/tv_phone_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:drawablePadding="16dp"
+            android:drawableRight="@drawable/ic_dropdown_accent"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            tools:text="+65"
+            style="@style/TextAppearance.AppCompat.Body1"
+            />
+
+        <View
+            android:id="@+id/vertical_line"
+            android:layout_width="1px"
+            android:layout_height="36dp"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toEndOf="@+id/tv_phone_code"
+            android:background="@color/dividerColor"
+            />
+        <View
+            android:id="@+id/horizontal_line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/vertical_line"
+            android:layout_toStartOf="@id/vertical_line"
+            android:background="@color/dividerColor"
+            />
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/edt_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/horizontal_line1"
+            android:layout_toEndOf="@+id/vertical_line"
+            android:hint="@string/all_mobile_number_label"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            tools:text="9282 0000"
+            />
+
+      </RelativeLayout>
+
+      <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/edt_street_address"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginStart="@dimen/margin_normal"
+          android:layout_marginTop="@dimen/margin_small"
+          android:hint="@string/payment_preview_street_address_label"
+          android:imeOptions="actionNext"
+          android:inputType="text"
+          android:visibility="visible"
+          tools:text="test1234"
+          />
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginStart="@dimen/margin_normal"
+          android:layout_marginTop="@dimen/margin_small"
+          >
+
+        <View
+            android:id="@+id/center0"
+            android:layout_width="@dimen/margin_normal"
+            android:layout_height="@dimen/margin_normal"
+            android:layout_centerInParent="true"
+            />
+
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/edt_unit_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/center0"
+            android:hint="@string/unit_number"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:visibility="visible"
+            tools:text="test1234"
+            />
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/edt_postal_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/center0"
+            android:hint="@string/payment_review_zip_postal_code_hing"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:visibility="visible"
+            tools:text="test1234"
+            />
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginStart="@dimen/margin_normal"
+          android:layout_marginTop="@dimen/margin_small"
+          >
+
+        <View
+            android:id="@+id/center1"
+            android:layout_width="@dimen/margin_normal"
+            android:layout_height="@dimen/margin_normal"
+            android:layout_centerInParent="true"
+            />
+
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/edt_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/center1"
+            android:hint="@string/city"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:visibility="visible"
+            tools:text="test1234"
+            />
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/edt_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/center1"
+            android:hint="@string/state"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:visibility="visible"
+            tools:text="test1234"
+            />
+      </RelativeLayout>
+
+
+      <FrameLayout
+          android:id="@+id/layout_country"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginTop="@dimen/margin_small"
+          >
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/edt_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:hint="@string/country"
+            android:inputType="none"
+            android:visibility="visible"
+            tools:text="test1234"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:paddingLeft="@dimen/small_padding"
+            android:paddingRight="@dimen/small_padding"
+            android:src="@drawable/ic_dropdown_accent"
+            />
+        <View
+            android:id="@+id/country_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            />
+
+      </FrameLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:layout_marginBottom="@dimen/margin_normal"
+          android:layout_marginTop="@dimen/margin_normal"
+          android:background="@color/dividerColor"
+          />
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/margin_normal"
+          android:text="@string/payment_review_important_info_title"
+          fontPath="@string/fonts_Lato_Bold"
+          tools:ignore="MissingPrefix"
+          />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/margin_small"
+          android:text="@string/cancellation_policy_label"
+          style="@style/TextStyleEanFieldLabel"
+          />
+
+      <TextView
+          android:id="@+id/tv_refundability_notice"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:drawablePadding="@dimen/margin_small"
+          android:paddingBottom="@dimen/margin_normal"
+          android:paddingLeft="@dimen/margin_normal"
+          android:paddingRight="@dimen/margin_normal"
+          android:paddingTop="@dimen/margin_small"
+          android:textSize="@dimen/text_size_small"
+          fontPath="@string/fonts_Lato_Medium"
+          tools:ignore="MissingPrefix"
+          tools:text="Once your booking has been confirmed, it cannot be cancelled or changed. You will be charged the total price of the booking (S$2,550) if you do not show up."
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/margin_small"
+          android:text="@string/payment_review_check_in_out_policy_label"
+          style="@style/TextStyleEanFieldLabel"
+          />
+
+      <TextView
+          android:id="@+id/tv_instruction_title"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:drawablePadding="@dimen/margin_small"
+          android:paddingBottom="@dimen/margin_tiny"
+          android:paddingLeft="@dimen/margin_normal"
+          android:paddingRight="@dimen/margin_normal"
+          android:paddingTop="@dimen/margin_tiny"
+          android:text="@string/payment_review_check_in_instructions_label"
+          android:textSize="@dimen/text_size_small"
+          fontPath="@string/fonts_Lato_Bold"
+          tools:ignore="MissingPrefix"
+          />
+
+      <TextView
+          android:id="@+id/tv_instruction"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:drawablePadding="@dimen/margin_small"
+          android:paddingBottom="@dimen/margin_normal"
+          android:paddingLeft="@dimen/margin_normal"
+          android:paddingRight="@dimen/margin_normal"
+          android:textSize="@dimen/text_size_small"
+          fontPath="@string/fonts_Lato_Medium"
+          tools:ignore="MissingPrefix"
+          tools:text="@string/payment_review_midnight_arrival_notice"
+          />
+
+
+      <TextView
+          android:id="@+id/tv_special_instruction_title"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:drawablePadding="@dimen/margin_small"
+          android:paddingBottom="@dimen/margin_tiny"
+          android:paddingLeft="@dimen/margin_normal"
+          android:paddingRight="@dimen/margin_normal"
+          android:paddingTop="@dimen/margin_tiny"
+          android:text="@string/payment_review_special_check_in_instructions_label"
+          android:textSize="@dimen/text_size_small"
+          fontPath="@string/fonts_Lato_Bold"
+          tools:ignore="MissingPrefix"
+          />
+
+      <TextView
+          android:id="@+id/tv_special_instruction"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:drawablePadding="@dimen/margin_small"
+          android:paddingBottom="@dimen/margin_normal"
+          android:paddingLeft="@dimen/margin_normal"
+          android:paddingRight="@dimen/margin_normal"
+          android:text="@string/payment_review_midnight_arrival_notice"
+          android:textSize="@dimen/text_size_small"
+          fontPath="@string/fonts_Lato_Medium"
+          tools:ignore="MissingPrefix"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/margin_small"
+          android:text="@string/payment_review_payment_method_label"
+          style="@style/TextStyleEanFieldLabel"
+          />
+
+      <TextView
+          android:id="@+id/tv_payment_method_notice"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:drawablePadding="@dimen/margin_small"
+          android:paddingBottom="@dimen/margin_normal"
+          android:paddingLeft="@dimen/margin_normal"
+          android:paddingRight="@dimen/margin_normal"
+          android:paddingTop="@dimen/margin_small"
+          android:textSize="@dimen/text_size_small"
+          fontPath="@string/fonts_Lato_Medium"
+          tools:ignore="MissingPrefix"
+          tools:text="To secure your booking, we will charge the total price of the booking (S$2,550) to your credit card. If your booking cannot be confirmed, you will be fully refunded."
+          />
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/margin_normal"
+          >
+
+        <CheckBox
+            android:id="@+id/cb_acknowledge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:checked="false"
+            />
+        <TextView
+            android:id="@+id/tv_acknowledge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/cb_acknowledge"
+            android:textSize="@dimen/text_size_small"
+            fontPath="@string/fonts_Lato_Medium"
+            tools:ignore="MissingPrefix"
+            />
+      </RelativeLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:layout_marginTop="@dimen/margin_small"
+          android:background="@color/dividerColor"
+          />
+      <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="@dimen/margin_large"
+          android:paddingLeft="@dimen/margin_normal"
+          android:paddingRight="@dimen/margin_normal"
+          android:paddingTop="@dimen/margin_large"
+          >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_grand_total"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_size_normal"
+            fontPath="@string/fonts_Lato_Medium"
+            tools:ignore="MissingPrefix"
+            />
+
+        <TextView
+            android:id="@+id/tv_grand_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size_big"
+            fontPath="@string/fonts_Lato_Heavy"
+            tools:ignore="MissingPrefix"
+            tools:text="S$2,550"
+            />
+      </FrameLayout>
+
+      <TextView
+          android:id="@+id/tv_summit_booking"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/margin_normal"
+          android:background="@drawable/payment_review_summit_btn_background"
+          android:clickable="true"
+          android:focusable="true"
+          android:foreground="?attr/selectableItemBackground"
+          android:gravity="center"
+          android:letterSpacing="0.1"
+          android:padding="@dimen/margin_normal"
+          android:text="@string/payment_review_summit_booking_btn"
+          android:textAllCaps="true"
+          android:textColor="@color/white"
+          fontPath="@string/fonts_Lato_Medium"
+          />
+    </LinearLayout>
+
+  </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

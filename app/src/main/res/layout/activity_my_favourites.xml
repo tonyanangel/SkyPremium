@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+
+  <LinearLayout
+      android:id="@+id/flContent"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:layout_alignParentTop="true"
+      android:layout_above="@+id/ly_bottom_nav"
+      >
+
+    <include layout="@layout/include_toolbar_home"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="48dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:visibility="visible"
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabTextColor="@color/textColorGrey"
+        style="@style/TabStyle"
+        />
+
+    <include layout="@layout/include_filter_two"/>
+
+    <LinearLayout
+        android:id="@+id/ll_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+      <ImageView
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:src="@drawable/ic_favourite_border_accent"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="4dp"
+          android:text="@string/notice_title_favourite_no_item"
+          android:textSize="@dimen/text_size_big"
+          fontPath="@string/fonts_Lato_Bold"
+          tools:ignore="MissingPrefix"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/notice_body_favourite_no_item"
+          android:textSize="@dimen/text_size_small"
+          fontPath="@string/fonts_Lato_Light"
+          tools:ignore="MissingPrefix"
+          />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMyFavourites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:padding="24dp"
+        android:visibility="gone"
+        />
+
+  </LinearLayout>
+
+  <ImageButton
+      android:id="@+id/btn_estore"
+      android:layout_width="84dp"
+      android:layout_height="80dp"
+      android:layout_gravity="end"
+      android:background="@color/transparent"
+      android:scaleType="centerInside"
+      android:src="@drawable/background_estore_button"
+      android:layout_above="@+id/ly_bottom_nav"
+      android:layout_alignParentEnd="true"
+      />
+
+  <LinearLayout
+      android:id="@+id/ly_bottom_nav"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:elevation="8dp"
+      android:gravity="bottom"
+      android:layout_alignParentBottom="true"
+      android:orientation="vertical"
+      >
+
+    <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+        android:id="@+id/ahbn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+  </LinearLayout>
+
+</RelativeLayout>

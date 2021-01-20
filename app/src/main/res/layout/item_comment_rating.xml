@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/ll_comment"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:foreground="?android:selectableItemBackground"
+  android:clickable="true"
+  android:padding="@dimen/normal_padding">
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+      android:id="@+id/tvLabelReviewBy"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/review_by"
+      style="@style/TextAppearance.AppCompat"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+      android:id="@+id/tvReviewerName"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="S***** L*****"
+      android:layout_marginLeft="@dimen/margin_normal"
+      style="@style/TextAppearance.AppCompat"
+      app:layout_constraintEnd_toStartOf="@id/tvReviewDate"
+      app:layout_constraintStart_toEndOf="@id/tvLabelReviewBy"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+      android:id="@+id/tvReviewDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="18 May 2020"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/tvReviewerName"
+      app:layout_constraintTop_toTopOf="parent" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/margin_large">
+    <com.willy.ratingbar.ScaleRatingBar
+      android:id="@+id/rtStar"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:paddingLeft="5dp"
+      android:paddingRight="5dp"
+      android:gravity="center"
+      app:srb_numStars="5"
+      app:srb_minimumStars="0.5"
+      app:srb_rating="0.5"
+      app:srb_starWidth="22dp"
+      app:srb_starHeight="22dp"
+      app:srb_starPadding="1dp"
+      app:srb_stepSize="0.5"
+      app:srb_isIndicator="false"
+      app:srb_clickable="false"
+      app:srb_scrollable="false"
+      app:srb_clearRatingEnabled="true"
+      app:srb_drawableEmpty="@drawable/ic_star_light_empty"
+      app:srb_drawableFilled="@drawable/ic_star_full"
+      />
+    <TextView
+      android:id="@+id/tv_content_comment"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      style="@style/TextAppearance.AppCompat"
+      android:layout_marginTop="@dimen/margin_normal"
+      android:text="@string/thank_you_for_submitting"/>
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvImagePage"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_normal"/>
+  </LinearLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1px"
+    android:layout_marginTop="@dimen/margin_large"
+    android:background="@color/lightGrey"/>
+</LinearLayout>

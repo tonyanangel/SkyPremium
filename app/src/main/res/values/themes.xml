@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="windowActionModeOverlay">true</item>
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <!--<item name="android:dialogTheme">@style/AppCompatAlertDialogStyle</item>
+    <item name="alertDialogTheme">@style/AppCompatAlertDialogStyle</item>-->
+  </style>
+
+  <style name="AppTheme" parent="AppBaseTheme">
+  </style>
+
+  <style name="AppTheme.Translucent" parent="AppBaseTheme">
+  </style>
+
+  <!--<style name="AppTheme.NoActionBar" parent="AppBaseTheme">
+    <item name="windowNoTitle">true</item>
+    <item name="windowActionBar">false</item>
+    <item name="android:windowContentOverlay">@null</item>
+  </style>-->
+
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+  <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowAnimationStyle">@android:style/Animation</item>
+  </style>
+
+  <style name="TranslucentDialog" parent="Theme.AppCompat.Translucent">
+    <item name="android:colorBackground">#32FFFFFF</item>
+  </style>
+
+
+</resources>

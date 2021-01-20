@@ -1,0 +1,12 @@
+<resources>
+  <string name="fonts_Lato_Regular">fonts/Lato-Regular.ttf</string>
+  <string name="fonts_Lato_Light">fonts/Lato-Light.ttf</string>
+  <string name="fonts_Lato_Bold">fonts/Lato-Bold.ttf</string>
+  <string name="fonts_Adobe_Garamond_Pro_Regular">fonts/Adobe_Garamond_Pro_Regular.ttf</string>
+  <string name="fonts_Adobe_Garamond_Pro_Bold">fonts/AGaramondPro-Bold.otf</string>
+  <string name="fonts_Notera_PersonalUseOnly">fonts/Notera_PersonalUseOnly.ttf</string>
+  <string name="fonts_Lato_Black">fonts/Lato-Black.ttf</string>
+  <string name="fonts_Lato_Heavy">fonts/Lato-Heavy.ttf</string>
+  <string name="fonts_Lato_Medium">fonts/Lato-Medium.ttf</string>
+  <string name="fonts_Lato_Semibold">fonts/Lato-Semibold.ttf</string>
+</resources>

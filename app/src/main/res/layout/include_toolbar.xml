@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    style="@style/Toolbar"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/ivNavigation_toolbar"
+        style="@style/ToolbarIcon"
+        android:src="@drawable/ic_homeasup_accent" />
+
+    <ImageView style="@style/ToolbarIcon" />
+
+    <TextView
+        android:id="@+id/tvTitle_toolbar"
+        style="@style/ToolbarTitle" />
+
+    <ImageView
+        style="@style/ToolbarIcon"
+        android:src="@drawable/ic_search_accent"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="48dp"
+        android:layout_height="48dp">
+
+        <ImageView
+            style="@style/ToolbarIcon"
+            android:layout_centerInParent="true" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_orchid"
+            android:padding="1dp"
+            android:visibility="invisible">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:gravity="center"
+                android:text="9"
+                android:textColor="@color/white" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:numberpicker="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:focusableInTouchMode="true"
+    android:gravity="bottom"
+    android:minWidth="360dp"
+    android:orientation="vertical"
+    >
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="-28dp"
+      android:layout_marginLeft="-10dp"
+      android:layout_marginRight="-10dp"
+      app:cardBackgroundColor="@color/white"
+      app:cardCornerRadius="16dp"
+      app:cardElevation="4dp"
+      app:cardUseCompatPadding="true"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Package Booking"
+            fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+            tools:ignore="MissingPrefix"
+            style="@style/TextAppearance.AppCompat.Title"
+            />
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_close_accent"
+            />
+
+      </RelativeLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/dividerColor"
+          />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp"
+          >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPackage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            >
+
+          <EditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:drawableRight="@drawable/ic_dropdown_accent"
+              android:focusable="false"
+              android:hint="Package Type"
+              android:inputType="text"
+              />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            >
+
+          <EditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:drawableRight="@drawable/ic_calendar_accent"
+              android:focusable="false"
+              android:hint="Date of Booking"
+              android:inputType="text"
+              />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="16dp"
+              android:layout_weight="1"
+              android:orientation="vertical"
+              >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adults (18+)"
+                android:textColor="@color/orchid"
+                style="@style/TextAppearance.AppCompat.Caption"
+                />
+
+            <com.travijuu.numberpicker.library.NumberPicker
+                android:id="@+id/npAdult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                numberpicker:custom_layout="@layout/layout_number_picker"
+                numberpicker:focusable="false"
+                numberpicker:max="20"
+                numberpicker:min="1"
+                numberpicker:unit="1"
+                numberpicker:value="-5"
+                />
+
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:orientation="vertical"
+              >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Children (0 - 17)"
+                android:textColor="@color/orchid"
+                style="@style/TextAppearance.AppCompat.Caption"
+                />
+
+            <com.travijuu.numberpicker.library.NumberPicker
+                android:id="@+id/npChild"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                numberpicker:custom_layout="@layout/layout_number_picker"
+                numberpicker:focusable="false"
+                numberpicker:max="20"
+                numberpicker:min="0"
+                numberpicker:unit="1"
+                numberpicker:value="-5"
+                />
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/dividerColor"
+          />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rvChildren"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:maxHeight="300dp"
+          />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/dividerColor"
+          />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:orientation="horizontal"
+          android:padding="16dp"
+          >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUBTOTAL"
+            android:textColor="@color/textColorPrimary"
+            style="@style/TextAppearance.AppCompat.Body1"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="S$ 1,200"
+            android:textColor="@color/textColorPrimary"
+            style="@style/TextAppearance.AppCompat.Title"
+            />
+
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/tvContinue"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:layout_marginBottom="16dp"
+          android:background="@color/colorAccent"
+          android:gravity="center"
+          android:text="Next"
+          android:textAllCaps="true"
+          android:textColor="@color/white"
+          fontPath="@string/fonts_Lato_Bold"
+          tools:ignore="MissingPrefix"
+          style="@style/TextAppearance.AppCompat.Subhead"
+          />
+
+    </LinearLayout>
+
+  </androidx.cardview.widget.CardView>
+
+</LinearLayout>

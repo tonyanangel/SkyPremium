@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_gravity="center"
+  android:fitsSystemWindows="true"
+  android:focusableInTouchMode="true"
+  android:orientation="vertical">
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/clTop"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:orientation="horizontal">
+      <TextView
+        android:id="@+id/tvTopTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review This Product"
+        android:textColor="@color/textColorPrimary"
+        fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+        tools:ignore="MissingPrefix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_marginRight="15sp"
+        android:foreground="?android:selectableItemBackground"
+        android:clickable="true"
+        android:src="@drawable/ic_close_accent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.skypremiuminternational.app.app.view.VerticalScrollview
+      android:id="@+id/scrollView"
+      android:layout_width="wrap_content"
+      android:layout_height="0dp"
+      app:layout_constraintTop_toBottomOf="@id/clTop"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/tv_save"
+      android:layout_gravity="center_horizontal">
+
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+          <ImageView
+            android:id="@+id/ivGarbage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_disable_garbage"
+            android:padding="15dp"
+            android:foreground="?android:selectableItemBackground"
+            android:clickable="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="right"/>
+        </FrameLayout>
+        <LinearLayout
+          android:id="@+id/clContent"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:layout_margin="32dp"
+          android:orientation="vertical"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:maxHeight="200dp"
+            android:minHeight="150dp">
+
+            <ImageView
+              android:id="@+id/imgThumbnail"
+              android:layout_width="match_parent"
+              android:layout_height="200dp"
+              android:maxHeight="200dp"
+              android:minHeight="150dp"
+              android:scaleType="centerInside" />
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/tvProductName"
+            fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Sweet Tomato Armera Red (Armera Rubins) - Sweet Tomato Armera Red "
+            android:textColor="@color/textColorPrimary"
+            tools:ignore="MissingPrefix" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_margin="5dp"
+              android:text="@string/overall_quality"
+              android:textColor="@color/textColorPrimary"
+              style="@style/TextAppearance.AppCompat.Caption"
+              fontPath="@string/fonts_Lato_Bold"
+              tools:ignore="MissingPrefix" />
+
+            <com.willy.ratingbar.ScaleRatingBar
+              android:id="@+id/rtStar"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:paddingLeft="5dp"
+              android:paddingRight="5dp"
+              android:gravity="center"
+              app:srb_numStars="5"
+              app:srb_minimumStars="0.0"
+              app:srb_rating="0.0"
+              app:srb_starWidth="22dp"
+              app:srb_starHeight="22dp"
+              app:srb_starPadding="1dp"
+              app:srb_stepSize="0.5"
+              app:srb_isIndicator="false"
+              app:srb_clickable="true"
+              app:srb_scrollable="true"
+              app:srb_clearRatingEnabled="true"
+              app:srb_drawableEmpty="@drawable/ic_star_light_empty"
+              app:srb_drawableFilled="@drawable/ic_star_full"
+               />
+          </LinearLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/clContent">
+
+          <TextView
+            android:id="@+id/lbComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comments"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/textColorPrimary"
+            style="@style/TextAppearance.AppCompat.Caption"
+            fontPath="@string/fonts_Lato_Bold"
+            tools:ignore="MissingPrefix"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+            android:id="@+id/tvLimitNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="(min. 25 characters)"
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/wineRed"
+            app:layout_constraintStart_toEndOf="@+id/lbComment"
+            app:layout_constraintTop_toTopOf="parent" />
+          <TextView
+            android:id="@+id/tvReviewComment"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:padding="16dp"
+            android:text="@string/thank_you_for_submitting"
+            android:textSize="@dimen/text_size_normal"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbComment" />
+          <EditText
+            android:id="@+id/editComment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_comment_gray_border"
+            android:gravity="top|left"
+            android:hint="@string/thank_you_for_your_feedback"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:maxLength="1000"
+            android:maxHeight="200dp"
+            android:minHeight="150dp"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingLeft="@dimen/normal_padding"
+            android:paddingRight="@dimen/normal_padding"
+            android:paddingBottom="20dp"
+            android:textSize="@dimen/text_size_normal"
+            android:isScrollContainer="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbComment" />
+
+          <TextView
+            android:id="@+id/tvLimitText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:text="0/1000"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_small"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/editComment"
+            app:layout_constraintEnd_toEndOf="@+id/editComment"
+            tools:ignore="MissingPrefix" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+          <TextView
+            android:id="@+id/lbAttachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attachment(s)"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:textColor="@color/textColorPrimary"
+            style="@style/TextAppearance.AppCompat.Caption"
+            fontPath="@string/fonts_Lato_Bold"
+            tools:ignore="MissingPrefix"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:orientation="vertical">
+            <FrameLayout
+              android:id="@+id/flList"
+              android:layout_width="match_parent"
+              android:layout_height="60dp"
+              android:layout_marginLeft="@dimen/margin_normal"
+              android:layout_marginRight="@dimen/margin_normal"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintEnd_toEndOf="parent">
+              <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvListImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|top"
+                android:layout_margin="8dp"
+                />
+            </FrameLayout>
+            <TextView
+              android:id="@+id/lbLimitFile"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="8dp"
+              android:text="@string/less_than_2mb"
+              android:layout_marginLeft="@dimen/normal_padding"
+              android:textColor="@color/grey"
+              android:textSize="@dimen/text_size_small"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="@+id/flList"
+              app:layout_constraintTop_toBottomOf="@+id/flList"
+              tools:ignore="MissingPrefix" />
+            <TextView
+              android:id="@+id/tvBotCaption"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="8dp"
+              android:layout_marginBottom="16dp"
+              android:text="@string/review_bottom_cation"
+              android:paddingRight="30dp"
+              android:paddingLeft="30dp"
+              android:gravity="center"
+              android:textColor="@color/grey"
+              android:textSize="@dimen/text_size_small"
+              tools:ignore="MissingPrefix"
+              android:visibility="gone"/>
+          </LinearLayout>
+        </LinearLayout>
+
+      </LinearLayout>
+    </com.skypremiuminternational.app.app.view.VerticalScrollview>
+
+    <TextView
+      android:id="@+id/tv_save"
+      style="@style/ButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_gravity="bottom"
+      android:clickable="true"
+      android:foreground="?android:selectableItemBackground"
+      android:letterSpacing="0.2"
+      android:text="@string/submit"
+      android:textAllCaps="true"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

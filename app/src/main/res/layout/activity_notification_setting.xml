@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white"
+  android:orientation="vertical">
+
+  <include layout="@layout/include_toolbar_notification_setting" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="32dp"
+      android:layout_marginBottom="16dp">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/push_notifications"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_large" />
+    </LinearLayout>
+
+    <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="32dp"
+          android:gravity="center_vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/marketing_alerts"
+            android:textSize="@dimen/text_size_big" />
+
+          <Switch
+            android:id="@+id/swt_maketing_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:checked="true"
+            android:padding="8dp"
+            android:thumb="@drawable/ic_baseline_brightness_1_24"
+            android:track="@drawable/track_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="32dp"
+          android:gravity="center_vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/event_invites_and_updates"
+            android:textSize="@dimen/text_size_big" />
+
+          <Switch
+            android:id="@+id/swt_event_invites_and_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:checked="true"
+            android:padding="8dp"
+            android:thumb="@drawable/ic_baseline_brightness_1_24"
+            android:track="@drawable/track_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="32dp"
+          android:gravity="center_vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/travel_deals"
+            android:textSize="@dimen/text_size_big" />
+
+          <Switch
+            android:id="@+id/swt_travel_deals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:checked="true"
+            android:padding="8dp"
+            android:thumb="@drawable/ic_baseline_brightness_1_24"
+            android:track="@drawable/track_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="32dp"
+          android:gravity="center_vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wine_amp_dine_deals"
+            android:textSize="@dimen/text_size_big" />
+
+          <Switch
+            android:id="@+id/swt_wine_dine_deals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:checked="true"
+            android:padding="8dp"
+            android:thumb="@drawable/ic_baseline_brightness_1_24"
+            android:track="@drawable/track_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="32dp"
+          android:gravity="center_vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shopping_deals"
+            android:textSize="@dimen/text_size_big" />
+
+          <Switch
+            android:id="@+id/swt_shopping_deals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:checked="true"
+            android:padding="8dp"
+            android:thumb="@drawable/ic_baseline_brightness_1_24"
+            android:track="@drawable/track_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="32dp"
+          android:gravity="center_vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/estore_deals"
+            android:textSize="@dimen/text_size_big" />
+
+          <Switch
+            android:id="@+id/swt_estore_deals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:checked="true"
+            android:padding="8dp"
+            android:thumb="@drawable/ic_baseline_brightness_1_24"
+            android:track="@drawable/track_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="32dp"
+          android:gravity="center_vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wellness_deals"
+            android:textSize="@dimen/text_size_big" />
+
+          <Switch
+            android:id="@+id/swt_wellness_deals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:checked="true"
+            android:padding="8dp"
+            android:thumb="@drawable/ic_baseline_brightness_1_24"
+            android:track="@drawable/track_selector" />
+        </LinearLayout>
+      </LinearLayout>
+    </ScrollView>
+
+  </LinearLayout>
+</LinearLayout>

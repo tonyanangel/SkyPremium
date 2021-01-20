@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:background="@color/colorPrimary"
+    style="@style/Toolbar"
+    >
+
+  <ImageView
+      android:id="@+id/ivNavigation_toolbar"
+      android:layout_gravity="center_vertical"
+      android:src="@drawable/ic_navigation_accent"
+      style="@style/ToolbarIcon"
+      />
+
+  <TextView
+      android:id="@+id/tvTitle_toolbar"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_gravity="center"
+      android:gravity="center_vertical|center"
+      android:letterSpacing="0.03"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      android:textColor="@color/textTitleColor"
+      fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+      tools:ignore="MissingPrefix"
+      tools:text="Testing"
+      />
+
+
+  <RelativeLayout
+      android:id="@+id/ly_cart"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_gravity="end|center_vertical"
+      android:visibility="invisible"
+      >
+
+    <ImageView
+        android:id="@+id/iv_cart"
+        android:src="@drawable/ic_cart_accent"
+        style="@style/ToolbarBigIcon"
+        />
+
+    <FrameLayout
+        android:id="@+id/ly_cart_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/circle_orchid"
+        android:padding="1dp"
+        >
+
+      <TextView
+          android:id="@+id/tv_cart_count"
+          android:layout_width="14dp"
+          android:layout_height="14dp"
+          android:gravity="center"
+          android:textColor="@color/white"
+          tools:text="9"
+          style="@style/TextAppearance.AppCompat.Caption"
+          />
+
+    </FrameLayout>
+
+  </RelativeLayout>
+
+
+  <ImageView
+      style="@style/ToolbarIcon"
+      />
+
+</FrameLayout>

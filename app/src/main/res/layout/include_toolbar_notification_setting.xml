@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/toolbar"
+  style="@style/Toolbar"
+
+  android:background="@color/colorPrimary">
+
+  <ImageView
+    android:id="@+id/ivNavigation_toolbar"
+    style="@style/ToolbarIcon"
+    android:src="@drawable/ic_homeasup_accent" />
+
+  <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_weight="1">
+
+    <TextView
+      android:id="@+id/tvTitle_toolbar"
+      fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical|center"
+      android:letterSpacing="0.03"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      android:textColor="@color/textTitleColor"
+      tools:ignore="MissingPrefix"
+      tools:text="@string/notifications" />
+    <TextView
+      android:id="@+id/tvNumNotifi"
+      fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical|center"
+      android:letterSpacing="0.03"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      android:textColor="@color/textTitleColor"
+      tools:ignore="MissingPrefix"
+      tools:text="(3)" />
+  </LinearLayout>
+
+
+  <RelativeLayout
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:visibility="invisible">
+
+
+    <ImageView
+      android:id="@+id/ivCart_toolbar"
+      style="@style/ToolbarBigIcon"
+      android:layout_centerInParent="true"
+      android:src="@drawable/ic_cart_accent" />
+
+    <FrameLayout
+      android:id="@+id/ly_cart_count"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentRight="true"
+      android:layout_margin="4dp"
+      android:background="@drawable/circle_orchid"
+      android:padding="1dp"
+      android:visibility="gone"
+      tools:visibility="visible">
+
+      <TextView
+        android:id="@+id/tv_cart_count"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:gravity="center"
+        android:text="9"
+        android:textColor="@color/white" />
+
+    </FrameLayout>
+
+  </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "847522674004",
+    "firebase_url": "https://skypremium-test.firebaseio.com",
+    "project_id": "skypremium-test",
+    "storage_bucket": "skypremium-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847522674004:android:58362878c46f1e13e344c1",
+        "android_client_info": {
+          "package_name": "com.skypremiuminternational.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847522674004-tdjteqv3hlu4olp7gkdflbd5bndel7a1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.skypremiuminternational.app",
+            "certificate_hash": "ac46a0751bfa9238a4b7698ebe5fb8e2eab7462c"
+          }
+        },
+        {
+          "client_id": "847522674004-j6jhg8dio72d1rscinsqevcscjv9uomq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMr3h5d03xirfpPBZY5d7xpQSHBIfjXjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847522674004-j6jhg8dio72d1rscinsqevcscjv9uomq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/transparent"
+  >
+
+  <View
+    android:id="@+id/view_transparent"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/transparent"
+    />
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_marginBottom="-28dp"
+    android:layout_marginLeft="-10dp"
+    android:layout_marginRight="-10dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:orientation="vertical"
+      >
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:padding="16dp"
+          android:text="@string/set_reservation_date"
+          fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+          tools:ignore="MissingPrefix"
+          style="@style/TextAppearance.AppCompat.Title"
+          />
+
+        <ImageView
+          android:id="@+id/iv_close"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:layout_centerVertical="true"
+          android:padding="16dp"
+          android:scaleType="fitCenter"
+          android:src="@drawable/ic_homeasup_accent"
+          />
+
+
+
+      </RelativeLayout>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dividerColor"
+        />
+
+
+
+      <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_normal"
+        android:paddingLeft="@dimen/margin_normal"
+        android:paddingRight="@dimen/margin_normal"
+        app:mcv_arrowColor="@color/colorAccent"
+        app:mcv_leftArrowMask="@drawable/ic_arrow_left_accent"
+        app:mcv_rightArrowMask="@drawable/ic_arrow_right_accent"
+        app:mcv_selectionColor="@color/colorAccent"
+        app:mcv_showOtherDates="all"
+        />
+
+      <TextView
+        android:id="@+id/tv_done"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/date_range_picker_done_btn_background"
+        android:gravity="center"
+        android:text="@string/btn_done"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        fontPath="@string/fonts_Lato_Bold"
+        tools:ignore="MissingPrefix"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        />
+
+    </LinearLayout>
+
+  </androidx.cardview.widget.CardView>
+
+</FrameLayout>
+  <!--
+  <RelativeLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_gravity="center"
+      android:background="@color/transparent"
+      android:minWidth="360dp"
+      android:layout_alignParentBottom="true"
+      android:gravity="bottom"
+      android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-28dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginRight="-10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:id="@+id/card_view"
+        app:cardUseCompatPadding="true">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:padding="16dp"
+              android:text="@string/date_range_picket_title"
+              fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+              tools:ignore="MissingPrefix"
+              style="@style/TextAppearance.AppCompat.Title"
+          />
+
+          <ImageView
+              android:id="@+id/iv_close"
+              android:layout_width="48dp"
+              android:layout_height="48dp"
+              android:layout_alignParentEnd="false"
+              android:layout_centerVertical="true"
+              android:padding="16dp"
+              android:scaleType="fitCenter"
+              android:src="@drawable/ic_homeasup_accent"
+          />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerColor"
+        />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+        >
+
+          <TextView
+              android:id="@+id/tv_check_in_date_hint"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_toStartOf="@+id/center0"
+              android:text="@string/all_check_in_date_label"
+              android:visibility="visible"
+              style="@style/TextStyleDateHint"
+          />
+
+          <TextView
+              android:id="@+id/tv_check_in_date_label"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_above="@+id/tv_check_in_date"
+              android:layout_toStartOf="@+id/center0"
+              android:text="@string/all_check_in_date_label"
+              android:visibility="gone"
+              style="@style/TextStyleEanFieldLabel"
+          />
+
+          <TextView
+              android:id="@+id/tv_check_in_date"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:layout_marginBottom="@dimen/margin_normal"
+              android:paddingBottom="6dp"
+              android:layout_toStartOf="@+id/center0"
+              android:paddingTop="@dimen/margin_tiny"
+              android:visibility="gone"
+              tools:text="22 Apr 2018 (Mon)"
+              style="@style/TextStyleDate"
+          />
+          <View
+              android:id="@+id/center0"
+              android:layout_width="1px"
+              android:layout_height="match_parent"
+              android:layout_centerInParent="true"
+              android:layout_margin="@dimen/margin_normal"
+              android:background="@color/lightGrey"
+          />
+
+          <TextView
+              android:id="@+id/tv_check_out_date_hint"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_toEndOf="@+id/center0"
+              android:text="@string/all_check_out_date_label"
+              android:visibility="visible"
+              style="@style/TextStyleDateHint"
+          />
+
+
+          <TextView
+              android:id="@+id/tv_check_out_date_label"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_above="@+id/tv_check_out_date"
+              android:layout_toEndOf="@+id/center0"
+              android:paddingLeft="-8dp"
+              android:text="@string/all_check_out_date_label"
+              android:visibility="gone"
+              style="@style/TextStyleEanFieldLabel"
+          />
+
+          <TextView
+              android:id="@+id/tv_check_out_date"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:layout_marginBottom="@dimen/margin_normal"
+              android:paddingBottom="6dp"
+              android:layout_toEndOf="@+id/center0"
+              android:paddingTop="@dimen/margin_tiny"
+              android:visibility="gone"
+              tools:text="23 Apr 2018 (Mon)"
+              style="@style/TextStyleDate"
+          />
+
+        </RelativeLayout>
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_normal"
+            android:paddingLeft="@dimen/margin_normal"
+            android:paddingRight="@dimen/margin_normal"
+            android:paddingTop="@dimen/margin_small"
+            app:mcv_arrowColor="@color/colorAccent"
+            app:mcv_leftArrowMask="@drawable/ic_arrow_left_accent"
+            app:mcv_rightArrowMask="@drawable/ic_arrow_right_accent"
+            app:mcv_selectionColor="@color/colorAccent"
+            app:mcv_showOtherDates="all"
+        />
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/date_range_picker_done_btn_background"
+            android:gravity="center"
+            android:text="@string/btn_done"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            fontPath="@string/fonts_Lato_Bold"
+            tools:ignore="MissingPrefix"
+            style="@style/TextAppearance.AppCompat.Subhead"
+        />
+
+      </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+  </RelativeLayout>-->

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="horizontal"
+    android:padding="@dimen/normal_padding"
+    android:weightSum="3">
+
+    <com.skypremiuminternational.app.app.utils.AspectRatioImageView
+        android:id="@+id/img_product"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:ratio="4:3" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:layout_weight="2"
+        tools:ignore="MissingPrefix">
+
+        <TextView
+            android:id="@+id/txt_product_name"
+            style="@style/TextAppearance.AppCompat.Menu"
+            fontPath="@string/fonts_Lato_Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/triple_padding"
+            android:layout_marginBottom="@dimen/small_padding"
+            tools:text="Satoshi Blazer" />
+
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_width="@dimen/normal_padding"
+            android:layout_height="@dimen/normal_padding"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_garbage" />
+
+        <TextView
+            android:id="@+id/txt_kind_of_product"
+            fontPath="@string/fonts_Lato_Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_product_name"
+            android:layout_marginRight="@dimen/triple_padding"
+            android:layout_marginBottom="@dimen/normal_padding"
+            android:letterSpacing="0.1"
+            android:textAllCaps="true"
+            android:textColor="@color/darkTransparentBlack"
+            android:textSize="11sp"
+            tools:text="BENJAMIN BARKER" />
+
+        <TextView
+            android:id="@+id/txt_product_amount"
+            fontPath="@string/fonts_Lato_Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_kind_of_product"
+            android:layout_marginRight="@dimen/triple_padding"
+            android:textColor="@color/darkTransparentBlack"
+            android:textSize="11sp"
+            tools:text="S$500" />
+
+        <TextView
+            android:id="@+id/tv_loyaltyValue"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_product_amount"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="SKY$ 199.00"
+            android:textAllCaps="true"
+            android:textColor="@color/orchid"
+            android:textSize="8sp"
+            android:visibility="gone"
+            tools:text="SKY$ 199.00"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_loyaltyValue"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_error_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_error_red_24dp"
+                android:gravity="center_vertical"
+                android:paddingRight="4dp"
+                android:textColor="@color/color_red"
+                android:visibility="gone"
+                tools:text="error" />
+
+            <RelativeLayout
+                android:id="@+id/layout_qty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/extra_small_padding"
+                android:paddingBottom="@dimen/extra_small_padding">
+
+                <TextView
+                    android:id="@+id/txt_qty"
+                    fontPath="@string/fonts_Lato_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/extra_small_padding"
+                    android:text="@string/txt_qty"
+                    android:textAllCaps="true"
+                    android:textColor="@color/orchid"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/eidt_qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/txt_qty"
+                    android:background="@drawable/rectangle_border_grey"
+                    android:focusable="true"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/normal_padding"
+                    android:paddingTop="@dimen/extra_small_padding"
+                    android:paddingRight="@dimen/normal_padding"
+                    android:paddingBottom="@dimen/extra_small_padding"
+                    tools:text="1" />
+
+                <TextView
+                    android:id="@+id/txt_amount"
+                    style="@style/TextAppearance.AppCompat.Menu"
+                    fontPath="@string/fonts_Lato_Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    tools:text="S$500" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

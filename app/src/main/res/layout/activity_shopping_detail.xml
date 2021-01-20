@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fpi="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    >
+
+  <androidx.core.widget.NestedScrollView
+      android:id="@+id/nsv"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="fill_vertical"
+      android:fillViewport="true"
+      app:behavior_overlapTop="104dp"
+      >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+      <LinearLayout
+          android:id="@+id/llImageHolder"
+          android:layout_width="match_parent"
+          android:layout_height="400dp"
+          android:orientation="vertical"
+          >
+
+        <View
+            android:id="@+id/vImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/llImageHolder"
+          android:layout_marginTop="-112dp"
+          android:orientation="vertical"
+          >
+
+        <com.flyco.pageindicator.indicator.FlycoPageIndicaor
+            android:id="@+id/fpi"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginBottom="8dp"
+            fpi:fpi_cornerRadius="5dp"
+            fpi:fpi_gap="8dp"
+            fpi:fpi_height="8dp"
+            fpi:fpi_isSnap="true"
+            fpi:fpi_selectColor="@color/colorAccent"
+            fpi:fpi_unselectColor="@color/colorPrimaryTransparent"
+            fpi:fpi_width="8dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_rect_white"
+            android:orientation="vertical"
+            >
+
+          <View
+              android:id="@+id/view"
+              android:layout_width="36dp"
+              android:layout_height="4dp"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginBottom="8dp"
+              android:layout_marginTop="12dp"
+              android:background="@drawable/scroll_indicator_grey"
+              />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="8dp"
+              android:gravity="center_vertical"
+              android:orientation="vertical"
+              android:paddingLeft="16dp"
+              android:paddingRight="16dp"
+              >
+
+            <ImageView
+                android:id="@+id/iv_new"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginBottom="@dimen/small_padding"
+                android:layout_marginTop="@dimen/margin_small"
+                android:src="@drawable/ic_new_product"
+                android:visibility="gone"
+
+                />
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Benjamin Barker\nHello"
+                style="@style/TextAppearance.AppCompat.Title"
+                />
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.1"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="10sp"
+                tools:text="Fashion"
+                style="@style/TextAppearance.AppCompat.Caption"
+                />
+
+          </LinearLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1px"
+              android:background="@color/colorAccent"
+              />
+
+          <LinearLayout
+              android:id="@+id/llBenefits"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="16dp"
+              android:visibility="gone"
+              >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="@string/benefits_and_privileges"
+                android:textColor="@color/colorAccent"
+                fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                tools:ignore="MissingPrefix"
+                style="@style/TextAppearance.AppCompat.Body1"
+                />
+
+            <TextView
+                android:id="@+id/tvBenefits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                />
+            <!--<com.skypremiuminternational.app.app.view.WebTextView
+                android:id="@+id/tvBenefits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                />-->
+
+          </LinearLayout>
+          <LinearLayout
+            android:id="@+id/ll_make_a_reservation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+              android:layout_width="match_parent"
+              android:layout_height="1px"
+              android:background="@color/colorAccent"
+              />
+            <TextView
+              android:id="@+id/tv_make_a_reservation"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/make_a_reservation"
+              fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+              android:textColor="@color/colorAccent"
+              android:gravity="center"
+              tools:ignore="MissingPrefix"
+              android:textSize="@dimen/text_size_big"
+              android:clickable="true"
+              android:foreground="?attr/selectableItemBackground"
+              android:paddingVertical="@dimen/normal_padding" />
+          </LinearLayout>
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1px"
+              android:background="@color/colorAccent"
+              />
+
+          <LinearLayout
+              android:id="@+id/llDescription"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="16dp"
+              android:visibility="gone"
+              >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:letterSpacing="0.05"
+                android:text="@string/description"
+                android:textAllCaps="true"
+                android:textColor="@color/orchid"
+                android:textSize="10sp"
+                fontPath="@string/fonts_Lato_Bold"
+                tools:ignore="MissingPrefix"
+                style="@style/TextAppearance.AppCompat.Caption"
+                />
+
+            <TextView
+                android:id="@+id/tvExcerpt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:ellipsize="end"
+                android:lineSpacingExtra="8sp"
+                android:maxLines="3"
+                android:textColor="@color/textColorPrimary"
+                style="@style/TextAppearance.AppCompat.Caption"
+                />
+            <!--<at.blogc.android.views.ExpandableTextView
+                android:id="@+id/tvExcerpt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:ellipsize="end"
+                android:lineSpacingExtra="8sp"
+                android:maxLines="3"
+                android:textColor="@color/textColorPrimary"
+                app:animation_duration="350"
+                fontPath="@string/fonts_Lato_Medium"
+                style="@style/TextAppearance.AppCompat.Caption"
+                />-->
+
+            <TextView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/etvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@color/background"
+                android:visibility="gone"
+                /><!-- <com.skypremiuminternational.app.app.view.MediumTextView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/etvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@color/background"
+                android:visibility="gone"
+                />-->
+
+            <LinearLayout
+                android:id="@+id/llToogleDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+              <View
+                  android:layout_width="0dp"
+                  android:layout_height="1px"
+                  android:layout_weight="1"
+                  android:background="@color/dividerColor"
+                  />
+
+              <TextView
+                  android:id="@+id/tvToogleDescription"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/rectangle_border_accent"
+                  android:padding="4dp"
+                  android:text="@string/read_more"
+                  android:textAllCaps="true"
+                  android:textColor="@color/colorAccent"
+                  android:textSize="8sp"
+                  style="@style/TextAppearance.AppCompat.Caption"
+                  />
+
+              <View
+                  android:layout_width="0dp"
+                  android:layout_height="1px"
+                  android:layout_weight="1"
+                  android:background="@color/dividerColor"
+                  />
+
+            </LinearLayout>
+
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:id="@+id/llTerms"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="32dp"
+              android:orientation="vertical"
+              android:padding="16dp"
+              android:visibility="gone"
+              >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:letterSpacing="0.05"
+                android:text="@string/terms_and_conditions"
+                android:textAllCaps="true"
+                android:textColor="@color/orchid"
+                android:textSize="10sp"
+                fontPath="@string/fonts_Lato_Bold"
+                tools:ignore="MissingPrefix"
+                style="@style/TextAppearance.AppCompat.Caption"
+                />
+
+            <TextView
+                android:id="@+id/etvTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                />
+            <!--<com.skypremiuminternational.app.app.view.ExpandableWebView
+                android:id="@+id/etvTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:animation_duration="350"
+                />-->
+
+            <LinearLayout
+                android:id="@+id/llToogleTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+              <View
+                  android:layout_width="0dp"
+                  android:layout_height="1px"
+                  android:layout_weight="1"
+                  android:background="@color/dividerColor"
+                  />
+
+              <TextView
+                  android:id="@+id/tvToogleTerms"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/rectangle_border_accent"
+                  android:padding="4dp"
+                  android:text="@string/read_more"
+                  android:textAllCaps="true"
+                  android:textColor="@color/colorAccent"
+                  android:textSize="8sp"
+                  style="@style/TextAppearance.AppCompat.Caption"
+                  />
+
+              <View
+                  android:layout_width="0dp"
+                  android:layout_height="1px"
+                  android:layout_weight="1"
+                  android:background="@color/dividerColor"
+                  />
+
+
+            </LinearLayout>
+
+          </LinearLayout>
+
+          <com.andrognito.kerningview.KerningTextView
+              android:layout_marginTop="32dp"
+              android:id="@+id/tvReserveNow"
+              android:layout_width="match_parent"
+              android:layout_height="56dp"
+              android:layout_marginBottom="16dp"
+              android:gravity="center"
+              android:text="Reserve Now"
+              fontPath="@string/fonts_Lato_Bold"
+              tools:ignore="MissingPrefix"
+              style="@style/ButtonStyle"
+              android:textAllCaps="false"
+              android:visibility="visible"
+              />
+
+          <TextView
+              android:id="@+id/tv_recommendation"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/margin_normal"
+              android:layout_marginLeft="@dimen/margin_normal"
+              android:layout_marginRight="@dimen/margin_normal"
+              android:layout_marginTop="@dimen/margin_normal"
+              android:gravity="center"
+              android:text="@string/recommended_for_you"
+              android:textColor="@color/textColorPrimary"
+              fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+              tools:ignore="MissingPrefix"
+              />
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/rv_recommendation"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/margin_normal"
+              android:layout_marginRight="@dimen/margin_normal"
+              />
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+    </RelativeLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+  <View
+      android:id="@+id/vStatusBar"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/status_bar_height"
+      android:background="@color/colorPrimaryDark"
+      android:visibility="gone"
+      />
+
+  <include
+      layout="@layout/include_toolbar_menu"/>
+
+  <LinearLayout
+      android:id="@+id/toolbar_white"
+      android:layout_marginTop="@dimen/status_bar_height"
+      android:background="@color/colorPrimary"
+      android:visibility="invisible"
+      style="@style/Toolbar"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+      <ImageView
+          android:id="@+id/ivNavigation_toolbar_white"
+          android:src="@drawable/ic_homeasup_accent"
+          style="@style/ToolbarIcon"
+          />
+
+      <TextView
+          android:id="@+id/tvTitle_toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="82dp"
+          android:gravity="center"
+          android:maxLines="2"
+          android:textColor="@color/textTitleColor"
+          android:visibility="visible"
+          fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+          tools:ignore="MissingPrefix"
+          />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <ImageView
+      android:id="@+id/ivFav"
+      android:layout_width="24dp"
+      android:layout_height="24dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginTop="42dp"
+      android:layout_toStartOf="@+id/basket"
+      android:elevation="4dp"
+      android:src="@drawable/ic_favourite_stroke_gold"
+      />
+
+  <RelativeLayout
+      android:id="@+id/basket"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_alignParentEnd="true"
+      android:layout_marginTop="30dp"
+      android:elevation="4dp"
+      >
+
+    <ImageView
+        android:id="@+id/iv_cart"
+        android:layout_width="26dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_cart_accent"
+        />
+
+    <FrameLayout
+        android:id="@+id/ly_cart_count_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/circle_orchid"
+        android:padding="1dp"
+        android:visibility="gone"
+        >
+
+      <TextView
+          android:id="@+id/tv_cart_count_white"
+          android:layout_width="14dp"
+          android:layout_height="14dp"
+          android:gravity="center"
+          android:text="0"
+          android:textColor="@color/white"
+          style="@style/TextAppearance.AppCompat.Caption"
+          />
+
+    </FrameLayout>
+
+  </RelativeLayout>
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      android:src="@drawable/bg_transparent_toolbar"
+      />
+</RelativeLayout>

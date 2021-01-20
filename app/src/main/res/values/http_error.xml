@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="exception_message_generic">There was an application error</string>
+  <string name="exception_message_no_connection">There is no internet connection</string>
+  <string name="exception_message_user_not_found">Cannot retrieve user data. Check your internet connection</string>
+  <string name="network_error">Network connection error!</string>
+  <string name="ssl_pinning_error">SSL Pinning Fail. Please contact the system administrator</string>
+  <string name="server_500">Server Error</string>
+  <string name="error_404">Internal Server Not Found</string>
+  <string name="error_401">Session timeout! Please login again.</string>
+  <string name="error_io">Conversion Error.</string>
+  <string name="error_json_syntax">JSON Syntax Error.</string>
+  <string formatted="false" name="http_error">Http Error - %d, Message - %s</string>
+  <string name="error_invalid_email">Invalid Email Address</string>
+  <string name="error_invalid_password">Invalid Password</string>
+  <string name="error_password_do_not_match">Password do not match!</string>
+  <item name="visible" type="id"/>
+  <item name="masked" type="id"/>
+</resources>

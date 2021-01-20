@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:background="@color/colorPrimary"
+    style="@style/Toolbar"
+    >
+
+  <ImageView
+      android:id="@+id/ivNavigation_toolbar"
+      android:src="@drawable/ic_navigation_accent"
+      style="@style/ToolbarIcon"/>
+
+  <ImageView
+      style="@style/ToolbarIcon"/>
+
+  <TextView
+      android:id="@+id/tvTitle_toolbar"
+      style="@style/ToolbarTitle"/>
+
+  <ImageView
+      android:id="@+id/ivSearch_toolbar"
+      android:src="@drawable/ic_search_accent"
+      style="@style/ToolbarMiddleIcon"
+      android:visibility="visible"/>
+
+  <RelativeLayout
+      android:id="@+id/layout_cart_icon"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:visibility="visible"
+      android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/ivCart_toolbar"
+        android:src="@drawable/ic_cart_accent"
+        style="@style/ToolbarBigIcon"/>
+
+    <FrameLayout
+        android:id="@+id/ly_cart_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="4dp"
+        android:background="@drawable/circle_orchid"
+        android:padding="1dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+      <TextView
+          android:id="@+id/tv_cart_count"
+          android:layout_width="16dp"
+          android:layout_height="16dp"
+          android:gravity="center"
+          android:text="0"
+          android:textColor="@color/white"
+          style="@style/TextAppearance.AppCompat.Caption"/>
+
+    </FrameLayout>
+
+  </RelativeLayout>
+
+</LinearLayout>

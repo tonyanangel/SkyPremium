@@ -1,0 +1,621 @@
+<resources>
+    <plurals name="days">
+
+        <item quantity="zero">%d Days</item>
+        <item quantity="one">%d Day</item>
+        <item quantity="other">%d Days</item>
+    </plurals>
+
+    <plurals name="rooms">
+        <item quantity="zero">%d Rooms</item>
+        <item quantity="one">%d Room</item>
+        <item quantity="other">%d Rooms</item>
+    </plurals>
+    <plurals name="adults">
+        <item quantity="zero">%d Adults</item>
+        <item quantity="one">%d Adult</item>
+        <item quantity="other">%d Adults</item>
+    </plurals>
+    <plurals name="children">
+        <item quantity="zero">%d Children</item>
+        <item quantity="one">%d Child</item>
+        <item quantity="other">%d Children</item>
+    </plurals>
+    <plurals name="nights">
+        <item quantity="zero">%d Nights</item>
+        <item quantity="one">%d Night</item>
+        <item quantity="other">%d Nights</item>
+    </plurals>
+
+    <plurals name="guests">
+        <item quantity="zero">%d Guests</item>
+        <item quantity="one">%d Guest</item>
+        <item quantity="other">%d Guests</item>
+    </plurals>
+    <string name="app_name">Sky Premium</string>
+    <string name="title_forgot_password">Please enter the email billing address associated with your
+    account.
+  </string>
+    <string name="title_forgot_password_success">Check Your Email</string>
+    <string name="body_forgot_password_success">A link has been sent to laurentanderson@mail.com.
+    Please follow the instructions in the email to reset your password.
+  </string>
+    <string name="title_reset_password">Please enter your new password.</string>
+
+    <string name="travel">Travel</string>
+
+    <string name="wine"><![CDATA[Wine & Dine]]></string>
+    <string name="home">Home</string>
+    <string name="shopping">Shopping</string>
+    <string name="wellness">Wellness</string>
+    <string name="e_store">eStore</string>
+    <string name="membership">Membership Services</string>
+    <string name="travel_all_caps">TRAVEL</string>
+    <string name="renewal_payment">Payment</string>
+
+    <string name="wine_all_caps"><![CDATA[WINE & DINE]]></string>
+    <string name="home_all_caps">HOME</string>
+    <string name="shopping_all_caps">SHOPPING</string>
+    <string name="wellness_all_caps">WELLNESS</string>
+    <string name="flash_sales_all_caps">FLASH SALES</string>
+    <string name="membership_all_caps">MEMBERSHIP SERVICES</string>
+    <string name="sample_product_subtitle">Hotel - Italy</string>
+    <string name="sample_product_title">Leone Blu</string>
+    <string name="signing_in">Signing in…</string>
+    <string name="sample_product_description">Birthday special: 20% off regular-priced shirt on
+    birthday month (not applicable for Custom Grade shirts)
+  </string>
+    <string name="terms_and_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="description">Description</string>
+    <string name="benefits_and_privileges"><![CDATA[Benefits & Privileges]]></string>
+
+    <string name="read_more">Read More</string>
+    <string name="read_less">Read Less</string>
+    <string name="getting_user_detail">Getting user info..</string>
+    <string name="updating_user_detail">Updating user info..</string>
+    <string name="uploading_profile_image">Uploading profile image..</string>
+    <string name="getting_favourite_lists">Getting Favourite Lists..</string>
+    <string name="help">How can we help you?</string>
+    <string name="contact_us">Alternatively, you can contact us at</string>
+    <string name="profile">My Profile</string>
+    <string name="faq">FAQ</string>
+    <string name="notifications">Notifications</string>
+    <string name="my_favourite">My Favourites</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="my_orders">My Orders</string>
+    <string name="manage_credit_cards">Manage Credit Cards</string>
+    <string name="manage_delivery_address">Manage Delivery Addresses</string>
+    <string name="invite_friend">Invite a Friend</string>
+    <string name="submitting">Submitting…</string>
+    <string name="log_out">Logout</string>
+
+    <string name="loading">Loading…</string>
+    <string name="try_again">Try again</string>
+    <string name="faq_empty">There is no FAQs available.</string>
+    <string name="faq_not_found">No results found for \'%s\'.</string>
+    <string name="faq_not_found_message">We couldn\'t find the FAQ you were looking for.\nTry
+    searching again.
+  </string>
+    <string name="try_search">We couldn\'t find the product you were looking for.\nTry searching for
+    another product instead.
+  </string>
+    <string name="membership_travel"><![CDATA[Travel Arrangements]]></string>
+    <string name="membership_restaurants"><![CDATA[Restaurant Bookings & Reservations]]></string>
+    <string name="membership_wellness"><![CDATA[Wellness Programs & Activities]]></string>
+    <string name="membership_shopping">Shopping Recommendations</string>
+    <string name="membership_enquiry">General Enquiry / Other Assistance</string>
+    <string name="membership_technical">Technical Support</string>
+
+    <!-- notification membership renewal -->
+    <string name="membership_fees">Membership Fees / Payment Matters</string>
+    <string name="membership_feedbacks">Feedbacks / Suggestions</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="label_partners">Partners</string>
+    <string name="label_products">Products</string>
+    <string name="message_loading_favourites">Fetching favourites…</string>
+    <string name="title_noti_membership_renewal">Membership Renewal</string>
+    <string name="title_added_to_cart">Added to Cart</string>
+    <string name="txt_notice_membership_renewal">Your membership is expiring soon.</string>
+    <string name="txt_notice_added_to_cart">\"Annual Membership Renewal\" has been added to your
+    cart.
+  </string>
+    <string name="txt_notice_added_to_cartdisable">\"Annual Membership Renewal\" has been disabled.
+  </string>
+    <string name="txt_que_membership_renewal">Your membership will be expiring on %1$s. Would
+    you like to renew your membership now?
+  </string>
+    <string name="txt_que_membership_renewalcode">Your membership will be expiring on %1$s.
+  </string>
+    <string name="txt_added_to_cart_description">You may utilize S$ %1$s from your current SKY DOLLAR(S) (S$ %2$s) to renew your membership for another year. Would you like to checkout now?
+  </string>
+    <string name="txt_donnot_show">Do not show this message again</string>
+    <string name="txt_que_checkout">Would you like to checkout now?</string>
+
+    <!-- shopping cart -->
+    <string name="btn_renewal_membership">Renew my annual membership</string>
+    <string name="btn_renew_later">Renew Later</string>
+    <string name="btn_use_loyalty">Yes, proceed to checkout. Use my SKY DOLLAR(S) to renew</string>
+    <string name="btn_keey_loyalty">Yes, proceed to checkout. Keep my SKY DOLLAR(S)</string>
+    <string name="btn_checkout_later">No, I will check out later</string>
+    <string name="btn_checkout_now">yes, check out now</string>
+    <string name="checkout">Check Out</string>
+    <string name="txt_subtotal">subtotal</string>
+    <string name="total_amount">S$1,160</string>
+    <string name="hint_promocode">Promo Code</string>
+    <string name="promo_amount">S$100</string>
+    <string name="hint_loyalty">Sky Dollar Earned</string>
+    <string name="hint_loyalty_sky_earn">Sky Dollar Earn</string>
+    <string name="hint_loyalty_sky_to_earn">Sky Dollar To Earn</string>
+    <string name="hint_loyalty_sky_dollars">Sky Dollar</string>
+    <string name="hint_loyalty_sky_dollars_redeem">Sky Dollar to redeem</string>
+    <string name="hint_loyalty_sky_dollars_redeemed">Sky Dollar redeemed</string>
+    <string name="hint_loyalty_sky_earned">Sky Dollar Earned</string>
+    <string name="apply">apply</string>
+    <string name="dummy_promocode">Happy Monday</string>
+    <string name="toolbarShoppinCart">My Shopping Cart</string>
+    <string name="txt_btn_redeem">redeem</string>
+    <string name="txt_redeem_loyalty_points">Redeem Sky Dollar</string>
+    <string name="txt_redeem">you can redeem up to</string>
+    <string name="txt_reduce_loyalty_money">S$282</string>
+    <string name="txt_reduce_loyalty_points">(1,412</string>
+    <string name="txt_grand_total">grand total</string>
+    <string name="txt_qty">qty</string>
+    <string name="txt_no_loyalty_point">You have no sky dollar to redeem.</string>
+
+    <!-- Checkout -->
+    <string name="txt_continue_shopping">Continue shopping</string>
+    <string name="txt_no_product">You have nothing in your cart.</string>
+    <string name="notice_body_favourite_no_item">Like something you see?\n Save them here to your
+    favourites.
+  </string>
+    <string name="notice_title_favourite_no_item">You have no favourites yet.</string>
+    <string name="review">review</string>
+    <string name="edit_review_underline">edit review</string>
+    <string name="btn_next">next</string>
+    <string name="btn_checkout">check out</string>
+    <string name="btn_done">done</string>
+    <string name="txt_delivery_and_payment">Delivery &amp; \n payment</string>
+    <string name="txt_review">review</string>
+    <string name="txt_order_placed">order\nplaced</string>
+    <string name="title_choose_delivery_address">Select Your Delivery Address</string>
+    <string name="title_choose_credit_card">Select Your Credit Card</string>
+    <string name="txt_person_name_address">Laurent Anderson</string>
+    <string name="txt_edit">edit</string>
+    <string name="txt_print">print</string>
+    <string name="txt_cancelbookingbutton">Cancel This Booking</string>
+    <string name="txt_address">Blk 123, Ang Mo Kia Ave 10 \n Singapore 512412</string>
+    <string name="txt_visa_number">XXXX XXXX XXXX</string>
+    <string name="date">01 / 2020</string>
+    <string name="txt_renew_membership">renew my annual membership</string>
+    <string name="txt_amt_shopping_cart">(3)</string>
+    <string name="txt_title_delivery_address">delivery address</string>
+    <string name="txt_title_billing_address">billing address</string>
+    <string name="txt_title_delivery">delivery &amp; billing</string>
+    <string name="txt_delivery_phone">+65 9123 4567</string>
+    <string name="txt_title_payment_detail">payment details</string>
+    <string name="txt_title_loyalty">loyalty points</string>
+    <string name="txt_shipping_fee">shipping fees</string>
+    <string name="txt_delivery_fee">delivery fee</string>
+    <string name="txt_amt_promocode">-S$100</string>
+    <string name="txt_amt_loyalty">-S$40(120 points)</string>
+    <string name="txt_amt_gand_total">S$1,060</string>
+    <string name="txt_order_id">Order ID:</string>
+    <string name="txt_thank_you">Thank you for your order</string>
+    <string name="txt_proceed">Your order is being proceed and will be completed within 1 working day.
+    You will receive an email confirmation when your order is complete.
+  </string>
+    <string name="txt_order_contact"><![CDATA[<html>Have a question? Kindly contact us at <a href=tel:6565330000>(65) 6533 0000</a>
+   <br />or email to <a href=mailto:orders@skypremium.com.sg>orders@skypremium.com.sg</a> for further assistance.</html>]]></string>
+    <string name="txt_home_delivery">Home Delivery</string>
+    <string name="txt_delivery_date">Thu, 10 Aug 2017, 2pm - 4pm</string>
+    <string name="txt_title_billing">billing</string>
+    <string name="booking_detail_payment_by_label">payment used</string>
+    <string name="txt_processing">Processing</string>
+    <string name="txt_complete">Complete</string>
+    <string name="txt_add_delivery_addresss">Add Delivery Address</string>
+    <string name="txt_edit_delivery_addresss">Edit Delivery Address</string>
+    <string name="mandatory">Mandatory</string>
+    <string name="first_name">First Name *</string>
+    <string name="full_name">Full Name *</string>
+    <string name="last_name">Last Name *</string>
+    <string name="mobile_number">Mobile Number *</string>
+    <string name="postal_code">Zip / Postal code *</string>
+    <string name="street_address">Street Address</string>
+    <string name="recommended_for_you">Recommended for you</string>
+    <string name="title_address">Street Address *</string>
+    <string name="floor">floor</string>
+    <string name="unit">unit</string>
+    <string name="save">save</string>
+    <string name="txt_set_primary">Set as Primary Address</string>
+    <string name="txt_set_primary_credit">Set as Primary Credit Card</string>
+    <string name="txt_sold_out">COMING SOON</string>
+    <string name="sale_over">SALE OVER</string>
+    <string name="sale_not_started">COMING SOON</string>
+    <string name="txt_coming_soon">COMING SOON</string>
+    <string name="label_estore_item_count_down">ENDS IN</string>
+    <string name="txt_add_credit_card">Add Credit Card</string>
+    <string name="txt_edit_credit_card">Edit Credit Card</string>
+    <string name="credit_card_number">Credit Card Number *</string>
+    <string name="expiry_month">Expiration Month *</string>
+    <string name="expiry_year">Expiration Year *</string>
+    <string name="security_code">CVV *</string>
+    <string name="txt_no_address">You have no delivery billing address.</string>
+    <string name="txt_continue_address">Add an billing address to continue.</string>
+    <string name="txt_no_credit">You have no credit cards.</string>
+    <string name="txt_continue_credit">Add a credit card to continue.</string>
+    <string name="label_dimiss">Dismiss</string>
+    <string name="referral_text">Dear friend,\n\n%1$s %2$s %3$s has invited you to join Sky Premium,
+    with the following personal message!\n\n[personalMessage]\n\nYou may click on the following
+    referral link to sign-up as a Sky Premium member:\n%4$s\n\nYou may also call us at +65 6533 0000
+    or email to asksg@skypremium.com.sg if you have any enquiries on the membership benefits &amp;
+    privileges. Our operating hours are from 9am to 6pm on Mondays to Fridays, except public
+    holidays.\n\nWe look forward to serving you!
+  </string>
+    <string name="txt_message_end_list">In the end of the list.</string>
+    <string name="txt_points">points</string>
+    <string name="txt_close_sign">)</string>
+    <string name="txt_warning_loyalty">Promo code or loyalty values is applicable to offset your grand total.</string>
+    <!--<string name="txt_collected">Collected</string>-->
+    <string name="txt_warning_loyalty_2">You can only use either your promo code or your loyalty points
+    at one time to offset your grand total.
+  </string>
+    <string name="txt_processing_order">Processing your order now …</string>
+    <string name="txt_processing_booking">Processing your booking now …</string>
+    <string name="txt_processing_content">There was an error processing your order. \n Would you like
+    to try again?
+  </string>
+    <string name="no_order">You have no orders.</string>
+    <string name="no_booking">You have no bookings.</string>
+    <string name="txt_collected">Complete</string>
+    <string name="txt_delivering">Delivering</string>
+    <string name="txt_fail">Fail</string>
+    <string name="txt_holded">On Hold</string>
+    <string name="txt_closed">Closed</string>
+    <string name="title_manage_delivery_address">Manage Delivery Addresses</string>
+    <string name="txt_add_credit">Add a credit card and start shopping.</string>
+    <string name="txt_no_delivery_address">You have no delivery address.</string>
+    <string name="txt_no_billing_address">You have no billing address.</string>
+    <string name="txt_create_delivery_addresss">Add an billing address and start shopping.</string>
+    <string name="btn_label_retry">Retry</string>
+    <string name="btn_label_ok">OK</string>
+    <string name="btn_label_cancel">Cancel</string>
+
+    <string name="label_shipping_fee">Shipping fee</string>
+    <string name="label_delivery_fee">Delivery fee</string>
+    <string name="label_tax">Tax</string>
+    <string name="txt_notice_before_submit_order">
+    <html>By clicking on “Submit Order”, I acknowledge that I have read and agree to the terms &amp;
+      conditions on shipping, delivery, cancellations, refunds and returns, as per stipulated under
+      the <a href="https://www.skypremium.com.sg/sg/legal#clubrules&amp;termsconditions">club rules
+        and terms and conditions</a>.
+    </html>
+  </string>
+    <string name="btn_submit_order">submit order</string>
+    <string name="label_template_order_id">Order ID: %s</string>
+    <string name="label_new">new</string>
+    <string name="terminate_membership">Your membership account has been suspended.
+  </string>
+    <string name="awaiting_renewal_membership">Your membership account has been extended for this
+    grace period. Please renew your membership to continue to enjoy your benefits and privileges.
+  </string>
+    <string name="expired_membership">Your membership account is inactive. Please renew your
+    membership to continue to enjoy your benefits and privileges.
+  </string>
+    <string name="que_default_address">Are you sure you want to change your default address?</string>
+    <string name="que_default_credit_card">Are you sure you want to change your default Credit Card?
+  </string>
+    <string name="txt_first_sign_creditcard">xxxx xxxx xxxx</string>
+    <string name="txt_null_creditcard">xxxx</string>
+    <string name="visa_type">visa</string>
+    <string name="unit_number">Unit Number *</string>
+    <string name="city">City *</string>
+    <string name="state">State / Province</string>
+    <string name="state_new">State / Province </string>
+    <string name="state_with_sign">State / Province *</string>
+    <string name="country">Country *</string>
+    <string name="error_first_name">First Name should include letters only</string>
+    <string name="error_last_name">Last name should include letters only</string>
+    <string name="error_full_name">Full name should include letters only</string>
+    <string name="error_phone">phone number</string>
+    <string name="error_unit_number">unit number</string>
+    <string name="error_post_code">post code</string>
+    <string name="error_address">street address</string>
+    <string name="error_city">City should include letters only</string>
+    <string name="error_state">State should include letters only</string>
+    <string name="error_country">country</string>
+    <string name="edit_text_redeem">amount to redeem</string>
+    <string name="title_order_id">Order ID:</string>
+    <string name="label_amount_to_redeem">Amount To Redeem</string>
+    <string name="invalid_card">invalid card</string>
+    <string name="error_card_number">credit card number</string>
+    <string name="error_null">This is a required field.</string>
+    <string name="error_expired_month">expiration month</string>
+    <string name="error_expired_year">expiration year</string>
+    <string name="error_expired_cvc">security code</string>
+
+    <string name="error_invalid">Invalid</string>
+
+    <string name="label_amount_format">S$%s</string>
+
+    <string name="label_update_now">Update Now</string>
+
+    <string name="error_something_went_wrong">Something went wrong</string>
+    <string name="title_order_error">Order Processing Error</string>
+    <string name="notice_need_more_permissions">You need more permissions to access this.</string>
+
+    <string name="guest_detail_bed_preferences_hint">Bed Preferences *</string>
+    <string name="complete_header">Thank You for Shopping with Sky Premium.</string>
+    <string name="complete_subheader">We are currently processing your order. You will receive updates via email on your order status once your item(s) have been shipped.</string>
+    <string name="pending_header">We apologise that your order is unsuccessful.</string>
+    <string name="pending_subheader">We encountered an error registering/processing our credit card. Please kindly review or update your credit details and try again.</string>
+    <string name="product_list_area_name_label">Area or hotel name</string>
+    <string name="all_check_out_date_label">Check-out date</string>
+    <string name="all_check_in_date_label">Check-in date</string>
+    <string name="product_list_search_for_hotels_label">Search for hotels</string>
+    <string name="product_list_emtpy_hotel_search">No hotel found.</string>
+    <string name="product_list_hotel_search_count">hotels have been found.</string>
+    <string name="all_occupancy_label"><![CDATA[No. of guests & room]]></string>
+    <string name="occupancy_picker_title"><![CDATA[No. of Guests & Rooms]]></string>
+    <string name="occupancy_picker_action_clear">clear</string>
+    <string name="occupancy_picker_no_of_rooms_label">No. of rooms</string>
+    <string name="occupancy_picker_adults_label">Adults</string>
+    <string name="occupancy_picker_children_label">Children</string>
+    <string name="occupancy_picker_action_done">done</string>
+    <string name="property_detail_search_for_rooms_label">Search For Rooms</string>
+    <string name="property_detail_book_your_rooms_label">Book your room(s):</string>
+    <string name="item_room_show_room_details">Show Room Details</string>
+    <string name="item_room_book_now_label">book now</string>
+    <string name="search_hotel_title">Search Hotels</string>
+    <string name="booking_summary_hotel_label">Hotel</string>
+    <string name="booking_summary_room_type_label">Room type</string>
+    <string name="booking_summary_occupancy_label">Number of guests</string>
+    <string name="booking_summary_price_summary_label">Price summary</string>
+    <string name="booking_summary_tourism_fee_label">Tourism fee</string>
+    <string name="booking_summary_not_included_in_price_warning">Not included in price</string>
+    <string name="booking_summary_prices_quotation_notice">All prices are quoted in Singapore Dollars (SGD)</string>
+    <string name="booking_summary_fees_taxes_label"><![CDATA[Fees & Taxes]]></string>
+    <string name="booking_summary_toolbar_title">Booking Summary</string>
+    <string name="label_travel">Travel</string>
+    <string name="wine_n_dine_label"><![CDATA[Wine & Dine]]></string>
+    <string name="shopping_label">Shopping</string>
+    <string name="wellness_label">Wellness</string>
+    <string name="property_detail_price_per_night_label">price per night per room</string>
+    <string name="cancellation_policy_label">Cancellation policy</string>
+    <string name="cancellation_policy_non_refundable">This booking is non- refundable. If you fail to check-in for this reservation, or if you cancel or change this reservation after check- in, you may incur penalty charges at the discretion of the property of up to 100% of the booking value.</string>
+    <string name="cancellation_policy_refundable">Cancellations or changes made after %1$s or no-shows are subject to a property fee equal to %2$s  of the total amount paid for the reservation.</string>
+    <string name="property_detail_room_search_result_label">room types available. Prices shown do not include taxes and fees.</string>
+    <string name="property_detail_empty_room_result">No room type available.</string>
+    <string name="date_range_picket_title">Set Booking Period</string>
+    <string name="all_not_selected_label">Not selected</string>
+    <string name="all_hotel_area_name_input_hint">Where would you like to travel to?</string>
+    <string name="txt_shipping">Shipping</string>
+    <string name="txt_cancelled">Cancelled</string>
+    <string name="room_checkout_step_one_label">Guest\ndetails</string>
+    <string name="room_checkout_step_two_label">Payment</string>
+    <string name="all_email_address_label">Email Address *</string>
+    <string name="guest_detail_email_address_hint"><font size="8">Email Address (To Receive Booking Confirmation Email) *</font></string>
+    <string name="guest_detail_checkbox_book_for_someone">I am making this booking for someone else.</string>
+    <string name="guest_detail_salutation_label">Salutation *</string>
+    <string name="guest_detail_first_name_label">Guest First Name *</string>
+    <string name="guest_detail_last_name_label">Guest Last Name *</string>
+    <string name="all_mobile_number_label">Contact Number *</string>
+    <string name="mobile_number_label">Contact Number</string>
+    <string name="guest_detail_smoking_checkbox">Smoking Room</string>
+    <string name="guest_detail_special_request_label">Special Request</string>
+    <string name="guest_detail_special_request_hint">Optional (250 characters max)</string>
+    <string name="guest_detail_special_request_notice">Special / accessibility requests are not guaranteed and may incur additional charges.</string>
+    <string name="payment_review_credit_card_type_hint">Credit Card Type *</string>
+    <string name="payment_review_credit_card_details">Credit Card Details</string>
+    <string name="payment_review_billing_address_label">Billing Address</string>
+    <string name="payment_preview_street_address_label">Street Address *</string>
+    <string name="payment_review_zip_postal_code_hing">Zip / Postal Code *</string>
+    <string name="payment_review_important_info_title">Important information regarding your booking</string>
+    <string name="payment_review_summit_booking_btn">Submit Booking</string>
+    <string name="order_placed_manage_my_bookings_label">Manage My Bookings</string>
+    <string name="order_placed_guest_details_label">Guest Details</string>
+    <string name="err_limit_room">You can choose 8 rooms maximum.</string>
+    <string name="txt_checkin_begin">Check-in time starts at</string>
+    <string name="txt_checkin_end">Check-in time ends at</string>
+    <string name="txt_checkin_instructions">Special check-in instructions:</string>
+    <string name="product_list_property_search_primary_hint">Where would you like to travel to?</string>
+    <string name="profile_my_bookings_label">My Bookings</string>
+    <string name="history_booking_date_label">Booking Date</string>
+    <string name="history_booking_hotel_label">Hotel</string>
+    <string name="history_date_of_booking_label">Date Of Booking</string>
+    <string name="room_item_show_more_label">Show More</string>
+    <string name="booking_date_lablel">Date Of Booking</string>
+    <string name="booking_id_label">Booking ID:</string>
+    <string name="booking_history_status_label">Status</string>
+    <string name="booking_history_total_cost">Total Cost</string>
+    <string name="booking_history_sky_dollar_earned">SKY DOLLAR EARNED</string>
+    <string name="booking_history_sky_dollar_redeemed">SKY DOLLAR REDEEMED</string>
+    <string name="excluding_taxes_fees_label">(Excluding Taxes and Fees)</string>
+    <string name="average_price_per_night">Average price / night</string>
+    <string name="error_invalid_salutation">Invalid Salutation</string>
+    <string name="error_invalid_first_name">Invalid First Name</string>
+    <string name="error_invalid_last_name">Invalid Last Name</string>
+    <string name="error_invalid_phone_code">Invalid Phone Code</string>
+    <string name="error_invalid_phone_number">Required</string>
+    <string name="error_invalid_skydollar_amount">Minimum payment amount should be SGD$1.00 for partial Sky Dollar offsets or exactly %s</string>
+    <string name="guest_detail_bed_preferences_notice">Kindly note that bed preference(s) are not guaranteed and will only be confirmed upon check-in.</string>
+    <string name="error_invalid_bed_group">Invalid Bed Preference</string>
+    <string name="payment_review_email_error">Invalid Email Address</string>
+    <string name="payment_review_country_error">Invalid Country</string>
+    <string name="payment_review_street_error">Invalid Street Address</string>
+    <string name="payment_review_city_error">Invalid City</string>
+    <string name="payment_review_postcode_error">Invalid Postal Code</string>
+    <string name="payment_review_state_error">Invalid State</string>
+    <string name="payment_review_phone_error">Required</string>
+    <string name="payment_review_last_name_error">Invalid Last Name</string>
+    <string name="payment_review_first_name_error">Invalid First Name</string>
+    <string name="payment_review_security_code_error">Invalid Security Code</string>
+    <string name="payment_review_expiry_year_error">Invalid Expiration Year</string>
+    <string name="payment_review_expiry_month_error">Invalid Expiration Month</string>
+    <string name="payment_review_card_number_error">Invalid Credit Card Number</string>
+    <string name="payment_review_card_type_error">Invalid Credit Card Type</string>
+    <string name="email_address_with_star">Email Address *</string>
+    <string name="payment_review_check_in_out_policy_label"><![CDATA[Hotel Check In & Check out policy]]></string>
+    <string name="payment_review_special_check_in_instructions_label">Special Check-in Instructions:</string>
+    <string name="payment_review_midnight_arrival_notice">If you are planning to arrive after midnight, please contact the property in advance using the information on the booking confirmation. Check out time is noon.</string>
+    <string name="payment_review_payment_method_label">Payment Method</string>
+    <string name="payment_review_non_refundable_label">Non-Refundable</string>
+    <string name="payment_review_refundability_notice">Once your booking has been confirmed, it cannot be cancelled or changed. You will be charged the total price of the booking (S$%1$s) if you do not show up.</string>
+    <string name="payment_review_payment_method_notice">To secure your booking, we will charge the total price of the booking (S$%1$s) to your credit card. If your booking cannot be confirmed, you will be fully refunded.</string>
+    <string name="payment_review_rules_acknowledgement_notice"><![CDATA[I acknowledge that I have read and accept the <a href=\"https://www.skypremium.com.sg/sg/legal#membershiptermsconditions\">Rules & Restrictions</a>, <a href=\"https://www.skypremium.com.sg/sg/legal#termsofuse\">Terms of Use</a>, <a href=\"https://www.skypremium.com.sg/sg/legal#dataprivacypolicy\">Privacy Policy</a> and <a href="https://www.skypremium.com.sg/sg/travel_advisory">Travel Advice</a>, with regards to this booking, as well as the cancellation policy for the selected property and room(s).]]></string>
+    <string name="payment_review_rules_acknowledgement_notice_error">I acknowledge that I have read and accept the <a href='https://www.skypremium.com.sg/sg/legal#membershiptermsconditions'><font color='#9B2243'>Rules &amp; Restrictions</font></a>, <a href='https://www.skypremium.com.sg/sg/legal#termsofuse'><font color='#9B2243'>Terms of Use</font></a>, <a href='https://www.skypremium.com.sg/sg/legal#dataprivacypolicy'><font color='#9B2243'>Privacy Policy</font></a> and <a href='https://www1.mfa.gov.sg/Services/Singapore-Citizens/Travel-Tips'><font color='#9B2243'>Travel Advice</font></a>, with regards to this booking, as well as the cancellation policy for the selected property and room(s).</string>
+    <string name="payment_review_unit_number_error">Invalid unit number</string>
+    <string name="payment_review_unit_number_limit_error">Please use only letters (a-z or A-Z), numbers (0-9) or spaces only in this field.</string>
+    <string name="order_place_confirmation_notice">Your booking is now confirmed.\nAn email confirmation has been sent to the given email address (%1$s).</string>
+    <string name="tax_notice_non_europe">Tax Recovery Charges and Service Fees</string>
+    <string name="tax_notice_europe">Tax Recovery Charges</string>
+    <string name="forms_validation_error_message">Please enter all required fields.</string>
+    <string name="label_no">No</string>
+    <string name="booking_history_btn_cancel_booking">Yes</string>
+    <string name="booking_history_booking_cancellation_confirmation_notice">Please ensure you have read the cancellation policy before proceeding. Cancelling a confirmed booking is a non-reversible process. Do your wish to continue?</string>
+    <string name="successful_label">Successful</string>
+    <string name="payment_review_refundable_label">Refundable</string>
+    <string name="guest_detail_smoking_label">Smoking:</string>
+    <string name="guest_detail_yes_label">Yes</string>
+    <string name="guest_detail_no_label">No</string>
+    <string name="guest_detail_special_request">Special Request: %s</string>
+    <string name="room_checkout_booking_placed_label">Booking Placed</string>
+    <string name="order_placed_thank_you_title">Thank you for your booking.</string>
+    <string name="payment_review_processing_country">Payment will be processed in %s</string>
+    <string name="payment_review_check_in_instructions_label">Check-in Instructions:</string>
+    <string name="payment_review_invalid_card_error">Please enter a valid Credit Card.</string>
+    <string name="payment_review_invalid_card_type">Please select a valid Credit Card type.</string>
+    <string name="payment_review_invalid_exp_month_error">Please enter a valid expiration month.</string>
+    <string name="payment_review_invalid_exp_year_error">Please enter a valid expiration year.</string>
+    <string name="payment_review_invalid_cvv_error">Please enter a valid security code.</string>
+    <string name="payment_review_invalid_first_name_error">Please enter a valid first name.</string>
+    <string name="payment_review_invalid_last_name_error">Please enter a valid last name.</string>
+    <string name="payment_review_invalid_email_error">Please enter a valid email Address.</string>
+    <string name="payment_review_invalid_phone_error">Please enter a valid contact number.</string>
+    <string name="payment_review_invalid_street_error">Please enter a valid street address.</string>
+    <string name="payment_review_invalid_post_code_error">Please enter a valid postal code.</string>
+    <string name="payment_review_invalid_unit_number_error">Please enter a valid unit number.</string>
+    <string name="payment_review_invalid_city_error">Please enter a valid city.</string>
+    <string name="payment_review_invalid_state_error">Please enter a valid state.</string>
+    <string name="payment_review_not_acknowledged_error">Please read and accept the policies to proceed.</string>
+    <string name="product_list_search_properties_error">Error fetching hotels.</string>
+    <string name="property_detail_search_room_error">Error fetching rooms.</string>
+    <string name="billing_address_title">Manage Billing Addresses</string>
+    <string name="txt_add_billing_addresss">Add Billing Address</string>
+    <string name="txt_edit_billing_addresss">Edit Billing Address</string>
+    <string name="billing_address_company_hint">Company</string>
+    <string name="title_choose_billing_address">Select Your Billing Address</string>
+    <string name="txt_billing_address">Billing Address</string>
+    <string name="que_of_travel_place">Where would you like to travel to?</string>
+    <string name="payment_review_invalid_phone_code_error">Invalid Phone Code</string>
+    <string name="all_country_code_error">Required</string>
+    <string name="card_selection_not_required_title">Credit Card selection is not required</string>
+    <string name="card_selection_not_required_subtitle">Because you are using full Sky Dollar redemption</string>
+    <string name="label_filters">filters</string>
+    <string name="label_clear_filters">Clear filters</string>
+    <string name="overall_quality">Overall Quality</string>
+    <string name="comments">Comments</string>
+    <string name="submit">Submit</string>
+    <string name="thank_you_for_your_feedback">Thank you for your feedback</string>
+    <string name="less_than_2mb">Less than 2mb</string>
+    <string name="thank_you_for_submitting">Thank you for submitting a review. Your review was successfully sent and is pending moderation.</string>
+    <string name="review_bottom_cation">All reviews will be moderated based on Sky Premium’s internal guidelines. We reserve the right to reject or remove any review from the site at our sole discretion.</string>
+    <string name="warning">Warning !</string>
+    <string name="ask_delete">Are you sure you want to delete this image?</string>
+    <string name="negative_answer">No</string>
+    <string name="positive_answer">Yes</string>
+    <string name="product_review">Product Review</string>
+    <string name="review_by">Review by:</string>
+    <string name="average_rating">Average Rating</string>
+    <string name="no_product_ratings_yet">No product ratings yet</string>
+    <string name="see_review">SEE REVIEW</string>
+    <string name="review_submission_successful">Review Submission Successful</string>
+    <string name="ask_delete_comment">Are you sure you want to delete this comment?</string>
+    <string name="limit_file">Some of the images you have selected exceed 2MB.</string>
+    <string name="text_hgw">Hungry Go Where</string>
+    <string name="text_url_invalid">URL is invalid!</string>
+    <string name="sky_dollar_exp_on">Sky Dollars Expiring On:</string>
+    <string name="text_err_get_details">Failed to get product detail.</string>
+    <string name="add_to_cart">ADD TO CART</string>
+    <string name="buy_now">buy now</string>
+    <string name="no_payment_information_required">No Payment Information Required</string>
+    <string name="notification_error_ssl_cert_invalid">SSL Certificate error.  Do you want to continue ?</string>
+    <string name="tv_reserve">reserve now</string>
+    <string name="card_information">Card Information</string>
+    <string name="my_sky_dollar">My Sky Dollar</string>
+    <string name="points">points</string>
+    <string name="edit">edit</string>
+    <string name="done">done</string>
+    <string name="notification_setting">Notification Settings</string>
+    <string name="no_notification">No notifications.</string>
+    <string name="marketing_alerts">Marketing Alerts</string>
+    <string name="event_invites_and_updates">Event Invites and Updates</string>
+    <string name="travel_deals">Travel Deals</string>
+    <string name="wine_amp_dine_deals"><![CDATA[Wine & Dine Deals]]></string>
+    <string name="shopping_deals">Shopping Deals</string>
+    <string name="estore_deals">eStore Deals</string>
+    <string name="wellness_deals">Wellness Deals</string>
+    <string name="push_notifications">push notifications</string>
+    <string name="deep_link_scheme">skypremium</string>
+    <string name="are_you_sure_you_wish_to_delete_this_notification">Are you sure you wish to delete this notification?</string>
+    <string name="are_you_sure_you_wish_to_delete_these_notification">Are you sure you wish to delete these notifications?</string>
+    <string name="make_a_reservation">Make a Reservation</string>
+    <string name="outlet">Outlet * </string>
+    <string name="salutation">Salutation*</string>
+    <string name="email_address">Email Address*</string>
+    <string name="email_address_1">Email Address</string>
+    <string name="contact_number">Contact Number*</string>
+    <string name="contact_number_1">Contact Number</string>
+    <string name="country_code">Country Code*</string>
+    <string name="reservation_date">Reservation Date * </string>
+    <string name="reservation_date_1">Reservation Date</string>
+    <string name="reservation_id">Reservation ID:</string>
+    <string name="reservation_time">Reservation Time * </string>
+    <string name="reservation_time_1">Reservation Time</string>
+    <string name="child_ren">Child(ren)  </string>
+    <string name="adult_s">Adult(s) * </string>
+    <string name="special_requests_are_not_guaranteed_and_are_subject_to_availability_and_restaurant_discre_on">Special requests are not guaranteed and are subject to availability and restaurant discre on.</string>
+
+    <string name="by_confirming_this_reserva_on_i_agree_to_sky_premium_s_privacy_policy_and_terms_condi_ons"><![CDATA[By confirming this reservation, I agree to Sky Premium’s <a href=\"https://www.skypremium.com.sg/sg/legal#membershiptermsconditions\">Privacy Policy</a> and <a href=\"https://www.skypremium.com.sg/sg/legal#membershiptermsconditions\">Terms & Conditions.</a>]]></string>
+    <string name="would_you_like_to_confirm_your_revervations_for">Would you like to confirm your \nreservations for</string>
+    <string name="confirm">confirm</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="unconfirmed">Unconfirm</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="confirm_reservation">Confirm Reservation?</string>
+    <string name="reservation_confirmed">Reservation Confirmed</string>
+    <string name="reservation_date_title">reservation date</string>
+    <string name="status">status</string>
+    <string name="reservation_time_title">reservation time</string>
+    <string name="my_reservation">My Reservation</string>
+    <string name="book_again">Book Again</string>
+    <string name="reservation_name">reservation name</string>
+    <string name="address">address</string>
+    <string name="opening_hours">opening hours</string>
+    <string name="website">website</string>
+    <string name="special_instructions_remarks">Special instructions/Remarks  </string>
+    <string name="set_reservation_date">Set Reservation Date</string>
+
+
+    <string name="q_re_1">adult(s) and</string>
+    <string name="q_re_2">child(ren) on</string>
+    <string name="at">at</string>
+    <string name="booking_number">Booking Number</string>
+    <string name="booking_made_on">Booking made on</string>
+    <string name="your_reservation_is_confirmed_nunder">Your reservation is confirmed \nunder</string>
+    <string name="edit_reservation">Edit Reservation</string>
+    <string name="cancel_reservation">Cancel Reservation</string>
+    <string name="with">With</string>
+    <string name="reserve_cancel_question">Do you wish to proceed with the cancellation?</string>
+    <string name="title_cancel_question">Cancel Reservation?</string>
+    <string name="cancellation_policy">Cancellation Policy:</string>
+    <string name="cancel_this_resercation">Cancel this reservation</string>
+    <string name="this_reservation_is_cancelled">THIS RESERVATION IS CANCELLED</string>
+    <string name="message_from_restaurant">Message from restaurant:</string>
+    <string name="msg_redden_sky_1"><![CDATA[Thank you for making a reservation with Sky Premium.]]></string>
+    <string name="msg_redden_sky_2"><![CDATA[will be credited into \nyour account within]]></string>
+    <string name="sky_dollars"><![CDATA[Sky Dollars]]></string>
+    <string name="msg_redden_sky_3"><![CDATA[working days after the reservation is fulfilled.]]></string>
+    <string name="note_sky_dollar_redemed_1">Sky Dollars will be credited into your account within</string>
+    <string name="note_sky_dollar_redemed_2">working days after the reservation is fulfilled.</string>
+    <string name="demo">Demo</string>
+</resources>

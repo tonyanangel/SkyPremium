@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+      <include layout="@layout/include_toolbar_home" />
+
+      <androidx.coordinatorlayout.widget.CoordinatorLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/my_appbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+          <RelativeLayout
+              android:id="@+id/rlFeatureProduct"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="100dp"
+              android:orientation="vertical"
+              app:layout_scrollFlags="scroll">
+
+            <ImageView
+                android:id="@+id/ivBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/llFeatured"
+                android:layout_alignBottom="@+id/llFeatured"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/travel_banner" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/llFeatured"
+                android:layout_alignBottom="@+id/llFeatured"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+<!--                android:background="@drawable/overlay_primary" />-->
+
+            <LinearLayout
+                android:id="@+id/llFeatured"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+              <TextView
+                  android:id="@+id/tvHeading"
+                  style="@style/TextAppearance.AppCompat.Headline"
+                  fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="48dp"
+                  android:layout_marginBottom="4dp"
+                  android:gravity="center"
+                  android:textColor="@color/white"
+                  tools:ignore="MissingPrefix"
+                  tools:text="@string/sample_product_title" />
+
+              <TextView
+                  android:id="@+id/tvSubHead"
+                  style="@style/TextAppearance.AppCompat.Caption"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="16dp"
+                  android:gravity="center"
+                  android:textColor="@color/white"
+                  tools:text="@string/sample_product_title" />
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/rvFeatured"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="16dp"
+                  android:clipToPadding="false"
+                  android:paddingStart="12dp"
+                  android:paddingEnd="16dp"
+                  android:visibility="visible" />
+
+            </LinearLayout>
+
+
+          </RelativeLayout>
+
+          <include layout="@layout/include_filter_two" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+          <com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout
+              android:id="@+id/srl"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:layout_behavior="@string/appbar_scrolling_view_behavior"
+              app:srl_direction="bottom">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:padding="16dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+          </com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout>
+
+          <com.skypremiuminternational.app.app.view.AutoResizeTextView
+              android:id="@+id/tv_comingsoon"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:text="coming soon."
+              android:textAllCaps="true"
+              android:textSize="20sp"
+              android:textStyle="bold"
+              android:visibility="gone" />
+        </RelativeLayout>
+
+      </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+      <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="?actionBarSize"
+          android:layout_gravity="bottom"
+          android:elevation="8dp"
+          android:gravity="bottom">
+
+        <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+            android:id="@+id/ahbn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+      </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_filter_popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88353535"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone">
+      <!--
+      <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:scrollbars="vertical">
+
+        <include layout="@layout/dialog_estorefilter"/>
+
+      </ScrollView>
+      -->
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recycler_filter"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="0dp"
+          android:background="@color/white"
+          android:paddingLeft="0dp"></androidx.recyclerview.widget.RecyclerView>
+
+
+    </FrameLayout>
+  </FrameLayout>
+</LinearLayout>

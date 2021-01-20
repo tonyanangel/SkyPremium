@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/root_layout"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/rectangle_top_round_white">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      tools:ignore="MissingPrefix"
+      >
+
+    <FrameLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/normal_padding"
+        >
+
+      <TextView
+          android:id="@+id/tv_title"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="@dimen/triple_padding"
+          android:gravity="center_horizontal"
+          android:text="@string/txt_edit_credit_card"
+          android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+          android:textColor="@color/textColorPrimary"
+          fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+          />
+
+      <ImageView
+          android:id="@+id/img_close"
+          android:layout_width="30dp"
+          android:layout_height="25dp"
+          android:layout_gravity="right|center_vertical"
+          android:paddingBottom="7dp"
+          android:paddingLeft="7dp"
+          android:paddingTop="7dp"
+          android:src="@drawable/ic_close_accent"
+          />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layout_title"
+        android:layout_marginBottom="@dimen/normal_padding"
+        android:background="@color/lightGrey"
+        />
+
+    <TextView
+        android:id="@+id/sign_of_mandatory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:layout_marginBottom="@dimen/normal_padding"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:text="*"
+        android:textColor="@color/colorAccent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:layout_marginLeft="@dimen/extra_small_padding"
+        android:layout_marginRight="@dimen/normal_padding"
+        android:layout_toRightOf="@+id/sign_of_mandatory"
+        android:text="@string/mandatory"
+        android:textColor="@color/textColorPrimary"
+        fontPath="@string/fonts_Lato_Regular"
+        style="@style/TextAppearance.AppCompat.Caption"
+        />
+    <LinearLayout
+      android:id="@+id/layout_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/sign_of_mandatory"
+      android:orientation="horizontal"
+      android:padding="@dimen/normal_padding">
+
+      <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+        android:id="@+id/input_owner_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/extra_small_padding"
+        android:layout_weight="1"
+        android:hint="@string/full_name"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        tools:text="test1234" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/layout_credit_card_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_name"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="@dimen/normal_padding"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        >
+
+      <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/input_card_number"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/credit_card_number"
+          android:maxLength="16"
+          android:imeOptions="actionNext"
+          android:inputType="number"
+          tools:text="test1234"
+          />
+
+      <ImageView
+          android:id="@+id/img_card_brand"
+          android:layout_width="24dp"
+          android:layout_height="20dp"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentEnd="true"
+          android:layout_marginLeft="@dimen/small_padding"
+          android:layout_marginRight="@dimen/normal_padding"
+          android:layout_marginTop="@dimen/small_padding"
+          android:paddingBottom="@dimen/small_padding"
+          android:scaleType="fitCenter"
+          android:visibility="invisible"
+          tools:src="@drawable/ic_american_express_blue_background"
+          />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_expiry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_credit_card_number"
+        android:layout_marginBottom="@dimen/small_padding"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        >
+
+      <RelativeLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="@dimen/extra_small_padding"
+          android:layout_weight="1"
+          >
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/input_exp_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:hint="@string/expiry_month"
+            android:inputType="none"
+            tools:text="test1234"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/small_padding"
+            android:paddingRight="@dimen/small_padding"
+            android:src="@drawable/ic_dropdown_accent"
+            />
+
+        <View
+            android:id="@+id/v_exp_month"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            />
+
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/extra_small_padding"
+          android:layout_weight="1"
+          >
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/input_exp_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:hint="@string/expiry_year"
+            android:inputType="none"
+            tools:text="test1234"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/small_padding"
+            android:paddingRight="@dimen/small_padding"
+            android:src="@drawable/ic_dropdown_accent"
+            />
+
+        <View
+            android:id="@+id/v_exp_year"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            />
+      </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_security"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_expiry"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        >
+
+      <RelativeLayout
+          android:id="@+id/layout_security_code"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_marginRight="@dimen/extra_small_padding"
+          android:layout_weight="1"
+          >
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/input_cvc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/security_code"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+
+            tools:text="test1234"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:paddingBottom="11dp"
+            android:paddingLeft="@dimen/small_padding"
+            android:paddingRight="@dimen/normal_padding"
+            android:paddingTop="@dimen/small_padding"
+            android:src="@drawable/ic_question"
+            android:visibility="gone"
+            />
+
+      </RelativeLayout>
+      <RelativeLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          />
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/layout_checkbox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/layout_security"
+      android:layout_marginBottom="@dimen/normal_padding"
+      android:layout_marginLeft="@dimen/normal_padding"
+      android:layout_marginRight="@dimen/normal_padding">
+      <ImageView
+        android:id="@+id/img_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/extra_small_padding"
+        android:layout_marginRight="@dimen/normal_padding"
+        android:src="@drawable/ic_circle"
+        />
+      <TextView
+        android:id="@+id/txt_set_primary_credit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        app:layout_constraintStart_toEndOf="@id/img_checkbox"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:layout_toRightOf="@+id/img_checkbox"
+        android:text="@string/txt_set_primary_credit"
+        android:textColor="@color/textColorPrimary"
+        fontPath="@string/fonts_Lato_Regular"
+        style="@style/TextAppearance.AppCompat.Small"
+        />
+
+      <ImageView
+        android:id="@+id/img_delete"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="@dimen/small_padding"
+        android:src="@drawable/ic_garbage"
+        android:visibility="visible"
+        />
+      <FrameLayout
+        android:id="@+id/layout_disable_checked"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img_delete"
+        android:background="@color/whiteTransparent"
+        android:visibility="gone"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+   <!-- <RelativeLayout
+        android:id="@+id/layout_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_security"
+        android:layout_marginBottom="@dimen/normal_padding"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:layout_marginRight="@dimen/normal_padding"
+        >
+
+      <ImageView
+          android:id="@+id/img_checkbox"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="@dimen/extra_small_padding"
+          android:layout_marginRight="@dimen/normal_padding"
+          android:src="@drawable/ic_circle"
+          />
+
+      <TextView
+          android:id="@+id/txt_set_primary_credit"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_toRightOf="@+id/img_checkbox"
+          android:text="@string/txt_set_primary_credit"
+          android:textColor="@color/textColorPrimary"
+          fontPath="@string/fonts_Lato_Regular"
+          style="@style/TextAppearance.AppCompat.Small"
+          />
+
+      <ImageView
+          android:id="@+id/img_delete"
+          android:layout_width="32dp"
+          android:layout_height="32dp"
+          android:layout_alignParentEnd="true"
+          android:layout_centerVertical="true"
+          android:foreground="?attr/selectableItemBackground"
+          android:padding="@dimen/small_padding"
+          android:src="@drawable/ic_garbage"
+          android:visibility="visible"
+          />
+
+    </RelativeLayout>-->
+
+    <!--<FrameLayout
+        android:id="@+id/layout_disable_checked"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@id/layout_security"
+        android:background="@color/whiteTransparent"
+        android:visibility="gone"
+        />-->
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/layout_checkbox"
+        android:letterSpacing="0.2"
+        android:text="@string/save"
+        style="@style/ButtonStyle"
+        />
+
+  </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

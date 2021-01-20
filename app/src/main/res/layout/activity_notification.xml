@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:background="@color/white"
+  android:orientation="vertical">
+
+  <include layout="@layout/include_toolbar_notification" />
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:weightSum="15">
+
+    <include
+      android:id="@+id/layout_refine"
+      layout="@layout/include_filter_two"
+      android:visibility="gone"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      />
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rv_notification"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/ll_action_bar"/>
+
+    <View
+      android:id="@+id/view_shadow"
+      android:layout_width="match_parent"
+      android:layout_height="8dp"
+      android:background="@drawable/bg_shadow_top"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="@+id/rv_notification"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+    <LinearLayout
+      android:id="@+id/ll_action_bar"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:orientation="horizontal"
+      android:visibility="gone"
+      android:background="@color/white"
+      android:elevation="20dp"
+      android:weightSum="3"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/rv_notification">
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_select_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="select all"
+        android:background="@color/white"
+        android:textAllCaps="true"
+        android:layout_weight="1"
+        style="@style/Clickable"
+        android:button="@drawable/ic_check_circle_box"
+        android:gravity="center"
+        android:textColor="@color/black">
+
+        <CheckBox
+          android:id="@+id/ck_all"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="1dp"
+          android:layout_marginEnd="8dp"
+          android:button="@drawable/ic_check_circle_box"
+          android:gravity="center|right"
+          app:layout_constraintBottom_toBottomOf="@+id/tv_select_all"
+          app:layout_constraintEnd_toStartOf="@+id/tv_select_all"
+          app:layout_constraintTop_toTopOf="@id/tv_select_all" />
+
+        <TextView
+          android:id="@+id/tv_select_all"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/ic_check_circle_box"
+          android:gravity="center"
+          android:text="select all"
+          android:textAllCaps="true"
+          android:textColor="@color/black"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+      <TextView
+        android:id="@+id/tv_make_as_read"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@color/colorAccent"
+        style="@style/Clickable"
+        android:text="make \nas read" />
+      <View
+        android:layout_width="1px"
+        android:layout_height="wrap_content"
+        android:background="@color/white"/>
+      <TextView
+        android:id="@+id/tv_delete_checked"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@color/colorAccent"
+        style="@style/Clickable"
+        android:text="delete" />
+    </LinearLayout>
+
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="1.0">
+
+      <LinearLayout
+        android:id="@+id/ll_no_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="16dp"
+          android:src="@drawable/bell_icon_01" />
+
+        <TextView
+          android:id="@+id/tvTitle_toolbar"
+          fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="center_vertical|center"
+          android:letterSpacing="0.03"
+          android:text="@string/no_notification"
+          android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+          android:textColor="@color/textTitleColor"
+          tools:ignore="MissingPrefix" />
+      </LinearLayout>
+    </FrameLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

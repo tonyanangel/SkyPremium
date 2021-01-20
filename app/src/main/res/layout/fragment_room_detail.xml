@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="?attr/actionBarSize"
+      android:layout_marginEnd="@dimen/margin_normal"
+      android:layout_marginStart="@dimen/margin_normal"
+      android:layout_marginTop="?attr/actionBarSize"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:ignore="WebViewLayout"
+        >
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/margin_normal"
+          >
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toStartOf="@+id/iv_close"
+            android:gravity="center"
+            android:paddingEnd="@dimen/margin_normal"
+            android:text="TailorBird Standard"
+            fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+            tools:ignore="MissingPrefix"
+            style="@style/TextAppearance.AppCompat.Title"
+            />
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/margin_large"
+            android:layout_height="@dimen/margin_large"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/extra_small_padding"
+            android:src="@drawable/ic_close_accent"
+            />
+      </RelativeLayout>
+
+      <View
+          android:id="@+id/horizontal_line0"
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:background="@color/lightGrey"
+          />
+
+      <WebView
+          android:id="@+id/webView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginEnd="@dimen/margin_tiny"
+          android:layout_marginStart="@dimen/margin_tiny"
+          />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:layout_marginBottom="@dimen/margin_normal"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginStart="@dimen/margin_normal"
+          android:background="@color/lightGrey"
+          android:visibility="gone"
+          />
+
+      <TextView
+          android:id="@+id/tv_extra_bed_policy"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/margin_small"
+          android:text="Children &amp; Extra bed policy"
+          android:visibility="gone"
+          style="@style/TextStyleEanFieldBoldLabel"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:drawableLeft="@drawable/ic_dot_black_4dp"
+          android:drawablePadding="@dimen/margin_small"
+          android:gravity="center_vertical"
+          android:paddingLeft="@dimen/margin_normal"
+          android:paddingRight="@dimen/margin_normal"
+          android:paddingTop="@dimen/margin_small"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="@dimen/text_size_normal"
+          android:visibility="gone"
+          tools:text="Infants(0 - 2yo): Stay for free if using existing bedding. Additional Changes apply if extra cot is required."
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:drawableLeft="@drawable/ic_dot_black_4dp"
+          android:drawablePadding="@dimen/margin_small"
+          android:gravity="center_vertical"
+          android:paddingLeft="@dimen/margin_normal"
+          android:paddingRight="@dimen/margin_normal"
+          android:paddingTop="@dimen/margin_small"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="@dimen/text_size_normal"
+          android:visibility="gone"
+          tools:text="Children(2 - 12yo): Stay for free if using existing bedding. Additional Changes apply if extra cot is required."
+          />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:layout_margin="@dimen/margin_normal"
+          android:background="@color/lightGrey"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/margin_small"
+          android:text="Hotel Check-in &amp; Check-out policy"
+          style="@style/TextStyleEanFieldBoldLabel"
+          />
+
+      <TextView
+          android:id="@+id/txtCheckInBeginTime"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="@dimen/margin_normal"
+          android:paddingRight="@dimen/margin_normal"
+          android:paddingTop="@dimen/margin_normal"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="@dimen/text_size_small"
+          />
+
+      <TextView
+          android:id="@+id/txtCheckInEndTime"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/margin_small"
+          android:paddingLeft="@dimen/margin_normal"
+          android:paddingRight="@dimen/margin_normal"
+          android:paddingBottom="@dimen/margin_small"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="@dimen/text_size_small"
+          />
+
+      <TextView
+          android:id="@+id/tv_instruction"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="@dimen/margin_normal"
+          android:paddingRight="@dimen/margin_normal"
+          android:paddingBottom="@dimen/margin_small"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="@dimen/text_size_small"
+          />
+
+      <TextView
+          android:id="@+id/tv_special_instruction"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="@dimen/margin_normal"
+          android:paddingRight="@dimen/margin_normal"
+          android:paddingBottom="@dimen/margin_small"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="@dimen/text_size_small"
+          />
+
+      <TextView
+          android:id="@+id/tv_min_check_in_age"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="@dimen/margin_normal"
+          android:paddingLeft="@dimen/margin_normal"
+          android:paddingRight="@dimen/margin_normal"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="@dimen/text_size_small"
+          />
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</FrameLayout>

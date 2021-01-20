@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/margin_small"
+    android:paddingTop="@dimen/margin_small"
+    >
+
+  <TextView
+      android:id="@+id/tv_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:paddingLeft="@dimen/margin_normal"
+      android:paddingRight="100dp"
+      android:textColor="@color/textColorPrimary"
+      fontPath="@string/fonts_Lato_Heavy"
+      tools:ignore="MissingPrefix"
+      tools:text="Room #1: 1 Adult + 1 Child"
+      />
+
+  <TextView
+      android:id="@+id/tv_night_count"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/tv_name"
+      android:layout_marginStart="@dimen/margin_small"
+      tools:text="2 Nights"
+      style="@style/TextStyleEanFieldValue"
+      />
+
+
+  <TextView
+      android:id="@+id/tv_fee_tax_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/tv_night_count"
+      android:layout_marginStart="@dimen/margin_small"
+      android:layout_toStartOf="@+id/tv_fee_tax"
+      android:paddingRight="100dp"
+      android:text="@string/tax_notice_non_europe"
+      style="@style/TextStyleEanFieldValue"
+      />
+
+  <TextView
+      android:id="@+id/tv_price"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/tv_night_count"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="@dimen/margin_normal"
+      android:textAllCaps="true"
+      android:textColor="@color/textColorPrimary"
+      android:textSize="@dimen/text_size_big"
+      fontPath="@string/fonts_Lato_Heavy"
+      tools:ignore="MissingPrefix"
+      tools:text="S$1,200.00"
+      />
+
+
+  <TextView
+      android:id="@+id/tv_fee_tax"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignTop="@+id/tv_fee_tax_label"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="@dimen/margin_normal"
+      android:textAllCaps="true"
+      android:textColor="@color/textColorPrimary"
+      android:textSize="@dimen/text_size_big"
+      fontPath="@string/fonts_Lato_Heavy"
+      tools:ignore="MissingPrefix"
+      tools:text="S$50.00"
+      />
+
+</RelativeLayout>

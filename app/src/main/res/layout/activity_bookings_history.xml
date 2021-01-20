@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+
+  <include layout="@layout/include_order_toolbar"/>
+
+  <RelativeLayout
+      android:visibility="gone"
+      android:id="@+id/rl_noticecancel"
+      android:layout_width="match_parent"
+      android:orientation="horizontal"
+      android:layout_height="wrap_content">
+    <ImageView
+        android:layout_margin="10px"
+        android:id="@+id/img_cancelsuccess"
+        android:layout_width="50px"
+        android:layout_height="50px"
+      android:src="@drawable/ic_cancelsuccess"
+      />
+    <TextView
+
+        android:id="@+id/tv_cancelnotice"
+        android:layout_margin="10px"
+        android:layout_toRightOf="@+id/img_cancelsuccess"
+        android:layout_toLeftOf="@id/img_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1e6c46"
+        android:paddingRight="10px"
+        android:text="You cancelled the booking"
+      />
+    <ImageView
+        android:layout_alignParentEnd="true"
+        android:id="@+id/img_close"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_close_green"
+        />
+  </RelativeLayout>
+  <RelativeLayout
+      android:layout_below="@+id/rl_noticecancel"
+      android:id="@+id/layout_order"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+
+      >
+
+    <include
+        layout="@layout/include_filter_one"
+        android:visibility="visible"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_booking_histories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_filter"
+        android:paddingBottom="@dimen/normal_padding"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        android:paddingTop="@dimen/margin_normal"
+        android:visibility="invisible"
+        />
+
+    <RelativeLayout
+        android:id="@+id/layout_no_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:ignore="MissingPrefix"
+        >
+
+      <ImageView
+          android:id="@+id/iv_no_history"
+          android:layout_width="40dp"
+          android:layout_height="44dp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="@dimen/small_padding"
+          android:src="@drawable/ic_no_orders"
+          />
+
+      <TextView
+          android:id="@+id/tv_no_history"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/iv_no_history"
+          android:gravity="center_horizontal"
+          android:letterSpacing="0.03"
+          android:text="@string/no_booking"
+          android:textColor="@color/textColorPrimary"
+          fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+          style="@style/TextAppearance.AppCompat.Medium"
+          />
+
+    </RelativeLayout>
+
+  </RelativeLayout>
+
+</LinearLayout>

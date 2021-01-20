@@ -1,0 +1,18 @@
+android.applicationVariants.all { variant ->
+  variant.outputs.each { output ->
+
+    def buildType
+    def appName = "SkyPremium"
+    if(output.baseName == "staging") {
+      buildType = "uat"
+    } else if (output.baseName == "debug") {
+      buildType = "dev"
+    } else {
+      buildType = "prod"
+    }
+
+    //#def relativeRootDir = output.packageApplication.outputDirectory.toPath().relativize(rootDir.toPath()).toFile()
+               
+        //#output.outputFileName = new File( "$relativeRootDir/release", "SkyPremium.apk")
+  }
+}

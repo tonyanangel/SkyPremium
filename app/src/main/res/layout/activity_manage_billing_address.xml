@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+
+  <include layout="@layout/include_toolbar_add"/>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rv_billing_address"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/normal_padding"
+      android:scrollbars="none"
+      android:visibility="visible"
+      />
+
+  <RelativeLayout
+      android:id="@+id/layout_no_billing_address"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:visibility="gone"
+      tools:ignore="MissingPrefix"
+      >
+
+    <ImageView
+        android:id="@+id/img_no_billing_address"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/normal_padding"
+        android:src="@drawable/ic_map"
+        />
+
+    <TextView
+        android:id="@+id/txt_no_billing_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_no_billing_address"
+        android:layout_marginBottom="11dp"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.03"
+        android:text="@string/txt_no_billing_address"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/textSteelGrey"
+        fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+        />
+
+    <TextView
+        android:id="@+id/txt_add_billing_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_no_billing_address"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.03"
+        android:text="@string/txt_create_delivery_addresss"
+        android:textColor="@color/textSteelGrey"
+        fontPath="@string/fonts_Lato_Regular"
+        style="@style/TextAppearance.AppCompat.Caption"
+        />
+
+  </RelativeLayout>
+
+</LinearLayout>

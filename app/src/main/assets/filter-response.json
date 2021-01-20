@@ -1,0 +1,250 @@
+{
+  "tree_filter": [
+    {
+      "filter_label": "BY CATEGORY",
+      "filter_type": "select",
+      "tree": {
+        "55": {
+          "category_id": "55",
+          "parent_id": "2",
+          "attribute_code": "eStore",
+          "is_active": "1",
+          "position": "7",
+          "level": "2",
+          "product_count": 302,
+          "children_data": {
+            "70": {
+              "category_id": "70",
+              "parent_id": "55",
+              "label": "THE TIME",
+              "is_active": "1",
+              "position": "1",
+              "level": "3",
+              "product_count": 70,
+              "is_checked": false,
+              "children_data": []
+            },
+            "56": {
+              "category_id": "56",
+              "parent_id": "55",
+              "label": "THE DIRECT",
+              "is_active": "1",
+              "position": "2",
+              "level": "3",
+              "product_count": 219,
+              "is_checked": false,
+              "children_data": {
+                "59": {
+                  "category_id": "59",
+                  "parent_id": "56",
+                  "label": "PRE-ORDER",
+                  "is_active": "1",
+                  "position": "1",
+                  "level": "4",
+                  "product_count": 42,
+                  "is_checked": false,
+                  "children_data": {
+                    "61": {
+                      "category_id": "61",
+                      "parent_id": "59",
+                      "label": "FRUITS",
+                      "is_active": "1",
+                      "position": "1",
+                      "level": "5",
+                      "product_count": 15,
+                      "is_checked": false,
+                      "children_data": []
+                    },
+                    "62": {
+                      "category_id": "62",
+                      "parent_id": "59",
+                      "label": "VEGETABLES",
+                      "is_active": "1",
+                      "position": "2",
+                      "level": "5",
+                      "product_count": 5,
+                      "is_checked": false,
+                      "children_data": []
+                    },
+                    "63": {
+                      "category_id": "63",
+                      "parent_id": "59",
+                      "label": "PICKLED",
+                      "is_active": "1",
+                      "position": "3",
+                      "level": "5",
+                      "product_count": 5,
+                      "is_checked": false,
+                      "children_data": []
+                    },
+                    "64": {
+                      "category_id": "64",
+                      "parent_id": "59",
+                      "label": "SEAFOOD",
+                      "is_active": "1",
+                      "position": "4",
+                      "level": "5",
+                      "product_count": 17,
+                      "is_checked": false,
+                      "children_data": []
+                    }
+                  }
+                },
+                "60": {
+                  "category_id": "60",
+                  "parent_id": "56",
+                  "label": "IN-STOCK",
+                  "is_active": "1",
+                  "position": "2",
+                  "level": "4",
+                  "product_count": 177,
+                  "is_checked": false,
+                  "children_data": {
+                    "65": {
+                      "category_id": "65",
+                      "parent_id": "60",
+                      "label": "HOME & LIVING",
+                      "is_active": "1",
+                      "position": "1",
+                      "level": "5",
+                      "product_count": 142,
+                      "is_checked": false,
+                      "children_data": []
+                    },
+                    "66": {
+                      "category_id": "66",
+                      "parent_id": "60",
+                      "label": "FOOD & BEVERAGE",
+                      "is_active": "1",
+                      "position": "2",
+                      "level": "5",
+                      "product_count": 18,
+                      "is_checked": false,
+                      "children_data": []
+                    },
+                    "67": {
+                      "category_id": "67",
+                      "parent_id": "60",
+                      "label": "BEAUTY",
+                      "is_active": "1",
+                      "position": "3",
+                      "level": "5",
+                      "product_count": 6,
+                      "is_checked": false,
+                      "children_data": []
+                    },
+                    "68": {
+                      "category_id": "68",
+                      "parent_id": "60",
+                      "label": "TRAVEL & TECH",
+                      "is_active": "1",
+                      "position": "4",
+                      "level": "5",
+                      "product_count": 11,
+                      "is_checked": false,
+                      "children_data": []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "filter_label": "BY TYPE",
+      "filter_type": "static",
+      "options": {
+        "by_new": {
+          "attribute_id": "95",
+          "attribute_code": "news_to_date",
+          "label": "NEW IN",
+          "name": "news_to_date",
+          "product_count": 52
+        },
+        "loyalty_value_to_earn": {
+          "attribute_id": "233",
+          "attribute_code": "loyalty_value_to_earn",
+          "label": "EARN SKY DOLLARS",
+          "name": "loyalty_value_to_earn",
+          "product_count": 65
+        }
+      }
+    },
+    {
+      "filter_label": "Price",
+      "filter_type": "seek_bar",
+      "attribute_id": "77",
+      "attribute_code": "price",
+      "name": "price",
+      "maximum_price": 300000,
+      "minimum_price": 0
+    },
+    {
+      "filter_label": "Brand",
+      "filter_type": "select",
+      "attribute_id": "263",
+      "attribute_code": "brand",
+      "name": "brand",
+      "options": {
+        "17": {
+          "label": "Alexander McQueen",
+          "product_count": 3
+        },
+        "18": {
+          "label": "BRAUN",
+          "product_count": 4
+        },
+        "19": {
+          "label": "BRUNO",
+          "product_count": 4
+        },
+        "20": {
+          "label": "DOLCE & GABBANA",
+          "product_count": 1
+        },
+        "21": {
+          "label": "FENDI",
+          "product_count": 3
+        },
+        "22": {
+          "label": "Frednology",
+          "product_count": 1
+        },
+        "24": {
+          "label": "GRAB",
+          "product_count": 2
+        },
+        "27": {
+          "label": "Japan Products",
+          "product_count": 114
+        },
+        "28": {
+          "label": "Kuvings",
+          "product_count": 2
+        },
+        "29": {
+          "label": "MONTBLANC",
+          "product_count": 13
+        },
+        "30": {
+          "label": "PRADA",
+          "product_count": 9
+        },
+        "31": {
+          "label": "Toyosu - Fruits",
+          "product_count": 3
+        },
+        "33": {
+          "label": "Toyosu - Seafood",
+          "product_count": 8
+        },
+        "35": {
+          "label": "AIBI",
+          "product_count": 2
+        }
+      }
+    }
+  ]
+}

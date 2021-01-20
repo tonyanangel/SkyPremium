@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/margin_normal"
+      android:layout_marginRight="@dimen/margin_normal"
+      android:layout_marginTop="150dp"
+      android:background="@color/white"
+      android:orientation="vertical"
+      >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_normal"
+        >
+      <TextView
+          android:id="@+id/tv_name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_toStartOf="@+id/iv_close"
+          android:gravity="center"
+          fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+          tools:ignore="MissingPrefix"
+          tools:text="TailorBird Standard"
+          style="@style/TextAppearance.AppCompat.Title"
+          />
+      <ImageView
+          android:id="@+id/iv_close"
+          android:layout_width="24dp"
+          android:layout_height="20dp"
+          android:layout_alignParentEnd="true"
+          android:layout_centerVertical="true"
+          android:padding="6dp"
+          android:src="@drawable/ic_close_accent"
+          />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/horizontal_line0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/lightGrey"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:paddingTop="@dimen/margin_normal"
+        android:text="Cancellation &amp; Refund Policies"
+        style="@style/TextStyleEanFieldLabel"
+        />
+
+    <TextView
+        android:id="@+id/tv_policy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/margin_small"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/margin_normal"
+        android:paddingLeft="@dimen/margin_normal"
+        android:paddingRight="@dimen/margin_normal"
+        android:paddingTop="@dimen/margin_small"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/text_size_normal"
+        tools:text="If you are planning to arrive after midnight, please contact the property in advance using the information on the booking confirmation.\n Check-out time is noon."
+        />
+
+  </LinearLayout>
+
+</LinearLayout>

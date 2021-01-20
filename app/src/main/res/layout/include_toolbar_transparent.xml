@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    tools:background="@color/colorAccent"
+    style="@style/Toolbar"
+    >
+
+  <ImageView
+      android:id="@+id/ivNavigation_toolbar"
+      android:src="@drawable/ic_homeasup"
+      style="@style/ToolbarIcon"
+      />
+
+  <ImageView
+      style="@style/ToolbarIcon"
+      />
+
+  <View
+      android:layout_width="0dp"
+      android:layout_height="30dp"
+      android:layout_weight="1"
+      />
+
+  <ImageView
+      android:id="@+id/ivSearch_toolbar"
+      android:src="@drawable/ic_search"
+      style="@style/ToolbarIcon"
+      />
+
+
+  <RelativeLayout
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_marginRight="8dp"
+      >
+
+    <ImageView
+        android:id="@+id/ivCart_toolbar"
+        android:src="@drawable/ic_cart"
+        style="@style/ToolbarIcon"
+        />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/circle_orchid"
+        android:padding="1dp"
+        >
+
+      <TextView
+          android:layout_width="14dp"
+          android:layout_height="14dp"
+          android:gravity="center"
+          android:text="9"
+          android:textColor="@color/white"
+          style="@style/TextAppearance.AppCompat.Caption"
+          />
+
+    </FrameLayout>
+
+  </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,945 @@
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'com.android.application'
+apply plugin: 'checkstyle'
+apply plugin: 'findbugs'
+apply plugin: 'pmd'
+apply plugin: 'me.tatarka.retrolambda'
+apply from: "$project.rootDir/system/artifacts.gradle"
+apply plugin: 'com.getkeepsafe.dexcount'
+//apply plugin: 'com.google.gms.google-services'
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/'}
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.12.8'
+    }
+}
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+android {
+    compileSdkVersion 30
+    buildToolsVersion '29.0.3'
+
+
+    defaultConfig {
+        applicationId rootProject.ext.androidApplicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner rootProject.ext.testInstrumentationRunner
+        buildConfigField "String", "BUILD_TIME", "\"${rootProject.ext.buildTime}\""
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        android.defaultConfig.javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings false
+        disable 'InvalidPackage' //Some libraries have issues with this.
+        disable 'OldTargetApi' //Lint gives this warning but SDK 20 would be Android L Beta.
+        disable 'IconDensities' //For testing purpose. This is safe to remove.
+        disable 'IconMissingDensityFolder' //For testing purpose. This is safe to remove.
+
+        lintConfig file("$project.rootDir/system/rules-lint.xml")
+        htmlOutput file("$project.rootDir/build/lint/app.html")
+        warningsAsErrors true
+        xmlReport false
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('../keystore/key.jks')
+            keyAlias 'debug'
+            keyPassword 'spdebug'
+            storePassword 'skypremium'
+            v2SigningEnabled true
+        }
+        staging {
+            storeFile file('../keystore/key.jks')
+            keyAlias 'staging'
+            keyPassword 'spstaging'
+            storePassword 'skypremium'
+            v2SigningEnabled true
+        }
+        release {
+            storeFile file('../keystore/key.jks')
+            keyAlias 'release'
+            keyPassword 'sprelease'
+            storePassword 'skypremium'
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            signingConfig signingConfigs.debug
+            applicationIdSuffix '.dev'
+
+            manifestPlaceholders = [
+                    onesignal_app_id: 'dcc13fb4-e682-425a-84cf-c1ea853a198b',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]
+           /* manifestPlaceholders = [
+
+                    onesignal_app_id: 'a799c9c3-df0d-491b-806e-3d1fdf4b0178',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]*/
+
+
+
+            //DEV settings http://54.254.149.93  ----   http://18.140.22.171 ---- https://incremental-ecm.skypremiumglobal.com
+            buildConfigField "String", "BASE_URL", '"http://54.254.149.93"'
+            buildConfigField "String", "API", '"/sg/member/rest/V1"'
+            buildConfigField "String", "API_V2", '"/sg/member/rest/V2"'
+            buildConfigField "String", "BASE_IMG_URL", '"https://sg-dev-ecm-sss01.s3.amazonaws.com"'
+            buildConfigField "String", "BASE_IMG_URL_1", '"https://res.cloudinary.com/sky-premium-sg/image/upload/v1"'
+            buildConfigField "String", "STRIPE_PUBLISHABLE_KEY", '"pk_test_DVCM93130wlNslC2GJa1Tbrb"'
+            buildConfigField "String", "EMAIL", '"estestemail2017@gmail.com"'
+            buildConfigField "String", "REFERRAL_LINK", '"http://54.169.88.62/sg/membership/step1?rref="'
+            buildConfigField "String", "EAN_API_KEY", '"5p0abhlj5cpgg17ssud45divlq"'
+            buildConfigField "String", "EAN_API_VERSION", '"2.4"'
+            buildConfigField "String", "EAN_SHARED_SECRET", '"3i38ooi2raigt"'
+            buildConfigField "String", "EAN_BASE_URL", '"https://test.ean.com"'
+            buildConfigField "String", "AWS_REGION", '"ap-southeast-1"'
+            buildConfigField "String", "AWS_SERVICE", '"cloudsearch"'
+            buildConfigField "String", "AWS_DOMAIN_ODD", '"search-uat-propertycatalog-spi-odd-5nu2mwcul7kw7oee3ax3a3au7y.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_DOMAIN_EVEN", '"search-uat-propertycatalog-spi-even-qjcuzylvu7jxt5svktu2kkyywu.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_PROTOCOL_VERSION", '"2013-01-01"'
+            buildConfigField "String", "APP_TYPE", '"DEV"'
+            buildConfigField "String", "BuildId", '"3.8.test"'
+            buildConfigField "String", "Chanel", '"mobile_app"'
+            buildConfigField "String", "RENEWAL_KEY", '"TestTestTestTest"'
+            buildConfigField "String", "RENEWAL_DOMAIN", '"http://54.169.88.62/sg"'
+            buildConfigField "String", "CWEB_DOMAIN", '"http://54.169.88.62"'
+            buildConfigField "String", "USER_TOKEN", '"a9md2nd0eav9da3kdtg8mb4ticij4mko"'
+            buildConfigField "String", "CRM_BASE", '"http://52.74.87.159"'
+            buildConfigField "String", "CRM_API", '"/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "CRM_GRANT_TYPE", '"password"'
+            buildConfigField "String", "CRM_CLIENT_ID", '"sugar"'
+            buildConfigField "String", "CRM_CLIENT_SECRET", '""'
+            buildConfigField "String", "CRM_USER", '"mweb"'
+            buildConfigField "String", "CRM_PASSWORD", '"SkyTech@P1"'
+            buildConfigField "String", "CRM_PLATFORM", '"external"'
+            buildConfigField "String", "CRM_API_URL", '"http://52.74.87.159/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "ONE_SIGNAL_BASE", '"https://onesignal.com"'
+            buildConfigField "String", "ONE_SIGNAL_API", '"/api/v1"'
+            //buildConfigField "String", "OS_APP_ID", '"a799c9c3-df0d-491b-806e-3d1fdf4b0178"'
+            buildConfigField "String", "OS_APP_ID", '"dcc13fb4-e682-425a-84cf-c1ea853a198b"'
+            //buildConfigField "String", "NOTIFICATION_TEMPLATE_ID", '"c46b248a-15c2-4d92-af76-3053fd2f47bb"'
+            buildConfigField "String", "NOTIFICATION_TEMPLATE_ID", '"12cd0157-5363-4bff-af36-8b8ea7a79ecd"'
+
+            minifyEnabled false
+            debuggable true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+
+        Incremental {
+            signingConfig signingConfigs.debug
+            applicationIdSuffix '.Incremental'
+
+            manifestPlaceholders = [
+
+                    onesignal_app_id: 'a799c9c3-df0d-491b-806e-3d1fdf4b0178',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]
+
+            //incrementalPatch
+            buildConfigField "String", "BASE_URL", '"https://incremental-ecm.skypremiumglobal.com"'
+            buildConfigField "String", "API", '"/sg/member/rest/V1"'
+            //buildConfigField "String", "BASE_IMG_URL", '"https://sg-dev-ecm-sss01.s3.amazonaws.com"'
+            buildConfigField "String", "API_V2", '"/sg/member/rest/V2"'
+            buildConfigField "String", "BASE_IMG_URL", '"https://em-skyipr-ecm-sss01.s3.amazonaws.com"'
+            buildConfigField "String", "BASE_IMG_URL_1", '"https://res.cloudinary.com/sky-premium-sg/image/upload/v1"'
+            buildConfigField "String", "STRIPE_PUBLISHABLE_KEY", '"pk_test_DVCM93130wlNslC2GJa1Tbrb"'
+            buildConfigField "String", "EMAIL", '"estestemail2017@gmail.com"'
+            buildConfigField "String", "REFERRAL_LINK", '"http://54.169.88.62/sg/membership/step1?rref="'
+            buildConfigField "String", "EAN_API_KEY", '"5p0abhlj5cpgg17ssud45divlq"'
+            buildConfigField "String", "EAN_API_VERSION", '"2.4"'
+            buildConfigField "String", "EAN_SHARED_SECRET", '"3i38ooi2raigt"'
+            buildConfigField "String", "EAN_BASE_URL", '"https://test.ean.com"'
+            buildConfigField "String", "AWS_REGION", '"ap-southeast-1"'
+            buildConfigField "String", "AWS_SERVICE", '"cloudsearch"'
+            buildConfigField "String", "AWS_DOMAIN_ODD", '"search-uat-propertycatalog-spi-odd-5nu2mwcul7kw7oee3ax3a3au7y.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_DOMAIN_EVEN", '"search-uat-propertycatalog-spi-even-qjcuzylvu7jxt5svktu2kkyywu.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_PROTOCOL_VERSION", '"2013-01-01"'
+            buildConfigField "String", "APP_TYPE", '"Incremental"'
+            buildConfigField "String", "BuildId", '"3.8.test"'
+            buildConfigField "String", "Chanel", '"mobile_app"'
+            buildConfigField "String", "RENEWAL_KEY", '"TestTestTestTest"'
+            buildConfigField "String", "RENEWAL_DOMAIN", '"http://54.169.88.62/sg"'
+            buildConfigField "String", "CWEB_DOMAIN", '"http://54.169.88.62"'
+            buildConfigField "String", "USER_TOKEN", '"a9md2nd0eav9da3kdtg8mb4ticij4mko"'
+            buildConfigField "String", "CRM_BASE", '"http://52.74.87.159"'
+            buildConfigField "String", "CRM_API", '"/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "CRM_GRANT_TYPE", '"password"'
+            buildConfigField "String", "CRM_CLIENT_ID", '"sugar"'
+            buildConfigField "String", "CRM_CLIENT_SECRET", '""'
+            buildConfigField "String", "CRM_USER", '"mweb"'
+            buildConfigField "String", "CRM_PASSWORD", '"SkyTech@P1"'
+            buildConfigField "String", "CRM_PLATFORM", '"external"'
+            buildConfigField "String", "CRM_API_URL", '"http://52.74.87.159/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "ONE_SIGNAL_BASE", '"https://onesignal.com"'
+            buildConfigField "String", "ONE_SIGNAL_API", '"/api/v1"'
+            buildConfigField "String", "OS_APP_ID", '"a799c9c3-df0d-491b-806e-3d1fdf4b0178"'
+            buildConfigField "String", "NOTIFICATION_TEMPLATE_ID", '"c46b248a-15c2-4d92-af76-3053fd2f47bb"'
+
+
+            minifyEnabled true
+            debuggable true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        staging {
+            signingConfig signingConfigs.staging
+            applicationIdSuffix '.staging'
+
+            manifestPlaceholders = [
+
+                    onesignal_app_id: 'a799c9c3-df0d-491b-806e-3d1fdf4b0178',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]
+
+            buildConfigField "String", "STRIPE_PUBLISHABLE_KEY", '"pk_test_DVCM93130wlNslC2GJa1Tbrb"'
+            buildConfigField "String", "REFERRAL_LINK", '"https://www.skypremiumglobal.com/sg/membership/step1?rref="'
+            buildConfigField "String", "BASE_URL", '"https://ecm.skypremiumglobal.com"'
+            buildConfigField "String", "API", '"/sg/member/rest/V1"'
+            buildConfigField "String", "API_V2", '"/sg/member/rest/V2"'
+            buildConfigField "String", "BASE_IMG_URL", '"https://sg-uat-ecm-sss02.s3.amazonaws.com"'
+            buildConfigField "String", "BASE_IMG_URL_1", '"https://res.cloudinary.com/sky-premium-sg/image/upload/v1"'
+            buildConfigField "String", "EMAIL", '"membersg@skypremium.com.sg"'
+            buildConfigField "String", "EAN_API_KEY", '"5p0abhlj5cpgg17ssud45divlq"'
+            buildConfigField "String", "EAN_API_VERSION", '"2.4"'
+            buildConfigField "String", "EAN_SHARED_SECRET", '"3i38ooi2raigt"'
+            buildConfigField "String", "EAN_BASE_URL", '"https://test.ean.com"'
+            buildConfigField "String", "AWS_REGION", '"ap-southeast-1"'
+            buildConfigField "String", "AWS_SERVICE", '"cloudsearch"'
+            buildConfigField "String", "AWS_DOMAIN_ODD", '"search-uat-propertycatalog-spi-odd-5nu2mwcul7kw7oee3ax3a3au7y.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_DOMAIN_EVEN", '"search-uat-propertycatalog-spi-even-qjcuzylvu7jxt5svktu2kkyywu.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_PROTOCOL_VERSION", '"2013-01-01"'
+            buildConfigField "String", "APP_TYPE", '"UAT"'
+            buildConfigField "String", "BuildId", '"3.8.test"'
+            buildConfigField "String", "Chanel", '"mobile_app"'
+            buildConfigField "String", "RENEWAL_KEY", '"TestTestTestTest"'
+            buildConfigField "String", "RENEWAL_DOMAIN", '"https://www.skypremiumglobal.com/sg"'
+            buildConfigField "String", "CWEB_DOMAIN", '"https://www.skypremiumglobal.com"'
+            buildConfigField "String", "USER_TOKEN", '"a9md2nd0eav9da3kdtg8mb4ticij4mko"'
+            buildConfigField "String", "CRM_BASE", '"http://54.251.85.213"'
+            buildConfigField "String", "CRM_API", '"/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "CRM_GRANT_TYPE", '"password"'
+            buildConfigField "String", "CRM_CLIENT_ID", '"sugar"'
+            buildConfigField "String", "CRM_CLIENT_SECRET", '""'
+            buildConfigField "String", "CRM_USER", '"mweb"'
+            //buildConfigField "String", "CRM_PASSWORD", '"SkyTech@P1"'
+            buildConfigField "String", "CRM_PASSWORD", '"mweb@API123"'
+            buildConfigField "String", "CRM_PLATFORM", '"external"'
+            buildConfigField "String", "CRM_API_URL", '"http://54.251.85.213/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "ONE_SIGNAL_BASE", '"https://onesignal.com"'
+            buildConfigField "String", "ONE_SIGNAL_API", '"/api/v1"'
+            buildConfigField "String", "OS_APP_ID", '"a799c9c3-df0d-491b-806e-3d1fdf4b0178"'
+            buildConfigField "String", "NOTIFICATION_TEMPLATE_ID", '"c46b248a-15c2-4d92-af76-3053fd2f47bb"'
+
+            buildConfigField "String", "API_HGW", '"http://web.qa1.tabledb.com"'
+            buildConfigField "String", "API_HGW_IMG", '"/img/rest"'
+            buildConfigField "String", "PARTNER_CODE", '"skypre"'
+            buildConfigField "String", "PARTNER_AUTH_CODE", '"I1AH5K5J-L41K-6HVU-JLE8-JMNN5LIGLRIH"'
+
+            minifyEnabled true
+            debuggable true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        SKYPLAY {
+            signingConfig signingConfigs.staging
+            applicationIdSuffix '.skyplay'
+
+            manifestPlaceholders = [
+
+                    onesignal_app_id: 'a799c9c3-df0d-491b-806e-3d1fdf4b0178',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]
+
+            buildConfigField "String", "STRIPE_PUBLISHABLE_KEY", '"pk_test_DVCM93130wlNslC2GJa1Tbrb"'
+            buildConfigField "String", "REFERRAL_LINK", '"https://www.skypremiumglobal.com/sg/membership/step1?rref="'
+            buildConfigField "String", "BASE_URL", '"http://54.151.153.34"'
+            buildConfigField "String", "API", '"/sg/member/rest/V1"'
+            buildConfigField "String", "API_V2", '"/sg/member/rest/V2"'
+            buildConfigField "String", "BASE_IMG_URL", '"https://sg-uat-ecm-sss02.s3.amazonaws.com"'
+            buildConfigField "String", "BASE_IMG_URL_1", '"https://res.cloudinary.com/sky-premium-sg/image/upload/v1"'
+            buildConfigField "String", "EMAIL", '"membersg@skypremium.com.sg"'
+            buildConfigField "String", "EAN_API_KEY", '"5p0abhlj5cpgg17ssud45divlq"'
+            buildConfigField "String", "EAN_API_VERSION", '"2.4"'
+            buildConfigField "String", "EAN_SHARED_SECRET", '"3i38ooi2raigt"'
+            buildConfigField "String", "EAN_BASE_URL", '"https://test.ean.com"'
+            buildConfigField "String", "AWS_REGION", '"ap-southeast-1"'
+            buildConfigField "String", "AWS_SERVICE", '"cloudsearch"'
+            buildConfigField "String", "AWS_DOMAIN_ODD", '"search-uat-propertycatalog-spi-odd-5nu2mwcul7kw7oee3ax3a3au7y.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_DOMAIN_EVEN", '"search-uat-propertycatalog-spi-even-qjcuzylvu7jxt5svktu2kkyywu.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_PROTOCOL_VERSION", '"2013-01-01"'
+            buildConfigField "String", "APP_TYPE", '"SKYPLAY"'
+            buildConfigField "String", "BuildId", '"3.8.test"'
+            buildConfigField "String", "Chanel", '"mobile_app"'
+            buildConfigField "String", "RENEWAL_KEY", '"TestTestTestTest"'
+            buildConfigField "String", "RENEWAL_DOMAIN", '"https://www.skypremiumglobal.com/sg"'
+            buildConfigField "String", "CWEB_DOMAIN", '"https://www.skypremiumglobal.com"'
+            buildConfigField "String", "USER_TOKEN", '"a9md2nd0eav9da3kdtg8mb4ticij4mko"'
+            buildConfigField "String", "CRM_BASE", '"http://52.74.87.159"'
+            buildConfigField "String", "CRM_API", '"/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "CRM_GRANT_TYPE", '"password"'
+            buildConfigField "String", "CRM_CLIENT_ID", '"sugar"'
+            buildConfigField "String", "CRM_CLIENT_SECRET", '""'
+            buildConfigField "String", "CRM_USER", '"mweb"'
+            buildConfigField "String", "CRM_PASSWORD", '"SkyTech@P1"'
+            buildConfigField "String", "CRM_PLATFORM", '"external"'
+            buildConfigField "String", "CRM_API_URL", '"http://52.74.87.159/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "ONE_SIGNAL_BASE", '"https://onesignal.com"'
+            buildConfigField "String", "ONE_SIGNAL_API", '"/api/v1"'
+            buildConfigField "String", "OS_APP_ID", '"a799c9c3-df0d-491b-806e-3d1fdf4b0178"'
+            buildConfigField "String", "NOTIFICATION_TEMPLATE_ID", '"c46b248a-15c2-4d92-af76-3053fd2f47bb"'
+
+
+            minifyEnabled false
+            debuggable true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        TravelFlexPOC {
+            signingConfig signingConfigs.staging
+            applicationIdSuffix '.TravflexPOC'
+
+            manifestPlaceholders = [
+
+                    onesignal_app_id: 'a799c9c3-df0d-491b-806e-3d1fdf4b0178',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]
+
+
+            buildConfigField "String", "STRIPE_PUBLISHABLE_KEY", '"pk_test_DVCM93130wlNslC2GJa1Tbrb"'
+            buildConfigField "String", "REFERRAL_LINK", '"https://www.skypremiumglobal.com/sg/membership/step1?rref="'
+            buildConfigField "String", "BASE_URL", '"https://poc.skypremiumglobal.com"'
+            buildConfigField "String", "API", '"/sg/member/rest/V1"'
+            buildConfigField "String", "API_V2", '"/sg/member/rest/V2"'
+            buildConfigField "String", "BASE_IMG_URL", '"https://sg-dev-ecm-sss01.s3.amazonaws.com"'
+            buildConfigField "String", "BASE_IMG_URL_1", '"https://res.cloudinary.com/sky-premium-sg/image/upload/v1"'
+            buildConfigField "String", "EMAIL", '"membersg@skypremium.com.sg"'
+            buildConfigField "String", "EAN_API_KEY", '"5p0abhlj5cpgg17ssud45divlq"'
+            buildConfigField "String", "EAN_API_VERSION", '"2.4"'
+            buildConfigField "String", "EAN_SHARED_SECRET", '"3i38ooi2raigt"'
+            buildConfigField "String", "EAN_BASE_URL", '"https://test.ean.com"'
+            buildConfigField "String", "AWS_REGION", '"ap-southeast-1"'
+            buildConfigField "String", "AWS_SERVICE", '"cloudsearch"'
+            buildConfigField "String", "AWS_DOMAIN_ODD", '"search-uat-propertycatalog-spi-odd-5nu2mwcul7kw7oee3ax3a3au7y.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_DOMAIN_EVEN", '"search-uat-propertycatalog-spi-even-qjcuzylvu7jxt5svktu2kkyywu.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_PROTOCOL_VERSION", '"2013-01-01"'
+            buildConfigField "String", "APP_TYPE", '"TravelFlexPOC"'
+            buildConfigField "String", "BuildId", '"3.8.test"'
+            buildConfigField "String", "Chanel", '"mobile_app"'
+            buildConfigField "String", "RENEWAL_KEY", '"TestTestTestTest"'
+            buildConfigField "String", "RENEWAL_DOMAIN", '"https://www.skypremiumglobal.com/sg"'
+            buildConfigField "String", "CWEB_DOMAIN", '"https://www.skypremiumglobal.com"'
+            buildConfigField "String", "USER_TOKEN", '"a9md2nd0eav9da3kdtg8mb4ticij4mko"'
+            buildConfigField "String", "CRM_BASE", '"http://52.74.87.159"'
+            buildConfigField "String", "CRM_API", '"/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "CRM_GRANT_TYPE", '"password"'
+            buildConfigField "String", "CRM_CLIENT_ID", '"sugar"'
+            buildConfigField "String", "CRM_CLIENT_SECRET", '""'
+            buildConfigField "String", "CRM_USER", '"mweb"'
+            buildConfigField "String", "CRM_PASSWORD", '"SkyTech@P1"'
+            buildConfigField "String", "CRM_PLATFORM", '"external"'
+            buildConfigField "String", "CRM_API_URL", '"http://52.74.87.159/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "ONE_SIGNAL_BASE", '"https://onesignal.com"'
+            buildConfigField "String", "ONE_SIGNAL_API", '"/api/v1"'
+            buildConfigField "String", "OS_APP_ID", '"a799c9c3-df0d-491b-806e-3d1fdf4b0178"'
+            buildConfigField "String", "NOTIFICATION_TEMPLATE_ID", '"c46b248a-15c2-4d92-af76-3053fd2f47bb"'
+
+
+            minifyEnabled true
+            debuggable true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        TravelFlex18 {
+            signingConfig signingConfigs.staging
+            applicationIdSuffix '.Travflex18'
+
+
+            manifestPlaceholders = [
+
+                    onesignal_app_id: 'a799c9c3-df0d-491b-806e-3d1fdf4b0178',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]
+
+            buildConfigField "String", "STRIPE_PUBLISHABLE_KEY", '"pk_test_DVCM93130wlNslC2GJa1Tbrb"'
+            buildConfigField "String", "REFERRAL_LINK", '"https://www.skypremiumglobal.com/sg/membership/step1?rref="'
+            buildConfigField "String", "BASE_URL", '"http://18.141.52.247"'
+            buildConfigField "String", "API", '"/sg/member/rest/V1"'
+            buildConfigField "String", "API_V2", '"/sg/member/rest/V2"'
+            buildConfigField "String", "BASE_IMG_URL", '"https://sg-dev-ecm-sss01.s3.amazonaws.com"'
+            buildConfigField "String", "BASE_IMG_URL_1", '"https://res.cloudinary.com/sky-premium-sg/image/upload/v1"'
+            buildConfigField "String", "EMAIL", '"membersg@skypremium.com.sg"'
+            buildConfigField "String", "EAN_API_KEY", '"5p0abhlj5cpgg17ssud45divlq"'
+            buildConfigField "String", "EAN_API_VERSION", '"2.4"'
+            buildConfigField "String", "EAN_SHARED_SECRET", '"3i38ooi2raigt"'
+            buildConfigField "String", "EAN_BASE_URL", '"https://test.ean.com"'
+            buildConfigField "String", "AWS_REGION", '"ap-southeast-1"'
+            buildConfigField "String", "AWS_SERVICE", '"cloudsearch"'
+            buildConfigField "String", "AWS_DOMAIN_ODD", '"search-uat-propertycatalog-spi-odd-5nu2mwcul7kw7oee3ax3a3au7y.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_DOMAIN_EVEN", '"search-uat-propertycatalog-spi-even-qjcuzylvu7jxt5svktu2kkyywu.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_PROTOCOL_VERSION", '"2013-01-01"'
+            buildConfigField "String", "APP_TYPE", '"TravelFlex18"'
+            buildConfigField "String", "BuildId", '"3.8.test"'
+            buildConfigField "String", "Chanel", '"mobile_app"'
+            buildConfigField "String", "RENEWAL_KEY", '"TestTestTestTest"'
+            buildConfigField "String", "RENEWAL_DOMAIN", '"https://www.skypremiumglobal.com/sg"'
+            buildConfigField "String", "CWEB_DOMAIN", '"https://www.skypremiumglobal.com"'
+            buildConfigField "String", "USER_TOKEN", '"a9md2nd0eav9da3kdtg8mb4ticij4mko"'
+            buildConfigField "String", "CRM_BASE", '"http://52.74.87.159"'
+            buildConfigField "String", "CRM_API", '"/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "CRM_GRANT_TYPE", '"password"'
+            buildConfigField "String", "CRM_CLIENT_ID", '"sugar"'
+            buildConfigField "String", "CRM_CLIENT_SECRET", '""'
+            buildConfigField "String", "CRM_USER", '"mweb"'
+            buildConfigField "String", "CRM_PASSWORD", '"SkyTech@P1"'
+            buildConfigField "String", "CRM_PLATFORM", '"external"'
+            buildConfigField "String", "CRM_API_URL", '"http://52.74.87.159/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "ONE_SIGNAL_BASE", '"https://onesignal.com"'
+            buildConfigField "String", "ONE_SIGNAL_API", '"/api/v1"'
+            buildConfigField "String", "OS_APP_ID", '"a799c9c3-df0d-491b-806e-3d1fdf4b0178"'
+            buildConfigField "String", "NOTIFICATION_TEMPLATE_ID", '"c46b248a-15c2-4d92-af76-3053fd2f47bb"'
+
+            minifyEnabled true
+            debuggable true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        Tranform {
+            signingConfig signingConfigs.staging
+            applicationIdSuffix '.tranform'
+
+
+            manifestPlaceholders = [
+
+                    onesignal_app_id: 'a799c9c3-df0d-491b-806e-3d1fdf4b0178',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]
+
+
+            buildConfigField "String", "STRIPE_PUBLISHABLE_KEY", '"pk_test_DVCM93130wlNslC2GJa1Tbrb"'
+            buildConfigField "String", "REFERRAL_LINK", '"https://www.skypremiumglobal.com/sg/membership/step1?rref="'
+            buildConfigField "String", "BASE_URL", '"https://sgnext-ecm.skypremiumglobal.com"'
+            buildConfigField "String", "API", '"/sg/member/rest/V1"'
+            buildConfigField "String", "API_V2", '"/sg/member/rest/V2"'
+            buildConfigField "String", "BASE_IMG_URL", '"https://sg-uat-ecm-sss02.s3.amazonaws.com"'
+            buildConfigField "String", "BASE_IMG_URL_1", '"https://res.cloudinary.com/sky-premium-sg/image/upload/v1"'
+            buildConfigField "String", "EMAIL", '"membersg@skypremium.com.sg"'
+            buildConfigField "String", "EAN_API_KEY", '"5p0abhlj5cpgg17ssud45divlq"'
+            buildConfigField "String", "EAN_API_VERSION", '"2.4"'
+            buildConfigField "String", "EAN_SHARED_SECRET", '"3i38ooi2raigt"'
+            buildConfigField "String", "EAN_BASE_URL", '"https://test.ean.com"'
+            buildConfigField "String", "AWS_REGION", '"ap-southeast-1"'
+            buildConfigField "String", "AWS_SERVICE", '"cloudsearch"'
+            buildConfigField "String", "AWS_DOMAIN_ODD", '"search-uat-propertycatalog-spi-odd-5nu2mwcul7kw7oee3ax3a3au7y.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_DOMAIN_EVEN", '"search-uat-propertycatalog-spi-even-qjcuzylvu7jxt5svktu2kkyywu.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_PROTOCOL_VERSION", '"2013-01-01"'
+            buildConfigField "String", "APP_TYPE", '"Tranform"'
+            buildConfigField "String", "BuildId", '"3.8.test"'
+            buildConfigField "String", "Chanel", '"mobile_app"'
+            buildConfigField "String", "RENEWAL_KEY", '"TestTestTestTest"'
+            buildConfigField "String", "RENEWAL_DOMAIN", '"https://www.skypremiumglobal.com/sg"'
+            buildConfigField "String", "CWEB_DOMAIN", '"http://54.169.88.62"'
+            buildConfigField "String", "USER_TOKEN", '"a9md2nd0eav9da3kdtg8mb4ticij4mko"'
+            buildConfigField "String", "CRM_BASE", '"http://52.74.87.159"'
+            buildConfigField "String", "CRM_API", '"/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "CRM_GRANT_TYPE", '"password"'
+            buildConfigField "String", "CRM_CLIENT_ID", '"sugar"'
+            buildConfigField "String", "CRM_CLIENT_SECRET", '""'
+            buildConfigField "String", "CRM_USER", '"mweb"'
+            buildConfigField "String", "CRM_PASSWORD", '"SkyTech@P1"'
+            buildConfigField "String", "CRM_PLATFORM", '"external"'
+            buildConfigField "String", "CRM_API_URL", '"http://52.74.87.159/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "ONE_SIGNAL_BASE", '"https://onesignal.com"'
+            buildConfigField "String", "ONE_SIGNAL_API", '"/api/v1"'
+            buildConfigField "String", "OS_APP_ID", '"a799c9c3-df0d-491b-806e-3d1fdf4b0178"'
+            buildConfigField "String", "NOTIFICATION_TEMPLATE_ID", '"c46b248a-15c2-4d92-af76-3053fd2f47bb"'
+
+            minifyEnabled true
+            debuggable true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+
+        MGR {
+            signingConfig signingConfigs.staging
+            applicationIdSuffix '.MGR'
+
+            manifestPlaceholders = [
+
+                    onesignal_app_id: 'a799c9c3-df0d-491b-806e-3d1fdf4b0178',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]
+
+
+            buildConfigField "String", "STRIPE_PUBLISHABLE_KEY", '"pk_test_DVCM93130wlNslC2GJa1Tbrb"'
+            buildConfigField "String", "REFERRAL_LINK", '"https://www.skypremiumglobal.com/sg/membership/step1?rref="'
+            buildConfigField "String", "BASE_URL", '"http://mgr-ecm.skypremiumglobal.com"'
+            buildConfigField "String", "API", '"/sg/member/rest/V1"'
+            buildConfigField "String", "API_V2", '"/sg/member/rest/V2"'
+            buildConfigField "String", "BASE_IMG_URL", '"https://sg-uat-ecm-sss02.s3.amazonaws.com"'
+            buildConfigField "String", "BASE_IMG_URL_1", '"https://res.cloudinary.com/sky-premium-sg/image/upload/v1"'
+            buildConfigField "String", "EMAIL", '"membersg@skypremium.com.sg"'
+            buildConfigField "String", "EAN_API_KEY", '"5p0abhlj5cpgg17ssud45divlq"'
+            buildConfigField "String", "EAN_API_VERSION", '"2.4"'
+            buildConfigField "String", "EAN_SHARED_SECRET", '"3i38ooi2raigt"'
+            buildConfigField "String", "EAN_BASE_URL", '"https://test.ean.com"'
+            buildConfigField "String", "AWS_REGION", '"ap-southeast-1"'
+            buildConfigField "String", "AWS_SERVICE", '"cloudsearch"'
+            buildConfigField "String", "AWS_DOMAIN_ODD", '"search-uat-propertycatalog-spi-odd-5nu2mwcul7kw7oee3ax3a3au7y.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_DOMAIN_EVEN", '"search-uat-propertycatalog-spi-even-qjcuzylvu7jxt5svktu2kkyywu.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_PROTOCOL_VERSION", '"2013-01-01"'
+            buildConfigField "String", "APP_TYPE", '"MGR"'
+            buildConfigField "String", "BuildId", '"3.8.test"'
+            buildConfigField "String", "Chanel", '"mobile_app"'
+            buildConfigField "String", "RENEWAL_KEY", '"TestTestTestTest"'
+            buildConfigField "String", "RENEWAL_DOMAIN", '"https://www.skypremiumglobal.com/sg"'
+            buildConfigField "String", "CWEB_DOMAIN", '"https://www.skypremiumglobal.com"'
+            buildConfigField "String", "USER_TOKEN", '"a9md2nd0eav9da3kdtg8mb4ticij4mko"'
+            buildConfigField "String", "CRM_BASE", '"http://52.74.87.159"'
+            buildConfigField "String", "CRM_API", '"/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "CRM_GRANT_TYPE", '"password"'
+            buildConfigField "String", "CRM_CLIENT_ID", '"sugar"'
+            buildConfigField "String", "CRM_CLIENT_SECRET", '""'
+            buildConfigField "String", "CRM_USER", '"mweb"'
+            buildConfigField "String", "CRM_PASSWORD", '"SkyTech@P1"'
+            buildConfigField "String", "CRM_PLATFORM", '"external"'
+            buildConfigField "String", "CRM_API_URL", '"http://52.74.87.159/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "ONE_SIGNAL_BASE", '"https://onesignal.com"'
+            buildConfigField "String", "ONE_SIGNAL_API", '"/api/v1"'
+            buildConfigField "String", "OS_APP_ID", '"a799c9c3-df0d-491b-806e-3d1fdf4b0178"'
+            buildConfigField "String", "NOTIFICATION_TEMPLATE_ID", '"c46b248a-15c2-4d92-af76-3053fd2f47bb"'
+
+            minifyEnabled true
+            debuggable true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        patchPRD {
+            signingConfig signingConfigs.staging
+            applicationIdSuffix '.staging'
+
+            manifestPlaceholders = [
+
+                    onesignal_app_id: 'a799c9c3-df0d-491b-806e-3d1fdf4b0178',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]
+            /*manifestPlaceholders = [
+                    onesignal_app_id: 'dcc13fb4-e682-425a-84cf-c1ea853a198b',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]*/
+
+
+            buildConfigField "String", "STRIPE_PUBLISHABLE_KEY", '"pk_test_DVCM93130wlNslC2GJa1Tbrb"'
+            buildConfigField "String", "REFERRAL_LINK", '"https://www.skypremiumglobal.com/sg/membership/step1?rref="'
+            buildConfigField "String", "BASE_URL", '"https://patch.skypremium.com.sg"'
+            buildConfigField "String", "API", '"/sg/member/rest/V1"'
+            buildConfigField "String", "API_V2", '"/sg/member/rest/V2"'
+            buildConfigField "String", "BASE_IMG_URL", '"https://sg-prd-new-ecm-sss01.s3.amazonaws.com"'
+            buildConfigField "String", "BASE_IMG_URL_1", '"https://res.cloudinary.com/sky-premium-sg/image/upload/v1"'
+            buildConfigField "String", "EMAIL", '"membersg@skypremium.com.sg"'
+            buildConfigField "String", "EAN_API_KEY", '"5p0abhlj5cpgg17ssud45divlq"'
+            buildConfigField "String", "EAN_API_VERSION", '"2.4"'
+            buildConfigField "String", "EAN_SHARED_SECRET", '"3i38ooi2raigt"'
+            buildConfigField "String", "EAN_BASE_URL", '"https://test.ean.com"'
+            buildConfigField "String", "AWS_REGION", '"ap-southeast-1"'
+            buildConfigField "String", "AWS_SERVICE", '"cloudsearch"'
+            buildConfigField "String", "AWS_DOMAIN_ODD", '"search-uat-propertycatalog-spi-odd-5nu2mwcul7kw7oee3ax3a3au7y.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_DOMAIN_EVEN", '"search-uat-propertycatalog-spi-even-qjcuzylvu7jxt5svktu2kkyywu.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_PROTOCOL_VERSION", '"2013-01-01"'
+            buildConfigField "String", "APP_TYPE", '"patchprd"'
+            buildConfigField "String", "BuildId", '"3.8.test"'
+            buildConfigField "String", "Chanel", '"mobile_app"'
+            buildConfigField "String", "RENEWAL_KEY", '"TestTestTestTest"'
+            buildConfigField "String", "RENEWAL_DOMAIN", '"https://www.skypremiumglobal.com/sg"'
+            buildConfigField "String", "CWEB_DOMAIN", '"https://www.skypremiumglobal.com"'
+            buildConfigField "String", "USER_TOKEN", '"a9md2nd0eav9da3kdtg8mb4ticij4mko"'
+            buildConfigField "String", "CRM_BASE", '"http://54.251.85.213"'
+            buildConfigField "String", "CRM_API", '"/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "CRM_GRANT_TYPE", '"password"'
+            buildConfigField "String", "CRM_CLIENT_ID", '"sugar"'
+            buildConfigField "String", "CRM_CLIENT_SECRET", '""'
+            buildConfigField "String", "CRM_USER", '"mweb"'
+            //buildConfigField "String", "CRM_PASSWORD", '"SkyTech@P1"'
+            buildConfigField "String", "CRM_PASSWORD", '"mweb@API123"'
+            buildConfigField "String", "CRM_PLATFORM", '"external"'
+            buildConfigField "String", "CRM_API_URL", '"http://54.251.85.213/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "ONE_SIGNAL_BASE", '"https://onesignal.com"'
+            buildConfigField "String", "ONE_SIGNAL_API", '"/api/v1"'
+            buildConfigField "String", "OS_APP_ID", '"a799c9c3-df0d-491b-806e-3d1fdf4b0178"'
+            buildConfigField "String", "NOTIFICATION_TEMPLATE_ID", '"c46b248a-15c2-4d92-af76-3053fd2f47bb"'
+
+            //http://54.251.85.213/sg/spi-crm
+
+            /*buildConfigField "String", "OS_APP_ID", '"dcc13fb4-e682-425a-84cf-c1ea853a198b"'
+            buildConfigField "String", "NOTIFICATION_TEMPLATE_ID", '"12cd0157-5363-4bff-af36-8b8ea7a79ecd"'*/
+
+            minifyEnabled false
+            debuggable true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        HGW {
+            signingConfig signingConfigs.staging
+            applicationIdSuffix '.staging'
+
+            manifestPlaceholders = [
+
+                    onesignal_app_id: 'a799c9c3-df0d-491b-806e-3d1fdf4b0178',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]
+            /*manifestPlaceholders = [
+                    onesignal_app_id: 'dcc13fb4-e682-425a-84cf-c1ea853a198b',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]*/
+
+
+            buildConfigField "String", "STRIPE_PUBLISHABLE_KEY", '"pk_test_DVCM93130wlNslC2GJa1Tbrb"'
+            buildConfigField "String", "REFERRAL_LINK", '"https://www.skypremiumglobal.com/sg/membership/step1?rref="'
+            buildConfigField "String", "BASE_URL", '"http://122.248.224.110"'
+            buildConfigField "String", "API", '"/sg/member/rest/V1"'
+            buildConfigField "String", "API_V2", '"/sg/member/rest/V2"'
+            buildConfigField "String", "BASE_IMG_URL", '"http://sg-uat-ecm-sss02.s3.amazonaws.com"'
+            buildConfigField "String", "BASE_IMG_URL_1", '"https://res.cloudinary.com/sky-premium-sg/image/upload/v1"'
+            buildConfigField "String", "EMAIL", '"membersg@skypremium.com.sg"'
+            buildConfigField "String", "EAN_API_KEY", '"5p0abhlj5cpgg17ssud45divlq"'
+            buildConfigField "String", "EAN_API_VERSION", '"2.4"'
+            buildConfigField "String", "EAN_SHARED_SECRET", '"3i38ooi2raigt"'
+            buildConfigField "String", "EAN_BASE_URL", '"https://test.ean.com"'
+            buildConfigField "String", "AWS_REGION", '"ap-southeast-1"'
+            buildConfigField "String", "AWS_SERVICE", '"cloudsearch"'
+            buildConfigField "String", "AWS_DOMAIN_ODD", '"search-uat-propertycatalog-spi-odd-5nu2mwcul7kw7oee3ax3a3au7y.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_DOMAIN_EVEN", '"search-uat-propertycatalog-spi-even-qjcuzylvu7jxt5svktu2kkyywu.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_PROTOCOL_VERSION", '"2013-01-01"'
+            buildConfigField "String", "APP_TYPE", '"HGW"'
+            buildConfigField "String", "BuildId", '"3.8.test"'
+            buildConfigField "String", "Chanel", '"mobile_app"'
+            buildConfigField "String", "RENEWAL_KEY", '"TestTestTestTest"'
+            buildConfigField "String", "RENEWAL_DOMAIN", '"https://www.skypremiumglobal.com/sg"'
+            buildConfigField "String", "CWEB_DOMAIN", '"https://www.skypremiumglobal.com"'
+            buildConfigField "String", "USER_TOKEN", '"a9md2nd0eav9da3kdtg8mb4ticij4mko"'
+            buildConfigField "String", "CRM_BASE", '"http://54.251.85.213"'
+            buildConfigField "String", "CRM_API", '"/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "CRM_GRANT_TYPE", '"password"'
+            buildConfigField "String", "CRM_CLIENT_ID", '"sugar"'
+            buildConfigField "String", "CRM_CLIENT_SECRET", '""'
+            buildConfigField "String", "CRM_USER", '"mweb"'
+            //buildConfigField "String", "CRM_PASSWORD", '"SkyTech@P1"'
+            buildConfigField "String", "CRM_PASSWORD", '"mweb@API123"'
+            buildConfigField "String", "CRM_PLATFORM", '"external"'
+            buildConfigField "String", "CRM_API_URL", '"http://54.251.85.213/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "ONE_SIGNAL_BASE", '"https://onesignal.com"'
+            buildConfigField "String", "ONE_SIGNAL_API", '"/api/v1"'
+            buildConfigField "String", "OS_APP_ID", '"a799c9c3-df0d-491b-806e-3d1fdf4b0178"'
+            buildConfigField "String", "NOTIFICATION_TEMPLATE_ID", '"c46b248a-15c2-4d92-af76-3053fd2f47bb"'
+
+            //http://54.251.85.213/sg/spi-crm
+
+            /*buildConfigField "String", "OS_APP_ID", '"dcc13fb4-e682-425a-84cf-c1ea853a198b"'
+            buildConfigField "String", "NOTIFICATION_TEMPLATE_ID", '"12cd0157-5363-4bff-af36-8b8ea7a79ecd"'*/
+
+
+            buildConfigField "String", "API_HGW", '"http://web.qa1.tabledb.com"'
+            buildConfigField "String", "API_HGW_IMG", '"/img/rest"'
+            buildConfigField "String", "PARTNER_CODE", '"skypre"'
+            buildConfigField "String", "PARTNER_AUTH_CODE", '"I1AH5K5J-L41K-6HVU-JLE8-JMNN5LIGLRIH"'
+
+
+
+            minifyEnabled false
+            debuggable true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+
+
+
+        release {
+            signingConfig signingConfigs.release
+
+            manifestPlaceholders = [
+
+                    onesignal_app_id: '08d03365-3c4c-4dc2-bbc0-c322dba2fe34',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: 'REMOTE'
+            ]
+
+
+            //PRD
+            buildConfigField "String", "STRIPE_PUBLISHABLE_KEY", '"pk_live_h8an551kRGktYAfw2eSgcA0J"'
+            buildConfigField "String", "REFERRAL_LINK", '"https://www.skypremium.com.sg/sg/membership/step1?rref="'
+            buildConfigField "String", "BASE_URL", '"https://www.skypremium.com.sg"'
+            buildConfigField "String", "API", '"/sg/member/rest/V1"'
+            buildConfigField "String", "API_V2", '"/sg/member/rest/V2"'
+            //buildConfigField "String", "BASE_IMG_URL", '"https://sg-prd-ecm-sss01.s3.amazonaws.com"'
+            buildConfigField "String", "BASE_IMG_URL", '"https://sg-prd-new-ecm-sss01.s3.amazonaws.com"'
+            buildConfigField "String", "BASE_IMG_URL_1", '"https://res.cloudinary.com/sky-premium-sg/image/upload/v1"'
+            buildConfigField "String", "EMAIL", '"membersg@skypremium.com.sg"'
+            buildConfigField "String", "EAN_API_KEY", '"5p0abhlj5cpgg17ssud45divlq"'
+            buildConfigField "String", "EAN_API_VERSION", '"2.4"'
+            buildConfigField "String", "EAN_SHARED_SECRET", '"3i38ooi2raigt"'
+            buildConfigField "String", "EAN_BASE_URL", '"https://api.ean.com"'
+            buildConfigField "String", "AWS_REGION", '"ap-southeast-1"'
+            buildConfigField "String", "AWS_SERVICE", '"cloudsearch"'
+            buildConfigField "String", "AWS_DOMAIN_ODD", '"search-prd-propertycatalog-spi-odd-obtuqhbckrqdafobutpj7y3pfa.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_DOMAIN_EVEN", '"search-prd-propertycatalog-spi-even-45zebnlpmlsvkhecbtj24oc6ku.ap-southeast-1.cloudsearch.amazonaws.com"'
+            buildConfigField "String", "AWS_PROTOCOL_VERSION", '"2013-01-01"'
+            buildConfigField "String", "APP_TYPE", '""'
+            buildConfigField "String", "BuildId", '"3.8.test"'
+            buildConfigField "String", "Chanel", '"mobile_app"'
+            buildConfigField "String", "RENEWAL_KEY", '"TestTestTestTest"'
+            buildConfigField "String", "RENEWAL_DOMAIN", '"https://www.skypremium.com.sg/sg"'
+            buildConfigField "String", "CWEB_DOMAIN", '"https://www.skypremium.com.sg"'
+            buildConfigField "String", "USER_TOKEN", '"a9md2nd0eav9da3kdtg8mb4ticij4mko"'
+            buildConfigField "String", "CRM_BASE", '"http://crm.skypremium.com.sg"'
+            buildConfigField "String", "CRM_API", '"/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "CRM_GRANT_TYPE", '"password"'
+            buildConfigField "String", "CRM_CLIENT_ID", '"sugar"'
+            buildConfigField "String", "CRM_CLIENT_SECRET", '""'
+            buildConfigField "String", "CRM_USER", '"mweb"'
+            buildConfigField "String", "CRM_PASSWORD", '"mweb@API123"'
+            buildConfigField "String", "CRM_PLATFORM", '"external"'
+            buildConfigField "String", "CRM_API_URL", '"http://crm.skypremium.com.sg/sg/spi-crm/rest/v10"'
+            buildConfigField "String", "ONE_SIGNAL_BASE", '"https://onesignal.com"'
+            buildConfigField "String", "ONE_SIGNAL_API", '"/api/v1"'
+            buildConfigField "String", "OS_APP_ID", '"08d03365-3c4c-4dc2-bbc0-c322dba2fe34"'
+            buildConfigField "String", "NOTIFICATION_TEMPLATE_ID", '"29f4613c-ac1b-4fcf-9433-435ce193af1b"'
+
+            buildConfigField "String", "API_HGW", '"http://web.qa1.tabledb.com"'
+            buildConfigField "String", "API_HGW_IMG", '"/img/rest"'
+            buildConfigField "String", "PARTNER_CODE", '"skypre"'
+            buildConfigField "String", "PARTNER_AUTH_CODE", '"I1AH5K5J-L41K-6HVU-JLE8-JMNN5LIGLRIH"'
+
+            minifyEnabled true
+            debuggable false
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+        resolutionStrategy.force 'com.android.support:cardview-v7:29.0.2'
+        resolutionStrategy.force 'com.android.support:appcompat-v7:29.0.2'
+        resolutionStrategy.force 'com.android.support:support-annotations:29.0.2'
+        resolutionStrategy.force 'com.android.support:design:29.0.2'
+        resolutionStrategy.force 'com.android.support:recyclerview-v7:29.0.2'
+    }
+}
+
+dependencies {
+
+
+    //seekbar
+    implementation 'com.github.Jay-Goo:RangeSeekBar:v3.0.0'
+
+    //textviewimage
+    implementation 'org.sufficientlysecure:html-textview:3.8'
+    //Multidex
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+    //Logging
+    implementation 'com.jakewharton.timber:timber:4.5.1'
+
+    //System
+    implementation 'com.greysonparrelli.permiso:permiso:0.2.0'
+
+    //Support
+    implementation 'com.thoughtbot:expandablerecyclerview:1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.annotation:annotation:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation "com.google.android.gms:play-services-location:17.0.0"
+    provided 'com.google.auto.value:auto-value:1.2'
+    annotationProcessor 'com.google.auto.value:auto-value:1.2'
+
+    annotationProcessor 'com.ryanharter.auto.value:auto-value-parcel:0.2.6'
+
+    //AutoValue Gson
+    provided 'com.ryanharter.auto.value:auto-value-gson:0.4.6'
+    annotationProcessor 'com.ryanharter.auto.value:auto-value-gson:0.4.6'
+
+    //Rx
+    implementation 'io.reactivex:rxandroid:1.2.0'
+    implementation 'io.reactivex:rxjava:1.1.5'
+
+
+    implementation 'com.google.code.gson:gson:2.4'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Rx EventBus
+    compile('com.hwangjr.rxbus:rxbus:1.0.5') {
+        exclude group: 'com.jakewharton.timber', module: 'timber'
+    }
+
+    //Butterknife
+    implementation 'com.jakewharton:butterknife:8.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.0.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+
+    //Image Crop
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.5.1'
+
+    //Dagger2
+    implementation 'com.google.dagger:dagger:2.17'
+    implementation 'com.google.dagger:dagger-android:2.17'
+    implementation 'com.google.dagger:dagger-android-support:2.17'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.17'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.17'
+    api 'com.google.guava:guava:24.1-android'
+
+    implementation 'javax.annotation:javax.annotation-api:1.2-b01'
+
+    //Network
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.2.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
+
+    //http
+    implementation "com.squareup.okhttp3:okhttp:4.2.1"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.2.1"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:4.2.1"
+
+    //Crash
+    implementation 'cat.ereza:customactivityoncrash:1.4.0'
+
+    //Font
+    //compile 'uk.co.chrisjenx:calligraphy:2.3.0'
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+
+    //Database
+    implementation 'com.j256.ormlite:ormlite-android:4.46'
+
+    //UI
+    implementation 'com.github.orangegangsters:swipy:1.2.3@aar'
+    implementation 'com.aurelhubert:ahbottomnavigation:2.1.0'
+    implementation 'com.github.developer-shivam:FeaturedRecyclerView:1.0.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.flyco.pageindicator:FlycoPageIndicator_Lib:1.0.0@aar'
+    implementation 'com.github.travijuu:numberpicker:1.0.7'
+    compile('com.savvi.datepicker:rangepicker:1.0.1') {
+        exclude module: 'appcompat-v7'
+    }
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+    implementation 'com.andrognito.kerningview:kerningview:1.0.0'
+    implementation 'at.blogc:expandabletextview:1.0.3'
+    implementation 'com.ms-square:expandableTextView:0.1.4'
+    implementation 'org.sufficientlysecure:html-textview:3.5'
+
+    implementation 'com.github.iammert:ExpandableLayout:1.4.1'
+    implementation 'com.stripe:stripe-android:8.1.0'
+    //jsoup
+    implementation 'org.jsoup:jsoup:1.11.2'
+
+    //Performance
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+
+    //Firebase messaging
+    implementation 'com.google.firebase:firebase-messaging:20.2.1'
+
+    //Testing
+    androidTestCompile 'junit:junit:4.12'
+    androidTestCompile('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    //rating star
+
+    implementation 'com.github.ome450901:SimpleRatingBar:1.5.0'
+
+
+
+
+
+
+
+
+    //OneSignal
+
+    implementation 'com.onesignal:OneSignal:3.15.3'
+
+    //Video
+
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+
+
+    implementation 'com.ct7ct7ct7.androidvimeoplayer:library:1.2.2'
+
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.assertj:assertj-core:3.9.1'
+    testCompile 'org.mockito:mockito-core:1.10.5'
+    testCompile 'com.squareup.okhttp3:mockwebserver:3.6.0'
+    testCompile 'com.android.support.test:testing-support-lib:0.1'
+    testCompile('androidx.test.espresso:espresso-contrib:3.1.0') {
+        exclude module: "support-annotations"
+        exclude module: "support-v4"
+        exclude module: "design"
+        exclude module: "recyclerview-v7"
+    }
+
+}

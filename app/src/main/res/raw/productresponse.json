@@ -1,0 +1,1062 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "sku": "Aileron wellness",
+      "name": "Aileron wellness",
+      "attribute_set_id": 10,
+      "price": 0,
+      "status": 1,
+      "visibility": 4,
+      "type_id": "virtual",
+      "created_at": "2017-09-26 14:59:23",
+      "updated_at": "2017-09-26 14:59:23",
+      "extension_attributes": [],
+      "product_links": [],
+      "tier_prices": [],
+      "custom_attributes": [
+        {
+          "attribute_code": "description",
+          "value": "<p>Nulla malesuada urna et bibendum imperdiet. Curabitur faucibus elit ut ante tincidunt, eget elementum enim maximus. In mollis tempus lectus, sit amet cursus risus consequat nec. Sed pulvinar enim urna. Proin vel nunc ultricies libero elementum faucibus. Nunc tempus purus non efficitur accumsan. Sed et tellus mollis, gravida justo non, ultrices felis. Ut a leo eu massa tristique interdum. Sed volutpat condimentum dui id dapibus. Nulla scelerisque mauris non nunc tempus, a aliquam sem commodo. Maecenas ut commodo mi, ac venenatis tellus. Quisque maximus elit enim, ac aliquam eros pulvinar sit amet. Nullam iaculis diam tortor, blandit ultricies nisl lobortis sit amet. Cras a tempor justo. Vivamus tristique nunc at eros viverra tempus. Aliquam erat volutpat.</p>\r\n<p>Curabitur vel justo vel nunc mattis elementum. Praesent orci libero, cursus at eros eu, aliquet ornare nisl. Proin mattis laoreet mauris non molestie. Nunc porttitor eu lorem dignissim aliquet. Quisque gravida sodales neque, pulvinar laoreet mi blandit sed. Curabitur dignissim sapien eget augue iaculis fermentum. Nam at mattis mi, nec ullamcorper mi. Vivamus laoreet metus urna, a iaculis tortor eleifend viverra. Donec at est libero.</p>"
+        },
+        {
+          "attribute_code": "short_description",
+          "value": "<p>Aileron Wellness is Singapore&rsquo;s first knowledge-driven boutique gym with a state-of-the-art training facility and certified trainers to help individuals break new grounds, a prime ground for health and fitness education, and a sanctuary for self-discovery and empowerment.</p>"
+        },
+        {
+          "attribute_code": "meta_title",
+          "value": "Aileron wellness"
+        },
+        {
+          "attribute_code": "meta_keyword",
+          "value": "Aileron wellness"
+        },
+        {
+          "attribute_code": "meta_description",
+          "value": "Aileron wellness Aileron Wellness is Singapore’s first knowledge-driven boutique gym with a state-of-the-art training facility and certified trainers to help individuals break new grounds, a prime ground for health and fitness education, and a sanctuary f"
+        },
+        {
+          "attribute_code": "image",
+          "value": "/b/a/banner_1200_ycms_1ac7cae7bec4c5ee8aec81793321a12c.png"
+        },
+        {
+          "attribute_code": "small_image",
+          "value": "/b/a/banner_1200_ycms_1ac7cae7bec4c5ee8aec81793321a12c.png"
+        },
+        {
+          "attribute_code": "thumbnail",
+          "value": "/b/a/banner_1200_ycms_1ac7cae7bec4c5ee8aec81793321a12c.png"
+        },
+        {
+          "attribute_code": "options_container",
+          "value": "container2"
+        },
+        {
+          "attribute_code": "required_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "has_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "url_key",
+          "value": "aileron-wellness"
+        },
+        {
+          "attribute_code": "tax_class_id",
+          "value": "2"
+        },
+        {
+          "attribute_code": "gift_message_available",
+          "value": "2"
+        },
+        {
+          "attribute_code": "swatch_image",
+          "value": "/b/a/banner_1200_ycms_1ac7cae7bec4c5ee8aec81793321a12c.png"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "sku": "EGA Juice Clinic",
+      "name": "EGA Juice Clinic",
+      "attribute_set_id": 10,
+      "price": 0,
+      "status": 1,
+      "visibility": 4,
+      "type_id": "virtual",
+      "created_at": "2017-09-26 15:08:23",
+      "updated_at": "2017-09-26 15:08:23",
+      "extension_attributes": [],
+      "product_links": [],
+      "tier_prices": [],
+      "custom_attributes": [
+        {
+          "attribute_code": "description",
+          "value": "<p>Nulla malesuada urna et bibendum imperdiet. Curabitur faucibus elit ut ante tincidunt, eget elementum enim maximus. In mollis tempus lectus, sit amet cursus risus consequat nec. Sed pulvinar enim urna. Proin vel nunc ultricies libero elementum faucibus. Nunc tempus purus non efficitur accumsan. Sed et tellus mollis, gravida justo non, ultrices felis. Ut a leo eu massa tristique interdum. Sed volutpat condimentum dui id dapibus. Nulla scelerisque mauris non nunc tempus, a aliquam sem commodo. Maecenas ut commodo mi, ac venenatis tellus. Quisque maximus elit enim, ac aliquam eros pulvinar sit amet. Nullam iaculis diam tortor, blandit ultricies nisl lobortis sit amet.</p>"
+        },
+        {
+          "attribute_code": "short_description",
+          "value": "<p>EGA Juice Clinic is based on the concept of Food as Medicine. We have a qualified Ayurveda doctor who is a full-time nutritionist to check body type based on five elements of nature, he prescribes best advice on diet and lifestyle which is suited to individual body type. We make fresh Turmeric, Ginger and Amla shots as a natural remedy for flu and common cold symptoms. We do fresh almond milk, coconut milk with Turmeric, Ginger, Black pepper, Cinnamon, Cardamom.</p>"
+        },
+        {
+          "attribute_code": "meta_title",
+          "value": "EGA Juice Clinic"
+        },
+        {
+          "attribute_code": "meta_keyword",
+          "value": "EGA Juice Clinic"
+        },
+        {
+          "attribute_code": "meta_description",
+          "value": "EGA Juice Clinic EGA Juice Clinic is based on the concept of Food as Medicine. We have a qualified Ayurveda doctor who is a full-time nutritionist to check body type based on five elements of nature, he prescribes best advice on diet and lifestyle which i"
+        },
+        {
+          "attribute_code": "image",
+          "value": "/f/e/feature_580_ycms_5025191a55c95d0b83a1ea8fc8304f31.jpg"
+        },
+        {
+          "attribute_code": "small_image",
+          "value": "/f/e/feature_580_ycms_5025191a55c95d0b83a1ea8fc8304f31.jpg"
+        },
+        {
+          "attribute_code": "thumbnail",
+          "value": "/f/e/feature_580_ycms_5025191a55c95d0b83a1ea8fc8304f31.jpg"
+        },
+        {
+          "attribute_code": "options_container",
+          "value": "container2"
+        },
+        {
+          "attribute_code": "required_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "has_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "url_key",
+          "value": "ega-juice-clinic"
+        },
+        {
+          "attribute_code": "tax_class_id",
+          "value": "2"
+        },
+        {
+          "attribute_code": "gift_message_available",
+          "value": "2"
+        },
+        {
+          "attribute_code": "swatch_image",
+          "value": "/f/e/feature_580_ycms_5025191a55c95d0b83a1ea8fc8304f31.jpg"
+        },
+        {
+          "attribute_code": "partner_id",
+          "value": "123456"
+        },
+        {
+          "attribute_code": "partners_benefits",
+          "value": "<ul>\r\n<li>30% off total bill</li>\r\n<li>Greetings from the Head Chef</li>\r\n<li>Guarantee of the best table</li>\r\n</ul>"
+        },
+        {
+          "attribute_code": "partners_terms_conditions",
+          "value": "<ul>\r\n<li>Valild till June 2018</li>\r\n<li>Offer can only be redeemed upon reservation</li>\r\n<li>Cras a tempor justo.&nbsp;</li>\r\n<li>Vivamus tristique nunc at eros viverra tempus.&nbsp;</li>\r\n<li>Aliquam erat volutpat.</li>\r\n<li>Cras a tempor justo.&nbsp;</li>\r\n</ul>"
+        },
+        {
+          "attribute_code": "partners_opening_hours",
+          "value": "<p>Lunch</p>\r\n<p>Monday to Sunday</p>\r\n<p>12:00 - 14:30</p>\r\n<p></p>\r\n<p>Dinner</p>\r\n<p>Monday to Sunday</p>\r\n<p>12:00 - 14:30</p>"
+        },
+        {
+          "attribute_code": "partners_contact",
+          "value": "<p>website: <a href=\"http://www.egajuiceclinic.com\" target=\"_blank\">www.egajuiceclinic.com</a></p>\r\n<p>Facebook</p>\r\n<p>Instagram</p>"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "sku": " Frunatic",
+      "name": " Frunatic",
+      "attribute_set_id": 10,
+      "price": 0,
+      "status": 1,
+      "visibility": 4,
+      "type_id": "virtual",
+      "created_at": "2017-09-26 15:11:08",
+      "updated_at": "2017-09-26 15:11:08",
+      "extension_attributes": [],
+      "product_links": [],
+      "tier_prices": [],
+      "custom_attributes": [
+        {
+          "attribute_code": "description",
+          "value": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id faucibus leo. Aliquam erat volutpat. Nullam convallis, metus at porta aliquam, libero odio iaculis nulla, in vehicula dolor nisi vel enim. Quisque congue rutrum pulvinar. Praesent elementum lectus ex, ut dignissim ex commodo id. Aliquam a tortor id neque iaculis pharetra efficitur eu libero. Duis sit amet ex urna. Nunc vestibulum lacinia interdum. Cras bibendum justo vitae ipsum cursus, vel aliquam tortor vestibulum.</p>\r\n<p>Nulla malesuada urna et bibendum imperdiet. Curabitur faucibus elit ut ante tincidunt, eget elementum enim maximus. In mollis tempus lectus, sit amet cursus risus consequat nec. Sed pulvinar enim urna. Proin vel nunc ultricies libero elementum faucibus. Nunc tempus purus non efficitur accumsan. Sed et tellus mollis, gravida justo non, ultrices felis. Ut a leo eu massa tristique interdum. Sed volutpat condimentum dui id dapibus. Nulla scelerisque mauris non nunc tempus, a aliquam sem commodo. Maecenas ut commodo mi, ac venenatis tellus. Quisque maximus elit enim, ac aliquam eros pulvinar sit amet. Nullam iaculis diam tortor, blandit ultricies nisl lobortis sit amet. Cras a tempor justo. Vivamus tristique nunc at eros viverra tempus. Aliquam erat volutpat.</p>"
+        },
+        {
+          "attribute_code": "short_description",
+          "value": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id faucibus leo. Aliquam erat volutpat. Nullam convallis, metus at porta aliquam, libero odio iaculis nulla, in vehicula dolor nisi vel enim. Quisque congue rutrum pulvinar.&nbsp;</p>"
+        },
+        {
+          "attribute_code": "meta_title",
+          "value": " Frunatic"
+        },
+        {
+          "attribute_code": "meta_keyword",
+          "value": " Frunatic"
+        },
+        {
+          "attribute_code": "meta_description",
+          "value": " Frunatic Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id faucibus leo. Aliquam erat volutpat. Nullam convallis, metus at porta aliquam, libero odio iaculis nulla, in vehicula dolor nisi vel enim. Quisque congue rutrum pulvinar. Praesen"
+        },
+        {
+          "attribute_code": "image",
+          "value": "/f/e/feature_580_ycms_689ebc0be24946c99de95624acb5fe6e.jpg"
+        },
+        {
+          "attribute_code": "small_image",
+          "value": "/f/e/feature_580_ycms_689ebc0be24946c99de95624acb5fe6e.jpg"
+        },
+        {
+          "attribute_code": "thumbnail",
+          "value": "/f/e/feature_580_ycms_689ebc0be24946c99de95624acb5fe6e.jpg"
+        },
+        {
+          "attribute_code": "options_container",
+          "value": "container2"
+        },
+        {
+          "attribute_code": "required_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "has_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "url_key",
+          "value": "frunatic"
+        },
+        {
+          "attribute_code": "tax_class_id",
+          "value": "2"
+        },
+        {
+          "attribute_code": "gift_message_available",
+          "value": "2"
+        },
+        {
+          "attribute_code": "swatch_image",
+          "value": "/f/e/feature_580_ycms_689ebc0be24946c99de95624acb5fe6e.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "sku": "Club 21",
+      "name": "Club 21",
+      "attribute_set_id": 10,
+      "price": 0,
+      "status": 1,
+      "visibility": 4,
+      "type_id": "virtual",
+      "created_at": "2017-09-26 15:13:39",
+      "updated_at": "2017-09-26 15:13:39",
+      "extension_attributes": [],
+      "product_links": [],
+      "tier_prices": [],
+      "custom_attributes": [
+        {
+          "attribute_code": "description",
+          "value": "<p>Curabitur vel justo vel nunc mattis elementum. Praesent orci libero, cursus at eros eu, aliquet ornare nisl. Proin mattis laoreet mauris non molestie. Nunc porttitor eu lorem dignissim aliquet. Quisque gravida sodales neque, pulvinar laoreet mi blandit sed. Curabitur dignissim sapien eget augue iaculis fermentum. Nam at mattis mi, nec ullamcorper mi. Vivamus laoreet metus urna, a iaculis tortor eleifend viverra. Donec at est libero.</p>\r\n<p>Fusce pharetra orci nisl, quis euismod lectus tristique a. Curabitur ac molestie lacus. Vestibulum et cursus felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur non odio lacinia, tincidunt erat eu, pretium nisl. Proin ac tellus interdum, varius neque in, commodo libero. Aliquam in felis finibus, elementum massa eget, tempus diam. Aenean dictum sapien risus, at porta risus condimentum non.</p>"
+        },
+        {
+          "attribute_code": "meta_title",
+          "value": "Club 21"
+        },
+        {
+          "attribute_code": "meta_keyword",
+          "value": "Club 21"
+        },
+        {
+          "attribute_code": "meta_description",
+          "value": "Club 21 Curabitur vel justo vel nunc mattis elementum. Praesent orci libero, cursus at eros eu, aliquet ornare nisl. Proin mattis laoreet mauris non molestie. Nunc porttitor eu lorem dignissim aliquet. Quisque gravida sodales neque, pulvinar laoreet mi bl"
+        },
+        {
+          "attribute_code": "image",
+          "value": "/c/o/corporate_profile_-_club21.jpg"
+        },
+        {
+          "attribute_code": "small_image",
+          "value": "/c/o/corporate_profile_-_club21.jpg"
+        },
+        {
+          "attribute_code": "thumbnail",
+          "value": "/c/o/corporate_profile_-_club21.jpg"
+        },
+        {
+          "attribute_code": "options_container",
+          "value": "container2"
+        },
+        {
+          "attribute_code": "required_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "has_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "url_key",
+          "value": "club-21"
+        },
+        {
+          "attribute_code": "tax_class_id",
+          "value": "2"
+        },
+        {
+          "attribute_code": "gift_message_available",
+          "value": "2"
+        },
+        {
+          "attribute_code": "swatch_image",
+          "value": "/c/o/corporate_profile_-_club21.jpg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "sku": "product-shopping-01",
+      "name": "Product shopping 01",
+      "attribute_set_id": 10,
+      "price": 6553,
+      "status": 1,
+      "visibility": 4,
+      "type_id": "simple",
+      "created_at": "2017-10-02 04:47:31",
+      "updated_at": "2017-10-20 07:55:39",
+      "weight": 1,
+      "extension_attributes": [],
+      "product_links": [],
+      "tier_prices": [],
+      "custom_attributes": [
+        {
+          "attribute_code": "description",
+          "value": "<p>description</p>"
+        },
+        {
+          "attribute_code": "meta_title",
+          "value": "Meta Title"
+        },
+        {
+          "attribute_code": "meta_keyword",
+          "value": "meta1, meta2, meta3"
+        },
+        {
+          "attribute_code": "meta_description",
+          "value": "meta description"
+        },
+        {
+          "attribute_code": "image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "small_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "thumbnail",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "options_container",
+          "value": "container2"
+        },
+        {
+          "attribute_code": "required_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "has_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "url_key",
+          "value": "product-shopping01"
+        },
+        {
+          "attribute_code": "tax_class_id",
+          "value": "2"
+        },
+        {
+          "attribute_code": "gift_message_available",
+          "value": "0"
+        },
+        {
+          "attribute_code": "swatch_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "partner_id",
+          "value": "product-shopping-01"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "sku": "product-shopping02",
+      "name": "Product shopping 02",
+      "attribute_set_id": 10,
+      "price": 3294,
+      "status": 1,
+      "visibility": 4,
+      "type_id": "simple",
+      "created_at": "2017-10-02 04:47:31",
+      "updated_at": "2017-10-02 04:47:31",
+      "weight": 1,
+      "extension_attributes": [],
+      "product_links": [],
+      "tier_prices": [],
+      "custom_attributes": [
+        {
+          "attribute_code": "description",
+          "value": "<p>description</p>"
+        },
+        {
+          "attribute_code": "meta_title",
+          "value": "Meta Title"
+        },
+        {
+          "attribute_code": "meta_keyword",
+          "value": "meta1, meta2, meta3"
+        },
+        {
+          "attribute_code": "meta_description",
+          "value": "meta description"
+        },
+        {
+          "attribute_code": "image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "small_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "thumbnail",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "options_container",
+          "value": "container2"
+        },
+        {
+          "attribute_code": "required_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "has_options",
+          "value": "1"
+        },
+        {
+          "attribute_code": "url_key",
+          "value": "Product-shopping02"
+        },
+        {
+          "attribute_code": "tax_class_id",
+          "value": "2"
+        },
+        {
+          "attribute_code": "swatch_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "sku": "product-shopping03",
+      "name": "Product shopping 03",
+      "attribute_set_id": 10,
+      "price": 7895,
+      "status": 1,
+      "visibility": 4,
+      "type_id": "simple",
+      "created_at": "2017-10-02 04:47:31",
+      "updated_at": "2017-10-02 04:47:31",
+      "weight": 1,
+      "extension_attributes": [],
+      "product_links": [],
+      "tier_prices": [],
+      "custom_attributes": [
+        {
+          "attribute_code": "description",
+          "value": "<p>description</p>"
+        },
+        {
+          "attribute_code": "meta_title",
+          "value": "Meta Title"
+        },
+        {
+          "attribute_code": "meta_keyword",
+          "value": "meta1, meta2, meta3"
+        },
+        {
+          "attribute_code": "meta_description",
+          "value": "meta description"
+        },
+        {
+          "attribute_code": "image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "small_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "thumbnail",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "options_container",
+          "value": "container2"
+        },
+        {
+          "attribute_code": "required_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "has_options",
+          "value": "1"
+        },
+        {
+          "attribute_code": "url_key",
+          "value": "Product-shopping03"
+        },
+        {
+          "attribute_code": "tax_class_id",
+          "value": "2"
+        },
+        {
+          "attribute_code": "swatch_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "sku": "product-shopping04",
+      "name": "Product shopping 04",
+      "attribute_set_id": 10,
+      "price": 203,
+      "status": 1,
+      "visibility": 4,
+      "type_id": "simple",
+      "created_at": "2017-10-02 04:47:31",
+      "updated_at": "2017-10-02 04:47:31",
+      "weight": 1,
+      "extension_attributes": [],
+      "product_links": [],
+      "tier_prices": [],
+      "custom_attributes": [
+        {
+          "attribute_code": "description",
+          "value": "<p>description</p>"
+        },
+        {
+          "attribute_code": "meta_title",
+          "value": "Meta Title"
+        },
+        {
+          "attribute_code": "meta_keyword",
+          "value": "meta1, meta2, meta3"
+        },
+        {
+          "attribute_code": "meta_description",
+          "value": "meta description"
+        },
+        {
+          "attribute_code": "image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "small_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "thumbnail",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "options_container",
+          "value": "container2"
+        },
+        {
+          "attribute_code": "required_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "has_options",
+          "value": "1"
+        },
+        {
+          "attribute_code": "url_key",
+          "value": "Product-shopping04"
+        },
+        {
+          "attribute_code": "tax_class_id",
+          "value": "2"
+        },
+        {
+          "attribute_code": "swatch_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "sku": "product-shopping05",
+      "name": "Product shopping 05",
+      "attribute_set_id": 10,
+      "price": 5840,
+      "status": 1,
+      "visibility": 4,
+      "type_id": "simple",
+      "created_at": "2017-10-02 04:47:31",
+      "updated_at": "2017-10-02 04:47:31",
+      "weight": 1,
+      "extension_attributes": [],
+      "product_links": [],
+      "tier_prices": [],
+      "custom_attributes": [
+        {
+          "attribute_code": "description",
+
+          "value": "<p>description</p>"
+        },
+        {
+          "attribute_code": "meta_title",
+          "value": "Meta Title"
+        },
+        {
+          "attribute_code": "meta_keyword",
+          "value": "meta1, meta2, meta3"
+        },
+        {
+          "attribute_code": "meta_description",
+          "value": "meta description"
+        },
+        {
+          "attribute_code": "image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "small_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "thumbnail",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "options_container",
+          "value": "container2"
+        },
+        {
+          "attribute_code": "required_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "has_options",
+          "value": "1"
+        },
+        {
+          "attribute_code": "url_key",
+          "value": "Product-shopping05"
+        },
+        {
+          "attribute_code": "tax_class_id",
+          "value": "2"
+        },
+        {
+          "attribute_code": "swatch_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "sku": "product-shopping06",
+      "name": "Product shopping 06",
+      "attribute_set_id": 10,
+      "price": 6810,
+      "status": 1,
+      "visibility": 4,
+      "type_id": "simple",
+      "created_at": "2017-10-02 04:47:31",
+      "updated_at": "2017-10-02 04:47:31",
+      "weight": 1,
+      "extension_attributes": [],
+      "product_links": [],
+      "tier_prices": [],
+      "custom_attributes": [
+        {
+          "attribute_code": "description",
+          "value": "<p>description</p>"
+        },
+        {
+          "attribute_code": "meta_title",
+          "value": "Meta Title"
+        },
+        {
+          "attribute_code": "meta_keyword",
+          "value": "meta1, meta2, meta3"
+        },
+        {
+          "attribute_code": "meta_description",
+          "value": "meta description"
+        },
+        {
+          "attribute_code": "image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "small_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "thumbnail",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "options_container",
+          "value": "container2"
+        },
+        {
+          "attribute_code": "required_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "has_options",
+          "value": "1"
+        },
+        {
+          "attribute_code": "url_key",
+          "value": "Product-shopping06"
+        },
+        {
+          "attribute_code": "tax_class_id",
+          "value": "2"
+        },
+        {
+          "attribute_code": "swatch_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "sku": "product-shopping07",
+      "name": "Product shopping 07",
+      "attribute_set_id": 10,
+      "price": 8756,
+      "status": 1,
+      "visibility": 4,
+      "type_id": "simple",
+      "created_at": "2017-10-02 04:47:31",
+      "updated_at": "2017-10-02 04:47:31",
+      "weight": 1,
+      "extension_attributes": [],
+      "product_links": [],
+      "tier_prices": [],
+      "custom_attributes": [
+        {
+          "attribute_code": "description",
+          "value": "<p>description</p>"
+        },
+        {
+          "attribute_code": "meta_title",
+          "value": "Meta Title"
+        },
+        {
+          "attribute_code": "meta_keyword",
+          "value": "meta1, meta2, meta3"
+        },
+        {
+          "attribute_code": "meta_description",
+          "value": "meta description"
+        },
+        {
+          "attribute_code": "image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "small_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "thumbnail",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "options_container",
+          "value": "container2"
+        },
+        {
+          "attribute_code": "required_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "has_options",
+          "value": "1"
+        },
+        {
+          "attribute_code": "url_key",
+          "value": "Product-shopping07"
+        },
+        {
+          "attribute_code": "tax_class_id",
+          "value": "2"
+        },
+        {
+          "attribute_code": "swatch_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "sku": "product-shopping08",
+      "name": "Product shopping 08",
+      "attribute_set_id": 10,
+      "price": 1303,
+      "status": 1,
+      "visibility": 4,
+      "type_id": "simple",
+      "created_at": "2017-10-02 04:47:31",
+      "updated_at": "2017-10-02 04:47:31",
+      "weight": 1,
+      "extension_attributes": [],
+      "product_links": [],
+      "tier_prices": [],
+      "custom_attributes": [
+        {
+          "attribute_code": "description",
+          "value": "<p>description</p>"
+        },
+        {
+          "attribute_code": "meta_title",
+          "value": "Meta Title"
+        },
+        {
+          "attribute_code": "meta_keyword",
+          "value": "meta1, meta2, meta3"
+        },
+        {
+          "attribute_code": "meta_description",
+          "value": "meta description"
+        },
+        {
+          "attribute_code": "image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "small_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "thumbnail",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "options_container",
+          "value": "container2"
+        },
+        {
+          "attribute_code": "required_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "has_options",
+          "value": "1"
+        },
+        {
+          "attribute_code": "url_key",
+          "value": "Product-shopping08"
+        },
+        {
+          "attribute_code": "tax_class_id",
+          "value": "2"
+        },
+        {
+          "attribute_code": "swatch_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "sku": "product-shopping09",
+      "name": "Product shopping 09",
+      "attribute_set_id": 10,
+      "price": 709,
+      "status": 1,
+      "visibility": 4,
+      "type_id": "simple",
+      "created_at": "2017-10-02 04:47:31",
+      "updated_at": "2017-10-02 04:47:31",
+      "weight": 1,
+      "extension_attributes": [],
+      "product_links": [],
+      "tier_prices": [],
+      "custom_attributes": [
+        {
+          "attribute_code": "description",
+          "value": "<p>description</p>"
+        },
+        {
+          "attribute_code": "meta_title",
+          "value": "Meta Title"
+        },
+        {
+          "attribute_code": "meta_keyword",
+          "value": "meta1, meta2, meta3"
+        },
+        {
+          "attribute_code": "meta_description",
+          "value": "meta description"
+        },
+        {
+          "attribute_code": "image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "small_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "thumbnail",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "options_container",
+          "value": "container2"
+        },
+        {
+          "attribute_code": "required_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "has_options",
+          "value": "1"
+        },
+        {
+          "attribute_code": "url_key",
+          "value": "Product-shopping09"
+        },
+        {
+          "attribute_code": "tax_class_id",
+          "value": "2"
+        },
+        {
+          "attribute_code": "swatch_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "sku": "product-shopping10",
+      "name": "Product shopping 10",
+      "attribute_set_id": 10,
+      "price": 8487,
+      "status": 1,
+      "visibility": 4,
+      "type_id": "simple",
+      "created_at": "2017-10-02 04:47:31",
+      "updated_at": "2017-10-02 04:47:31",
+      "weight": 1,
+      "extension_attributes": [],
+      "product_links": [],
+      "tier_prices": [],
+      "custom_attributes": [
+        {
+          "attribute_code": "description",
+          "value": "<p>description</p>"
+        },
+        {
+          "attribute_code": "meta_title",
+          "value": "Meta Title"
+        },
+        {
+          "attribute_code": "meta_keyword",
+          "value": "meta1, meta2, meta3"
+        },
+        {
+          "attribute_code": "meta_description",
+          "value": "meta description"
+        },
+        {
+          "attribute_code": "image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "small_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "thumbnail",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        },
+        {
+          "attribute_code": "options_container",
+          "value": "container2"
+        },
+        {
+          "attribute_code": "required_options",
+          "value": "0"
+        },
+        {
+          "attribute_code": "has_options",
+          "value": "1"
+        },
+        {
+          "attribute_code": "url_key",
+          "value": "Product-shopping10"
+        },
+        {
+          "attribute_code": "tax_class_id",
+          "value": "2"
+        },
+        {
+          "attribute_code": "swatch_image",
+          "value": "/h/t/httpdev.monilab.netryanskypremiumimagescouple.jpg"
+        }
+      ]
+    }
+  ],
+  "search_criteria": {
+    "filter_groups": [
+      {
+        "filters": [
+          {
+            "field": "category_id",
+            "value": "4",
+            "condition_type": "eq"
+          }
+        ]
+      },
+      {
+        "filters": [
+          {
+            "field": "visibility",
+            "value": "1",
+            "condition_type": "neq"
+          }
+        ]
+      }
+    ],
+    "page_size": 20,
+    "current_page": 1
+  },
+  "total_count": 14
+}

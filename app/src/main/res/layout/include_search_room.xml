@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:paddingTop="@dimen/margin_small"
+      android:text="@string/property_detail_book_your_rooms_label"
+      android:textSize="@dimen/text_size_big"
+      android:textColor="@color/textColorPrimary"
+      fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+      tools:ignore="MissingPrefix"
+      />
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_normal"
+      android:background="@color/colorAccent"
+      >
+    <RelativeLayout
+        android:id="@+id/ly_ean_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:background="@color/white"
+        android:paddingTop="@dimen/margin_small"
+        >
+
+      <TextView
+          android:id="@+id/tv_check_in_date_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+          android:text="@string/all_check_in_date_label"
+          style="@style/TextStyleEanFieldLabel"
+          />
+
+      <TextView
+          android:id="@+id/tv_check_in_date"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tv_check_in_date_label"
+          android:text="04 Apr 2018 (Wed)"
+          style="@style/TextStyleEanFieldValue"
+          />
+
+      <View
+          android:id="@+id/vertical_line"
+          android:layout_width="1dp"
+          android:layout_height="match_parent"
+          android:layout_above="@+id/horizontal_line2"
+          android:layout_centerHorizontal="true"
+          android:background="@color/grey"
+          />
+
+      <TextView
+          android:id="@+id/tv_check_out_date_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/vertical_line"
+          android:text="@string/all_check_out_date_label"
+          style="@style/TextStyleEanFieldLabel"
+          />
+
+      <TextView
+          android:id="@+id/tv_check_out_date"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tv_check_in_date_label"
+          android:layout_toEndOf="@id/vertical_line"
+          android:text="05 Apr 2018 (Thu)"
+          style="@style/TextStyleEanFieldValue"
+          />
+      <View
+          android:id="@+id/horizontal_line2"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_below="@+id/tv_check_in_date"
+          android:layout_marginBottom="@dimen/margin_small"
+          android:layout_marginTop="@dimen/margin_small"
+          android:background="@color/lightGrey"
+          />
+
+      <TextView
+          android:id="@+id/tv_occupancy_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+          android:layout_below="@+id/horizontal_line2"
+          android:text="@string/all_occupancy_label"
+          style="@style/TextStyleEanFieldLabel"
+          />
+
+      <TextView
+          android:id="@+id/tv_occupancy"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tv_occupancy_label"
+          android:text="2 Adults, 2 Children, 2 Rooms"
+          style="@style/TextStyleEanFieldValue"
+          />
+      <Button
+          android:id="@+id/btn_search_rooms"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tv_occupancy"
+          android:layout_marginTop="@dimen/margin_small"
+          android:background="@color/colorAccent"
+          android:foreground="?attr/selectableItemBackground"
+          android:gravity="center"
+          android:letterSpacing="0.1"
+          android:text="@string/property_detail_search_for_rooms_label"
+          android:textAllCaps="true"
+          android:textColor="@color/white"
+          fontPath="@string/fonts_Lato_Bold"
+          tools:ignore="MissingPrefix"
+          />
+
+    </RelativeLayout>
+  </FrameLayout>
+</LinearLayout>

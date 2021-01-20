@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:background="@drawable/rectangle_top_round_white">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:paddingBottom="@dimen/normal_padding">
+      <FrameLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/normal_padding"
+        android:paddingHorizontal="@dimen/normal_padding">
+
+        <TextView
+          android:id="@+id/title"
+          fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal|center_vertical"
+          android:text="@string/make_a_reservation"
+          android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+          android:textColor="@color/textColorPrimary"
+          tools:ignore="MissingPrefix" />
+
+        <ImageView
+          android:id="@+id/img_close"
+          android:layout_width="30dp"
+          android:layout_height="25dp"
+          android:layout_gravity="right|center_vertical"
+          android:paddingLeft="7dp"
+          android:paddingTop="7dp"
+          android:paddingBottom="7dp"
+          android:src="@drawable/ic_close_accent" />
+      </FrameLayout>
+      <TextView
+        android:id="@+id/tv_sub_restaurant"
+        fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="with"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/text_size_normal"
+        tools:ignore="MissingPrefix"/>
+    </LinearLayout>
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="1px"
+      android:background="@color/black" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:paddingHorizontal="@dimen/normal_padding">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:paddingHorizontal="@dimen/margin_small">
+
+        <TextView
+          android:id="@+id/sign_of_mandatory"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="*"
+          android:textColor="@color/colorAccent" />
+
+        <TextView
+          style="@style/TextAppearance.AppCompat.Caption"
+          fontPath="@string/fonts_Lato_Regular"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/mandatory"
+          android:textColor="@color/textColorPrimary"
+          tools:ignore="MissingPrefix" />
+      </LinearLayout>
+
+      <FrameLayout
+        android:id="@+id/rlOutlet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/input_outlet"
+          android:layout_width="match_parent"
+          android:layout_height="56dp"
+          android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+          android:layout_margin="@dimen/margin_small"
+          android:hint="@string/outlet"
+          android:autofillHints="@string/outlet"
+          android:inputType="text" />
+
+        <View
+          android:id="@+id/vOutlet"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_margin="@dimen/margin_small" />
+      </FrameLayout>
+
+      <!--<RelativeLayout
+        android:id="@+id/rlSalutation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/input_salutation"
+          android:layout_width="match_parent"
+          android:layout_height="56dp"
+          android:layout_margin="@dimen/margin_small"
+          android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+          android:hint="@string/salutation"
+          android:inputType="text" />
+
+        <View
+          android:id="@+id/vSalutation"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+      </RelativeLayout>-->
+
+     <!-- <LinearLayout
+        android:id="@+id/ll_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/input_first_name"
+          android:layout_width="match_parent"
+          android:layout_height="56dp"
+          android:layout_margin="@dimen/margin_small"
+          android:layout_weight="1"
+          android:hint="@string/first_name"
+          android:inputType="text" />
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/input_last_name"
+          android:layout_width="match_parent"
+          android:layout_height="56dp"
+          android:layout_alignParentEnd="true"
+          android:layout_margin="@dimen/margin_small"
+          android:layout_weight="1"
+          android:hint="@string/last_name"
+          android:inputType="text" />
+      </LinearLayout>-->
+
+     <!-- <RelativeLayout
+        android:id="@+id/rlEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/input_email"
+          android:layout_width="match_parent"
+          android:layout_height="56dp"
+          android:hint="@string/email_address"
+          android:layout_margin="@dimen/margin_small"
+          android:inputType="text" />
+      </RelativeLayout>-->
+
+      <!--<LinearLayout
+        android:id="@+id/ll_contry_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/margin_small"
+          android:layout_weight="1">
+
+          <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/input_country"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginEnd="0dp"
+            android:hint="@string/country_code"
+            android:inputType="text" />
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+          <View
+            android:id="@+id/vCountry"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+        </RelativeLayout>
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/input_contact_number"
+          android:layout_width="match_parent"
+          android:layout_height="56dp"
+          android:layout_weight="1"
+          android:layout_margin="@dimen/margin_small"
+          android:hint="@string/contact_number"
+          android:inputType="text" />
+      </LinearLayout>-->
+
+      <LinearLayout
+        android:id="@+id/ll_reservation_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="56dp"
+          android:layout_weight="1"
+          android:layout_margin="@dimen/margin_small">
+
+          <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/input_reservation_date"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="@string/reservation_date"
+            android:inputType="text" />
+          <View
+            android:id="@+id/vDateSinglePicker"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"/>
+        </FrameLayout>
+
+        <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/margin_small"
+          android:layout_weight="1">
+
+          <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+            android:id="@+id/input_reservation_time"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="@string/reservation_time"
+            android:inputType="text" />
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="@dimen/margin_small"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+          <View
+            android:id="@+id/vReservationTime"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:clickable="true"/>
+        </RelativeLayout>
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/ll_people_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/input_adults_number"
+          android:layout_width="match_parent"
+          android:layout_height="56dp"
+          android:layout_margin="@dimen/margin_small"
+          android:layout_weight="1"
+          android:hint="@string/adult_s"
+          android:inputType="number" />
+
+        <com.skypremiuminternational.app.app.features.skytextinputlayout.SkyTextInputLayout
+          android:id="@+id/input_children_number"
+          android:layout_width="match_parent"
+          android:layout_height="56dp"
+          android:layout_alignParentEnd="true"
+          android:layout_margin="@dimen/margin_small"
+          android:layout_weight="1"
+          android:hint="@string/child_ren"
+          android:inputType="number" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/ll_special_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.skypremiuminternational.app.app.features.skytextinputlayout.SkyTextInputLayout
+          android:id="@+id/input_special_instruction"
+          android:layout_width="match_parent"
+          android:layout_height="56dp"
+          android:layout_marginEnd="0dp"
+          android:layout_margin="@dimen/margin_small"
+          android:layout_weight="1"
+          android:hint="@string/special_instructions_remarks"
+          android:inputType="text" />
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        android:textColor="@color/grey"
+        android:text="@string/special_requests_are_not_guaranteed_and_are_subject_to_availability_and_restaurant_discre_on" />
+
+      <TextView
+        android:id="@+id/tv_message_retaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        android:textColor="@color/black"
+        android:text="@string/message_from_restaurant" />
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+          android:id="@+id/ck_policy"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toStartOf="@id/tv_policy"/>
+
+        <TextView
+          android:id="@+id/tv_policy"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:padding="0dp"
+          android:text="Policy"
+          android:textColor="@color/grey"
+          android:textColorLink="@color/grey"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/ck_policy"
+          app:layout_constraintTop_toTopOf="parent" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <TextView
+      android:id="@+id/tv_save"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:gravity="center"
+      android:textColor="@color/white"
+      android:background="@color/colorAccent"
+      android:layout_marginTop="@dimen/margin_normal"
+      android:textAllCaps="true"
+      android:clickable="true"
+      android:foreground="?attr/selectableItemBackground"
+      android:text="@string/save"/>
+  </LinearLayout>
+</androidx.core.widget.NestedScrollView>

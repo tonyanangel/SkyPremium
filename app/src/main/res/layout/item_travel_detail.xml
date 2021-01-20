@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:elevation="4dp"
+    android:orientation="vertical"
+    >
+
+  <ImageView
+      android:layout_width="240dp"
+      android:layout_height="160dp"
+      android:scaleType="centerCrop"
+      android:src="@drawable/travel_2"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="16dp"
+      android:layout_marginTop="16dp"
+      android:text="Tailorbird Standard"
+      fontPath="@string/fonts_Lato_Bold"
+      tools:ignore="MissingPrefix"
+      style="@style/TextAppearance.AppCompat.Subhead"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="16dp"
+      android:layout_marginTop="4dp"
+      android:text="(Single / Double / Twin)"
+      style="@style/TextAppearance.AppCompat.Caption"
+      />
+
+  <TextView
+      android:id="@+id/tvSubmit"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:layout_marginTop="8dp"
+      android:background="@color/colorAccent"
+      android:gravity="center"
+      android:paddingBottom="4dp"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:paddingTop="4dp"
+      android:text="Extra bed +SGD$35"
+      android:textColor="@color/white"
+      fontPath="@string/fonts_Lato_Bold"
+      tools:ignore="MissingPrefix"
+      style="@style/TextAppearance.AppCompat.Caption"
+      />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:gravity="center"
+      android:orientation="horizontal"
+      >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:text="Peak Season"
+          android:textColor="@color/textColorPrimary"
+          fontPath="@string/fonts_Lato_Bold"
+          tools:ignore="MissingPrefix"
+          style="@style/TextAppearance.AppCompat.Caption"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:layout_marginTop="4dp"
+          android:text="21 Dec- 05 Jan"
+          style="@style/TextAppearance.AppCompat.Caption"
+          />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:text="SGD 120"
+        android:textColor="@color/textColorPrimary"
+        fontPath="@string/fonts_Lato_Bold"
+        tools:ignore="MissingPrefix"
+        style="@style/TextAppearance.AppCompat.Caption"
+        />
+
+  </LinearLayout>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1px"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginTop="8dp"
+      android:background="@color/dividerColor"
+      />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:gravity="center"
+      android:orientation="horizontal"
+      >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:text="High Season"
+          android:textColor="@color/textColorPrimary"
+          fontPath="@string/fonts_Lato_Bold"
+          tools:ignore="MissingPrefix"
+          style="@style/TextAppearance.AppCompat.Caption"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:layout_marginTop="4dp"
+          android:text="01 Nov - 31 Oct"
+          style="@style/TextAppearance.AppCompat.Caption"
+          />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:text="SGD 98"
+        android:textColor="@color/textColorPrimary"
+        fontPath="@string/fonts_Lato_Bold"
+        tools:ignore="MissingPrefix"
+        style="@style/TextAppearance.AppCompat.Caption"
+        />
+
+  </LinearLayout>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1px"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginTop="8dp"
+      android:background="@color/dividerColor"
+      />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="16dp"
+      android:layout_marginTop="16dp"
+      android:gravity="center"
+      android:orientation="horizontal"
+      >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:text="Low Season"
+          android:textColor="@color/textColorPrimary"
+          fontPath="@string/fonts_Lato_Bold"
+          tools:ignore="MissingPrefix"
+          style="@style/TextAppearance.AppCompat.Caption"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:layout_marginTop="4dp"
+          android:text="01 Apr - 31 Oct"
+          style="@style/TextAppearance.AppCompat.Caption"
+          />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:text="SGD 87"
+        android:textColor="@color/textColorPrimary"
+        fontPath="@string/fonts_Lato_Bold"
+        tools:ignore="MissingPrefix"
+        style="@style/TextAppearance.AppCompat.Caption"
+        />
+
+  </LinearLayout>
+
+
+</LinearLayout>

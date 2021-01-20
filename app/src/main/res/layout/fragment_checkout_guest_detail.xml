@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    >
+
+  <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+
+    <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:hint="@string/guest_detail_email_address_hint"
+        android:inputType="textEmailAddress"
+        />
+
+    <CheckBox
+        android:id="@+id/cb_book_for_someone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:buttonTint="@color/grey"
+        android:checked="false"
+        android:text="@string/guest_detail_checkbox_book_for_someone"
+        android:textSize="@dimen/text_size_small"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+      <com.skypremiuminternational.app.app.view.SkyTextInputSignLayout
+          android:id="@+id/edt_bed_preferences"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginStart="@dimen/margin_normal"
+          android:hint="@string/guest_detail_bed_preferences_hint"
+          android:inputType="none"
+          />
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="end"
+          android:layout_marginRight="@dimen/margin_normal"
+          android:layout_marginTop="10dp"
+          android:paddingLeft="@dimen/small_padding"
+          android:paddingRight="@dimen/small_padding"
+          android:src="@drawable/ic_dropdown_accent"
+          />
+
+      <View
+          android:id="@+id/bed_preferences_overlay"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_error_accent_16dp"
+        android:drawablePadding="@dimen/margin_small"
+        android:paddingBottom="@dimen/margin_normal"
+        android:paddingLeft="@dimen/margin_normal"
+        android:paddingRight="@dimen/margin_normal"
+        android:paddingTop="@dimen/margin_small"
+        android:text="@string/guest_detail_bed_preferences_notice"
+        android:textSize="@dimen/text_size_small"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3sp"
+        android:background="@color/greyTransparent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_booker_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:padding="@dimen/margin_normal"
+        android:text="@string/btn_next"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        fontPath="@string/fonts_Lato_Medium"
+        tools:ignore="MissingPrefix"
+        />
+  </LinearLayout>
+</androidx.core.widget.NestedScrollView>

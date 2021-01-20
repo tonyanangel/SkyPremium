@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <debug-overrides>
+        <trust-anchors>
+            <!-- Trust user added CAs while debuggable only -->
+            <certificates src="user" />
+        </trust-anchors>
+    </debug-overrides>
+    <domain-config cleartextTrafficPermitted="true">
+
+        <domain includeSubdomains="true">search-prd-propertycatalog-spi-odd-obtuqhbckrqdafobutpj7y3pfa.ap-southeast-1.cloudsearch.amazonaws.com</domain>
+        <domain includeSubdomains="true">search-prd-propertycatalog-spi-even-45zebnlpmlsvkhecbtj24oc6ku.ap-southeast-1.cloudsearch.amazonaws.com</domain> <!-- PRD -->
+        <domain includeSubdomains="true">search-uat-propertycatalog-spi-odd-5nu2mwcul7kw7oee3ax3a3au7y.ap-southeast-1.cloudsearch.amazonaws.com</domain>
+        <domain includeSubdomains="true">search-uat-propertycatalog-spi-even-qjcuzylvu7jxt5svktu2kkyywu.ap-southeast-1.cloudsearch.amazonaws.com</domain>
+        <domain includeSubdomains="true">sg-dev-ecm-sss01.s3.amazonaws.com</domain>
+        <domain includeSubdomains="true">sg-uat-ecm-sss02.s3.amazonaws.com</domain>
+        <domain includeSubdomains="true">em-skyipr-ecm-sss01.s3.amazonaws.com</domain>
+        <domain includeSubdomains="true">54.254.149.93</domain>   <!-- UAT -->
+        <domain includeSubdomains="true">54.169.88.62</domain>
+        <domain includeSubdomains="true">192.168.1.36</domain>
+        <domain includeSubdomains="true">18.140.22.171</domain>
+        <domain includeSubdomains="true">192.168.1.31</domain>
+        <domain includeSubdomains="true">52.74.87.159</domain>
+        <domain includeSubdomains="true">54.151.153.34</domain>
+        <domain includeSubdomains="true">54.251.85.213</domain>
+        <domain includeSubdomains="true">crm.skypremium.com.sg</domain>
+        <domain includeSubdomains="true">122.248.224.110</domain>
+        <domain includeSubdomains="true">web.qa1.tabledb.com</domain> //HGW
+    </domain-config>
+</network-security-config>

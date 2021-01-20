@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:focusableInTouchMode="true"
+    android:gravity="bottom"
+    android:minWidth="360dp"
+    android:orientation="vertical"
+    >
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="-28dp"
+      android:layout_marginLeft="-10dp"
+      android:layout_marginRight="-10dp"
+      app:cardBackgroundColor="@color/white"
+      app:cardCornerRadius="16dp"
+      app:cardElevation="4dp"
+      app:cardUseCompatPadding="true"
+      >
+    <RelativeLayout
+        android:id="@+id/ly_ean_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+      <TextView
+          android:id="@+id/tv_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:gravity="center"
+          android:padding="16dp"
+          android:text="@string/search_hotel_title"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="@dimen/text_size_big"
+          fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+          tools:ignore="MissingPrefix"
+          />
+
+      <ImageView
+          android:id="@+id/iv_close"
+          android:layout_width="24dp"
+          android:layout_height="24dp"
+          android:layout_alignParentEnd="true"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginTop="14dp"
+          android:padding="6dp"
+          android:src="@drawable/ic_close_accent"
+          />
+
+      <View
+          android:id="@+id/horizontal_line0"
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:layout_below="@+id/tv_title"
+          android:background="@color/lightGrey"
+          />
+
+      <com.skypremiuminternational.app.app.view.HotelEditText
+          android:id="@+id/stiAreaName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/horizontal_line0"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginStart="@dimen/margin_small"
+          android:layout_marginTop="@dimen/margin_small"
+          android:hint="@string/product_list_property_search_primary_hint"
+          android:imeOptions="actionDone"
+          android:inputType="none"
+          android:textColor="@color/textColorPrimary"
+          app:isHintMutable="true"
+          app:secondaryHint="@string/product_list_area_name_label"
+          tools:text="Hello"
+          />
+
+      <View
+          android:id="@+id/hotel_name_overlay"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:clickable="true"
+          android:focusable="true"
+          android:layout_below="@+id/horizontal_line0"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginStart="@dimen/margin_small"
+          android:layout_marginTop="@dimen/margin_small"
+          />
+
+      <View
+          android:id="@+id/horizontal_line1"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_below="@+id/stiAreaName"
+          android:layout_marginBottom="@dimen/margin_small"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginStart="@dimen/margin_normal"
+          android:background="@color/lightGrey"
+          />
+
+      <TextView
+          android:id="@+id/tv_check_in_date_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+          android:layout_below="@+id/horizontal_line1"
+          android:layout_marginStart="@dimen/margin_small"
+          android:text="@string/all_check_in_date_label"
+          style="@style/TextStyleEanFieldLabel"
+          />
+
+      <TextView
+          android:id="@+id/tv_check_in_date"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tv_check_in_date_label"
+          android:layout_marginStart="@dimen/margin_small"
+          android:text="04 Apr 2018 (Wed)"
+          style="@style/TextStyleEanFieldValue"
+          />
+
+      <View
+          android:id="@+id/vertical_line"
+          android:layout_width="1dp"
+          android:layout_height="match_parent"
+          android:layout_above="@+id/horizontal_line2"
+          android:layout_below="@+id/horizontal_line1"
+          android:layout_centerHorizontal="true"
+          />
+
+      <TextView
+          android:id="@+id/tv_check_out_date_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/horizontal_line1"
+          android:layout_marginStart="@dimen/margin_tiny"
+          android:layout_toEndOf="@+id/vertical_line"
+          android:text="@string/all_check_out_date_label"
+          style="@style/TextStyleEanFieldLabel"
+          />
+
+      <TextView
+          android:id="@+id/tv_check_out_date"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tv_check_in_date_label"
+          android:layout_marginStart="@dimen/margin_tiny"
+          android:layout_toEndOf="@id/vertical_line"
+          android:text="05 Apr 2018 (Thu)"
+          style="@style/TextStyleEanFieldValue"
+          />
+      <View
+          android:id="@+id/horizontal_line2"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_below="@+id/tv_check_in_date"
+          android:layout_marginBottom="@dimen/margin_small"
+          android:layout_marginEnd="@dimen/margin_small"
+          android:layout_marginStart="@dimen/margin_normal"
+          android:layout_marginTop="@dimen/margin_small"
+          android:layout_toStartOf="@+id/vertical_line"
+          android:background="@color/lightGrey"
+          />
+
+      <View
+          android:id="@+id/horizontal_line3"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_below="@+id/tv_check_in_date"
+          android:layout_marginBottom="@dimen/margin_small"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginStart="@dimen/margin_small"
+          android:layout_marginTop="@dimen/margin_small"
+          android:layout_toEndOf="@+id/vertical_line"
+          android:background="@color/lightGrey"
+          />
+
+      <TextView
+          android:id="@+id/tv_occupancy_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+          android:layout_below="@+id/horizontal_line2"
+          android:layout_marginStart="@dimen/margin_small"
+          android:text="@string/all_occupancy_label"
+          style="@style/TextStyleEanFieldLabel"
+          />
+
+      <TextView
+          android:id="@+id/tv_occupancy"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tv_occupancy_label"
+          android:layout_marginStart="@dimen/margin_small"
+          android:text="2 Adults, 2 Children, 2 Rooms"
+          style="@style/TextStyleEanFieldValue"
+          />
+
+      <View
+          android:id="@+id/horizontal_line4"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_below="@+id/tv_occupancy"
+          android:layout_marginBottom="@dimen/margin_large"
+          android:layout_marginEnd="@dimen/margin_normal"
+          android:layout_marginStart="@dimen/margin_normal"
+          android:layout_marginTop="@dimen/margin_small"
+          android:background="@color/lightGrey"
+          />
+
+      <Button
+          android:id="@+id/btn_search_hotels"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/horizontal_line4"
+          android:layout_marginBottom="@dimen/margin_normal"
+          android:background="@color/colorAccent"
+          android:clickable="true"
+          android:focusable="true"
+          android:foreground="?attr/selectableItemBackground"
+          android:gravity="center"
+          android:letterSpacing="0.1"
+          android:text="@string/product_list_search_for_hotels_label"
+          android:textAllCaps="true"
+          android:textColor="@color/white"
+          fontPath="@string/fonts_Lato_Bold"
+          tools:ignore="MissingPrefix"
+          />
+
+    </RelativeLayout>
+
+  </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+

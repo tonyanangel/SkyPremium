@@ -1,0 +1,109 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+  end
+
+  lane :clean do
+    gradle(task: "clean")
+  end
+
+  desc "Upload Development build to s3 "
+  lane :dev do
+        clean
+        gradle(task: "assembleDebug")
+
+        upload_dev_to_s3
+  end
+
+  lane :uat do
+        clean
+        gradle(task: "assembleStaging")
+
+        upload_uat_to_s3
+  end
+
+  lane :prod do
+        clean
+        gradle(task: "assembleRelease")
+
+        upload_prod_to_s3
+  end
+
+  desc "Upload dev build to s3"
+  lane :upload_dev_to_s3 do
+    aws_s3(
+      access_key: ENV['S3_ACCESS_KEY'],               # Required from user (unless using aws_profile).
+      secret_access_key: ENV['S3_SECRET_ACCESS_KEY'], # Required from user (unless using aws_profile).
+      bucket: ENV['S3_BUCKET'],                       # Required from user.
+      region: ENV['S3_REGION'],                       # Required from user.
+      apk: "#{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}",
+      app_directory: 'skypremium/Android/DEV',
+  
+      path: '',
+  
+      endpoint: 'https://s3.ap-southeast-1.amazonaws.com'
+    )
+  end
+  
+  desc "Upload uat build to s3"
+  lane :upload_uat_to_s3 do
+    aws_s3(
+      access_key: ENV['S3_ACCESS_KEY'],               # Required from user (unless using aws_profile).
+      secret_access_key: ENV['S3_SECRET_ACCESS_KEY'], # Required from user (unless using aws_profile).
+      bucket: ENV['S3_BUCKET'],                       # Required from user.
+      region: ENV['S3_REGION'],                       # Required from user.
+      apk: "#{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}",
+      app_directory: 'skypremium/Android/UAT',
+    
+      path: '',
+    
+      endpoint: 'https://s3.ap-southeast-1.amazonaws.com'
+    )  
+  end
+  
+  desc "Upload prod build to s3"
+  lane :upload_prod_to_s3 do
+    aws_s3(
+      access_key: ENV['S3_ACCESS_KEY'],               # Required from user (unless using aws_profile).
+      secret_access_key: ENV['S3_SECRET_ACCESS_KEY'], # Required from user (unless using aws_profile).
+      bucket: ENV['S3_BUCKET'],                       # Required from user.
+      region: ENV['S3_REGION'],                       # Required from user.
+      apk: "#{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}",
+      app_directory: 'skypremium/Android/Production',
+  
+      path: '',
+  
+      endpoint: 'https://s3.ap-southeast-1.amazonaws.com'
+    )
+  end
+
+  #desc "Submit a new Beta Build to Crashlytics Beta"
+  #lane :beta do
+  # gradle(task: "assembleRelease")
+  #  crashlytics
+
+    # sh "your_script.sh"
+    # You can also use other beta testing services here
+  #end
+
+  desc "Deploy a new version to the Google Play"
+  lane :deploy do
+    gradle(task: "assembleRelease")
+    upload_to_play_store
+  end
+end
+

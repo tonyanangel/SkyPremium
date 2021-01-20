@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    >
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <LinearLayout
+        android:id="@+id/lnl_item_view"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:paddingLeft="5dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/danhSachName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Danh Sach"
+
+
+            />
+        <TextView
+            android:id="@+id/demoTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:text="Demo"
+
+            />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkBoxDemo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="" />
+</LinearLayout>

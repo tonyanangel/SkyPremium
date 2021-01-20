@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/normal_padding"
+    android:layout_marginRight="@dimen/normal_padding"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/triple_padding"
+    android:layout_marginBottom="@dimen/extra_small_padding"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="@dimen/normal_padding"
+    tools:ignore="MissingPrefix">
+
+  <FrameLayout
+      android:id="@+id/layout_img"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="40dp">
+
+    <ImageView
+        android:id="@+id/img_visa"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center_vertical"
+        tools:src="@drawable/ic_american_express"/>
+
+    <TextView
+        android:id="@+id/txt_edit"
+        style="@style/TextAppearance.AppCompat.Caption"
+        fontPath="@string/fonts_Lato_Bold"
+        android:layout_gravity="right|center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.1"
+        android:text="@string/txt_edit"
+        android:paddingTop="16dp"
+        android:paddingRight="8dp"
+        android:paddingLeft="16dp"
+        android:paddingBottom="12dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:textAllCaps="true"
+        android:textColor="@color/textGreyChateau"/>
+
+  </FrameLayout>
+
+  <TextView
+      android:id="@+id/txt_visa_number"
+      style="@style/TextAppearance.AppCompat.Menu"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/layout_img"
+      android:layout_marginBottom="@dimen/normal_padding"
+      android:text="@string/txt_visa_number"
+      android:textColor="@color/textColorPrimary"/>
+
+  <TextView
+      android:id="@+id/tv_delivery_date"
+      style="@style/TextAppearance.AppCompat.Small"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/txt_visa_number"
+      android:text="@string/date"
+      android:textColor="@color/textColorPrimary"/>
+
+  <ImageView
+      android:id="@+id/isVisa"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentRight="true"
+      android:src="@drawable/ic_check_circle_orchid"
+      android:visibility="gone"/>
+
+</RelativeLayout>

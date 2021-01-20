@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/black">
+  <VideoView
+    android:id="@+id/videoView"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+  <LinearLayout
+    android:layout_height="50dp"
+    android:layout_width="match_parent"
+    android:layout_gravity="bottom|right"
+    android:gravity="right"
+    android:background="#45858585">
+    <ImageView
+      android:id="@+id/exitFull"
+      android:layout_width="50dp"
+      android:layout_height="match_parent"
+      android:src="@drawable/ic_baseline_fullscreen_exit_24"
+      />
+  </LinearLayout>
+</FrameLayout>

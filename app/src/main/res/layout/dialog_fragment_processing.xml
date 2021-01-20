@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkTransparentBlack"
+    android:fitsSystemWindows="true">
+
+  <ImageView
+      android:id="@+id/img_icon"
+      android:layout_width="59dp"
+      android:layout_height="60dp"
+      android:layout_centerInParent="true"
+      android:layout_marginBottom="@dimen/triple_padding"
+      android:src="@drawable/ic_logo_white"/>
+
+  <TextView
+      android:id="@+id/txt_processing"
+      style="@style/TextAppearance.AppCompat.Menu"
+      tools:ignore="MissingPrefix"
+      fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/img_icon"
+      android:gravity="center_horizontal"
+      android:text="@string/txt_processing_order"
+      android:textColor="@color/white"/>
+
+  <RelativeLayout
+      android:id="@+id/layout_error"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_margin="@dimen/small_padding"
+      android:background="@color/white"
+      android:paddingBottom="@dimen/normal_padding"
+      android:paddingTop="@dimen/small_padding"
+      android:visibility="visible"
+      tools:ignore="MissingPrefix">
+
+    <include layout="@layout/include_toolbar_close"/>
+
+    <View
+        android:id="@+id/divider_title"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="@dimen/normal_padding"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/dividerColor"/>
+
+    <TextView
+        android:id="@+id/content"
+        style="@style/TextAppearance.AppCompat.Small"
+        fontPath="@string/fonts_Lato_Regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_title"
+        android:layout_marginBottom="@dimen/normal_padding"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        android:text="@string/txt_processing_content"
+        android:textColor="@color/textShuttleGrey"/>
+
+    <View
+        android:id="@+id/divider_content"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/content"
+        android:layout_marginBottom="@dimen/normal_padding"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:layout_marginRight="@dimen/normal_padding"
+        android:background="@color/dividerColor"/>
+
+    <TextView
+        android:id="@+id/tvCheckout"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/divider_content"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:layout_marginRight="@dimen/normal_padding"
+        android:clickable="true"
+        android:focusable="true"
+        android:letterSpacing="0.2"
+        android:text="@string/try_again"/>
+
+  </RelativeLayout>
+
+</RelativeLayout>

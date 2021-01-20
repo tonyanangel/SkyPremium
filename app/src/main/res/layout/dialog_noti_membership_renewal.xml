@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/triple_padding"
+        tools:ignore="MissingPrefix">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/textColorPrimary"
+            tools:text="Membership Renewal" />
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentEnd="true"
+            android:padding="4dp"
+            android:src="@drawable/ic_close_accent" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/layout_view_one"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layout_title"
+        android:background="@color/dividerColor" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_view_one"
+        android:padding="@dimen/normal_padding"
+        tools:ignore="MissingPrefix">
+
+        <TextView
+            android:id="@+id/txt_notice_expire"
+            fontPath="@string/fonts_Lato_Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal_padding"
+            android:textColor="@color/textColorPrimary"
+            tools:text="@string/txt_notice_membership_renewal" />
+
+        <TextView
+            android:id="@+id/txt_que_expire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_notice_expire"
+            android:layout_marginBottom="@dimen/normal_padding"
+            android:lineSpacingMultiplier="1.3"
+            android:textColor="@color/textColorPrimary"
+            tools:text="@string/txt_que_membership_renewal" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_que_expire"
+            android:layout_marginBottom="@dimen/normal_padding"
+            android:buttonTint="@color/grey"
+            android:text="@string/txt_donnot_show"
+            android:visibility="visible"
+            tools:ignore="UnusedAttribute" />
+
+        <View
+            android:id="@+id/layout_view_two"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/checkbox"
+            android:layout_marginBottom="@dimen/normal_padding"
+            android:background="@color/dividerColor" />
+
+        <TextView
+            android:id="@+id/btn_renew_membership"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/layout_view_two"
+            android:layout_marginTop="@dimen/small_padding"
+            android:letterSpacing="0.1"
+            android:paddingLeft="@dimen/triple_padding"
+            android:paddingRight="@dimen/triple_padding"
+            android:textAllCaps="true"
+            android:text="@string/btn_renewal_membership" />
+
+        <TextView
+            android:id="@+id/btn_keey_loyalty"
+            style="@style/ButtonBorderStyle"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/btn_renew_membership"
+            android:layout_marginTop="@dimen/small_padding"
+            android:letterSpacing="0.1"
+            android:paddingLeft="@dimen/triple_padding"
+            android:paddingRight="@dimen/triple_padding"
+            android:textAllCaps="true"
+            android:text="@string/btn_keey_loyalty"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btn_renew_later"
+            style="@style/TextAppearance.AppCompat.Caption"
+            fontPath="@string/fonts_Lato_Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_keey_loyalty"
+            android:layout_marginTop="@dimen/normal_padding"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.1"
+            android:paddingBottom="@dimen/small_padding"
+            android:paddingTop="@dimen/small_padding"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorGrey"
+            tools:ignore="MissingPrefix"
+            tools:text="@string/btn_renew_later" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_marginHorizontal="@dimen/margin_large"
+  android:orientation="vertical"
+  android:gravity="center">
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <TextView
+      android:id="@+id/title"
+      fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center_horizontal|center_vertical"
+      android:text="@string/reservation_confirmed"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      android:textColor="@color/textColorPrimary"
+      tools:ignore="MissingPrefix" />
+    <ImageView
+      android:id="@+id/img_close"
+      android:layout_width="30dp"
+      android:layout_height="25dp"
+      android:layout_marginRight="5dp"
+      android:layout_gravity="right|center_vertical"
+      android:padding="7dp"
+      android:src="@drawable/ic_close_accent" />
+  </FrameLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1px"
+    android:background="@color/black"/>
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_normal"
+    android:orientation="vertical">
+<!--    Booking number-->
+    <TextView
+      android:id="@+id/tv_booking_number"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="@color/grey"
+      android:textAlignment="center"
+      android:layout_marginTop="@dimen/margin_normal"
+      android:textSize="@dimen/text_size_normal"
+      android:text="@string/booking_number"/>
+    <TextView
+      android:id="@+id/tv_under_name"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_normal"
+      android:textColor="@color/black"
+      fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+      android:text="@string/your_reservation_is_confirmed_nunder"
+      android:textAlignment="center"
+      android:textSize="@dimen/text_size_big"
+      tools:ignore="MissingPrefix" />
+    <TextView
+      android:id="@+id/tv_content_reservation"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_normal"
+      android:text="4 adult(s) and 1 child(ren) on \n26 October 2020 at 06.30pm at Restaurant Name"
+      android:textAlignment="center"
+      android:textSize="@dimen/text_size_big"
+      android:textColor="@color/black"/>
+    <TextView
+      android:id="@+id/tv_sky_dollar_redeemed_policy"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAlignment="center"
+      android:layout_marginTop="@dimen/margin_normal"
+      fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+      android:text="@string/msg_redden_sky_1"
+      android:textColor="@color/black"
+      android:textSize="@dimen/text_size_big"
+      tools:ignore="MissingPrefix" />
+      <TextView
+      android:id="@+id/tv_sky_dollar_redeemed_policy_2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAlignment="center"
+      fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+      android:text="@string/msg_redden_sky_1"
+      android:textColor="@color/black"
+      android:textSize="@dimen/text_size_big"
+      tools:ignore="MissingPrefix" />
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAlignment="center"
+      android:layout_marginTop="@dimen/margin_normal"
+      android:layout_marginBottom="20dp"
+      android:text="Members are required to present their membership \ncard or member mobile app during payment."
+      android:textColor="@color/grey"
+      android:textSize="@dimen/text_size_normal"
+      tools:ignore="MissingPrefix" />
+  </LinearLayout>
+  <TextView
+    android:id="@+id/tv_done"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:gravity="center"
+    android:textColor="@color/white"
+    android:background="@color/colorAccent"
+    android:layout_marginTop="@dimen/margin_normal"
+    android:textAllCaps="true"
+    android:text="@string/done"/>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#FFFFFF</color>
+  <color name="colorPrimaryDark">#000000</color>
+  <color name="colorPrimaryLight">#f8f8f8</color>
+  <color name="colorAccent">#CCA255</color>
+  <color name="colorAddToCart">#CBA84A</color>
+  <color name="colorYellowDarkDisabled">#80B49541</color>
+  <color name="colorAccentDisabled">#809F7F2E</color>
+  <color name="colorAddToCartLightDisabled">#80CBA84A</color>
+  <color name="colorAccentDark">#67200E</color>
+  <color name="colorAccentLight">#FFEBBD</color>
+  <color name="yellowDark">#B49541</color>
+  <color name="orchid">#C1B2B6</color>
+  <color name="light_green">#A9C1C0</color>
+  <color name="grey">#9FAAB2</color>
+  <color name="lightGrey">#cccccc</color>
+  <color name="brightGrey">#585859</color>
+  <color name="brightGreyTransparent">#d6696969</color>
+  <color name="blue">#2a75ad</color>
+  <color name="darkBlue">#152983</color>
+  <color name="bg_grey">#e7e7e7</color>
+  <color name="soldOutBackground">#CC4242</color>
+  <color name="colorSaleEnded">#808080</color>
+  <color name="colorSaleNotStarted">#808080</color>
+  <color name="colorSaleNotStartedLight">#eeb947</color>
+  <color name="colorSaleNotStartedDisabled">#e1cda9</color>
+  <color name="colorGold">#cba84a</color>
+
+  <color name="textColorPrimary">#CC000000</color>
+  <color name="textColorLightPrimary">#333640</color>
+  <color name="textColorSecondary">#343741</color>
+  <color name="textColorGrey">#89949d</color>
+  <color name="textColorDarkGrey">#494949</color>
+  <color name="textColorSoftGrey">#999A9D</color>
+  <color name="textGreyChateau">#9EA7AF</color>
+  <color name="textShuttleGrey">#626368</color>
+  <color name="textTitleColor">#303030</color>
+  <color name="textSteelGrey">#41444C</color>
+  <color name="textWhite">#FFFFFF</color>
+
+  <color name="dividerColor">#33000000</color>
+  <color name="white">#FFFFFF</color>
+  <color name="whiteTransparent">#87ffffff</color>
+  <color name="background">#F9F9F9</color>
+  <color name="transparentBackground">#83f9f9f9</color>
+  <color name="lightTransparentBlack">#32000000</color>
+  <color name="darkTransparentBlack">#bd231f20</color>
+  <color name="greyTransparent">#c69faab2</color>
+  <color name="LightgreyTransparent">#919faab2</color>
+  <color name="colorPrimaryTransparent">#99FAFAFA</color>
+  <color name="facebook">#3B5998</color>
+  <color name="oliveGreen">#9DA839</color>
+  <color name="wineRed">#9B2243</color>
+  <color name="transparent">#00f9f7f7</color>
+  <color name="light_blue">#9CC4C1</color>
+  <color name="red_transparent">#e9bc3d42</color>
+  <color name="background_estore_item">#F5FAF5</color>
+
+  <color name="txt_complete">#C6A361</color>
+  <color name="txt_pending">#979F1E</color>
+  <color name="txt_processing">#32353E</color>
+  <color name="txt_canceled">#860012</color>
+  <color name="grey_transparent">#47a3a3a3</color>
+  <color name="black">#000</color>
+  <color name="soft_grey">#f8f8f8</color>
+  <color name="colorToursimFees">@color/colorAccent</color>
+
+
+
+  <color name="bg_notification">#FAF8F4</color>
+
+
+
+</resources>

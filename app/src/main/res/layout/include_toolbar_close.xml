@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    style="@style/ToolbarNoElevation"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/tvTitle_toolbar"
+        style="@style/ToolbarTitle" />
+
+    <ImageView
+        android:id="@+id/img_close"
+        style="@style/ToolbarIcon"
+        android:src="@drawable/ic_close_accent" />
+
+</LinearLayout>

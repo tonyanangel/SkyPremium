@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+  <include layout="@layout/include_order_toolbar"/>
+
+  <RelativeLayout
+      android:id="@+id/layout_order"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="?attr/actionBarSize">
+
+    <include
+        layout="@layout/include_filter_one"
+        android:visibility="visible"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMyOrders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_filter"
+        android:paddingBottom="12dp"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        android:paddingTop="@dimen/extra_small_padding"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_no_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:ignore="MissingPrefix">
+
+      <ImageView
+          android:id="@+id/img_no_order"
+          android:layout_width="40dp"
+          android:layout_height="44dp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="@dimen/small_padding"
+          android:src="@drawable/ic_no_orders"/>
+
+      <TextView
+          android:id="@+id/txt_no_order"
+          style="@style/TextAppearance.AppCompat.Medium"
+          fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/img_no_order"
+          android:gravity="center_horizontal"
+          android:letterSpacing="0.03"
+          android:text="@string/no_order"
+          android:textColor="@color/textColorPrimary"/>
+
+    </RelativeLayout>
+
+  </RelativeLayout>
+
+</RelativeLayout>

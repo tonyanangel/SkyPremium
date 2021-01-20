@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.skypremiuminternational.app.app.features.forgot_password.ForgotPasswordActivity"
+    >
+
+  <include layout="@layout/include_toolbar"/>
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+      <ImageView
+          android:id="@+id/ivBanner"
+          android:layout_width="match_parent"
+          android:layout_height="164dp"
+          android:scaleType="centerCrop"
+          android:src="@drawable/img_home_banner"
+          />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:padding="16dp"
+          >
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="8dp"
+            android:lineSpacingMultiplier="1.3"
+            tools:text="Spread the good news! You are already benefiting from the many rewards of the Sky Premium membership by now, so why not inform your friends and let them enjoy the exclusive benefits as well? Start inviting your friends to Sky Premium now!"
+            android:textColor="@color/textColorPrimary"
+            style="@style/TextAppearance.AppCompat.Small"
+            />
+        <TextView
+            android:id="@+id/tvInvite"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorAccent"
+            android:clickable="true"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:text="Invite a friend"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            fontPath="@string/fonts_Lato_Bold"
+            tools:ignore="MissingPrefix"
+            style="@style/TextAppearance.AppCompat.Caption"
+            />
+      </LinearLayout>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</LinearLayout>

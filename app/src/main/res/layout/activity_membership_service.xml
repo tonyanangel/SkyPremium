@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar_navigation" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlBanner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/membership_banner" />
+
+                <LinearLayout
+                    android:id="@+id/llFeatured"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        style="@style/TextAppearance.AppCompat.Title"
+                        fontPath="@string/fonts_Notera_PersonalUseOnly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center"
+                        android:textColor="@color/colorAccent"
+                        tools:ignore="MissingPrefix"
+                        tools:text="Mr Laurent Anderson" />
+
+                    <TextView
+                        android:id="@+id/tvSubHead"
+                        style="@style/TextAppearance.AppCompat.Headline"
+                        fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/help"
+                        android:textColor="@color/textColorPrimary"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- <ExpandableListView
+                 android:id="@+id/elw"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="16dp"
+                 android:scrollbars="none"
+                 />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llTravel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivTravel"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_travel_black" />
+
+                    <TextView
+                        android:id="@+id/tvTravel"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/membership_travel"
+                        android:textColor="@color/textColorPrimary"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTravelDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/vvTravel"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/dividerColor" />
+
+                    <EditText
+                        android:id="@+id/edtTravelDesc"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="top"
+                        android:hint="Description (4000 characters max)"
+                        android:maxLength="4000"
+                        android:minHeight="100dp"
+                        android:padding="16dp"
+                        android:textColor="@color/textColorPrimary" />
+
+                    <!-- <com.andrognito.kerningview.KerningTextView
+                         android:id="@+id/tvSubmit"
+                         android:layout_width="match_parent"
+                         android:layout_height="56dp"
+                         android:gravity="center"
+                         android:text="Submit Request"
+                         fontPath="@string/fonts_Lato_Bold"
+                         tools:ignore="MissingPrefix"
+                         style="@style/ButtonStyle"
+                         />-->
+
+                    <com.andrognito.kerningview.KerningTextView
+                        android:id="@+id/ktvTravelSubmit"
+                        style="@style/ButtonStyle"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Submit Request"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llRestaurant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivRestaurant"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_wine_black" />
+
+                    <TextView
+                        android:id="@+id/tvRestaurant"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/membership_restaurants"
+                        android:textColor="@color/textColorPrimary"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRestaurantDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/vvRestaurant"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/dividerColor" />
+
+                    <EditText
+                        android:id="@+id/edtRestaurantDesc"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="top"
+                        android:hint="Description (4000 characters max)\n\n\n"
+                        android:maxLength="4000"
+                        android:minHeight="100dp"
+                        android:padding="16dp"
+                        android:textColor="@color/textColorPrimary" />
+
+                    <!-- <com.andrognito.kerningview.KerningTextView
+                         android:id="@+id/tvSubmit"
+                         android:layout_width="match_parent"
+                         android:layout_height="56dp"
+                         android:gravity="center"
+                         android:text="Submit Request"
+                         fontPath="@string/fonts_Lato_Bold"
+                         tools:ignore="MissingPrefix"
+                         style="@style/ButtonStyle"
+                         />-->
+
+                    <com.andrognito.kerningview.KerningTextView
+                        android:id="@+id/ktvRestaurantSubmit"
+                        style="@style/ButtonStyle"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Submit Request"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llWellness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivWellness"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_wellness_black" />
+
+                    <TextView
+                        android:id="@+id/tvWellness"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/membership_wellness"
+                        android:textColor="@color/textColorPrimary"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llWellnessDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/vvWellness"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/dividerColor" />
+
+                    <EditText
+                        android:id="@+id/edtWellnessDesc"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="top"
+                        android:hint="Description (4000 characters max)\n\n\n"
+                        android:maxLength="4000"
+                        android:minHeight="100dp"
+                        android:padding="16dp"
+                        android:textColor="@color/textColorPrimary" />
+
+                    <!-- <com.andrognito.kerningview.KerningTextView
+                         android:id="@+id/tvSubmit"
+                         android:layout_width="match_parent"
+                         android:layout_height="56dp"
+                         android:gravity="center"
+                         android:text="Submit Request"
+                         fontPath="@string/fonts_Lato_Bold"
+                         tools:ignore="MissingPrefix"
+                         style="@style/ButtonStyle"
+                         />-->
+
+                    <com.andrognito.kerningview.KerningTextView
+                        android:id="@+id/ktvWellnessSubmit"
+                        style="@style/ButtonStyle"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Submit Request"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llShopping"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivShopping"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_shopping_black" />
+
+                    <TextView
+                        android:id="@+id/tvShopping"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/membership_shopping"
+                        android:textColor="@color/textColorPrimary"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llShoppingDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/vvShopping"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/dividerColor" />
+
+                    <EditText
+                        android:id="@+id/edtShoppingDesc"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="top"
+                        android:hint="Description (4000 characters max)\n\n\n"
+                        android:maxLength="4000"
+                        android:minHeight="100dp"
+                        android:padding="16dp"
+                        android:textColor="@color/textColorPrimary" />
+
+                    <!-- <com.andrognito.kerningview.KerningTextView
+                         android:id="@+id/tvSubmit"
+                         android:layout_width="match_parent"
+                         android:layout_height="56dp"
+                         android:gravity="center"
+                         android:text="Submit Request"
+                         fontPath="@string/fonts_Lato_Bold"
+                         tools:ignore="MissingPrefix"
+                         style="@style/ButtonStyle"
+                         />-->
+
+                    <com.andrognito.kerningview.KerningTextView
+                        android:id="@+id/ktvShoppingSubmit"
+                        style="@style/ButtonStyle"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Submit Request"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llEnquiry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivEnquiry"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_enquiry_black" />
+
+                    <TextView
+                        android:id="@+id/tvEnquiry"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/membership_enquiry"
+                        android:textColor="@color/textColorPrimary"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llEnquiryDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/vvEnquiry"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/dividerColor" />
+
+                    <EditText
+                        android:id="@+id/edtEnquiryDesc"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="top"
+                        android:hint="Description (4000 characters max)\n\n\n"
+                        android:maxLength="4000"
+                        android:minHeight="100dp"
+                        android:padding="16dp"
+                        android:textColor="@color/textColorPrimary" />
+
+                    <!-- <com.andrognito.kerningview.KerningTextView
+                         android:id="@+id/tvSubmit"
+                         android:layout_width="match_parent"
+                         android:layout_height="56dp"
+                         android:gravity="center"
+                         android:text="Submit Request"
+                         fontPath="@string/fonts_Lato_Bold"
+                         tools:ignore="MissingPrefix"
+                         style="@style/ButtonStyle"
+                         />-->
+
+                    <com.andrognito.kerningview.KerningTextView
+                        android:id="@+id/ktvEnquirySubmit"
+                        style="@style/ButtonStyle"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Submit Request"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llTechnical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivTechnical"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_support_black" />
+
+                    <TextView
+                        android:id="@+id/tvTechnical"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/membership_technical"
+                        android:textColor="@color/textColorPrimary"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTechnicalDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/vvTechnical"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/dividerColor" />
+
+                    <EditText
+                        android:id="@+id/edtTechnicalDesc"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="top"
+                        android:hint="Description (4000 characters max)\n\n\n"
+                        android:maxLength="4000"
+                        android:minHeight="100dp"
+                        android:padding="16dp"
+                        android:textColor="@color/textColorPrimary" />
+
+                    <!-- <com.andrognito.kerningview.KerningTextView
+                         android:id="@+id/tvSubmit"
+                         android:layout_width="match_parent"
+                         android:layout_height="56dp"
+                         android:gravity="center"
+                         android:text="Submit Request"
+                         fontPath="@string/fonts_Lato_Bold"
+                         tools:ignore="MissingPrefix"
+                         style="@style/ButtonStyle"
+                         />-->
+
+                    <com.andrognito.kerningview.KerningTextView
+                        android:id="@+id/ktvTechnicalSubmit"
+                        style="@style/ButtonStyle"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Submit Request"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llFees"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivFees"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_membership_fee_black" />
+
+                    <TextView
+                        android:id="@+id/tvFees"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/membership_fees"
+                        android:textColor="@color/textColorPrimary"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFeesDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/vvFees"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/dividerColor" />
+
+                    <EditText
+                        android:id="@+id/edtFeesDesc"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="top"
+                        android:hint="Description (4000 characters max)\n\n\n"
+                        android:maxLength="4000"
+                        android:minHeight="100dp"
+                        android:padding="16dp"
+                        android:textColor="@color/textColorPrimary" />
+
+                    <!-- <com.andrognito.kerningview.KerningTextView
+                         android:id="@+id/tvSubmit"
+                         android:layout_width="match_parent"
+                         android:layout_height="56dp"
+                         android:gravity="center"
+                         android:text="Submit Request"
+                         fontPath="@string/fonts_Lato_Bold"
+                         tools:ignore="MissingPrefix"
+                         style="@style/ButtonStyle"
+                         />-->
+
+                    <com.andrognito.kerningview.KerningTextView
+                        android:id="@+id/ktvFeesSubmit"
+                        style="@style/ButtonStyle"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Submit Request"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llFeedbacks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivFeedbacks"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_feedback_black" />
+
+                    <TextView
+                        android:id="@+id/tvFeedbacks"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/membership_feedbacks"
+                        android:textColor="@color/textColorPrimary"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFeedbacksDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/vvFeedbacks"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/dividerColor" />
+
+                    <EditText
+                        android:id="@+id/edtFeedbacksDesc"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="top"
+                        android:hint="Description (4000 characters max)\n\n\n"
+                        android:maxLength="4000"
+                        android:minHeight="100dp"
+                        android:padding="16dp"
+                        android:textColor="@color/textColorPrimary" />
+
+                    <!-- <com.andrognito.kerningview.KerningTextView
+                         android:id="@+id/tvSubmit"
+                         android:layout_width="match_parent"
+                         android:layout_height="56dp"
+                         android:gravity="center"
+                         android:text="Submit Request"
+                         fontPath="@string/fonts_Lato_Bold"
+                         tools:ignore="MissingPrefix"
+                         style="@style/ButtonStyle"
+                         />-->
+
+                    <com.andrognito.kerningview.KerningTextView
+                        android:id="@+id/ktvFeedbacksSubmit"
+                        style="@style/ButtonStyle"
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Submit Request"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Subhead"
+                fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/contact_us"
+                android:textColor="@color/textColorPrimary"
+                tools:ignore="MissingPrefix" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:id="@+id/llCall"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_call_black" />
+
+                    <TextView
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:gravity="center"
+                        android:text="+65 6533 0000"
+                        android:textSize="12dp"
+                        android:textColor="@color/textColorPrimary" />
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="7dp"
+                        android:padding="0dp"
+                        android:text="Open from Mon to Fri (9am-6pm) and eve of \nPH (9am-1pm). Closed on Sat, Sun and PH."
+                        android:textColor="@color/textColorPrimary" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llMail"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:padding="12dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_mail_black" />
+
+                    <TextView
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:layout_marginTop="6dp"
+                        android:text="membersg@"
+                        android:textColor="@color/textColorPrimary" />
+
+                    <TextView
+                        fontPath="@string/fonts_Lato_Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:text="skypremium.com.sg\n"
+                        android:textColor="@color/textColorPrimary" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

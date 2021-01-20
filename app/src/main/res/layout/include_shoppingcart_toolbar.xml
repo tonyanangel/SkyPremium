@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    style="@style/Toolbar"
+    android:background="@color/colorPrimary">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center_horizontal"
+      tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/tvTitle_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/textTitleColor"
+        android:gravity="center_vertical|center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+        android:letterSpacing="0.03"
+        tools:text="My Order"
+        tools:ignore="MissingPrefix"/>
+
+    <TextView
+        android:id="@+id/tvTitle_toolbar_amount"
+        fontPath="@string/fonts_Lato_Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/extra_small_padding"
+        android:layout_toRightOf="@+id/tvTitle_toolbar"
+        android:gravity="center_vertical"
+        tools:text="(3)"
+        android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+        android:textColor="@color/textColorPrimary"/>
+
+  </RelativeLayout>
+
+  <ImageView
+      android:id="@+id/img_close"
+      android:layout_centerVertical="true"
+      android:layout_alignParentEnd="true"
+      style="@style/ToolbarIcon"
+      android:src="@drawable/ic_close_accent"/>
+
+</RelativeLayout>

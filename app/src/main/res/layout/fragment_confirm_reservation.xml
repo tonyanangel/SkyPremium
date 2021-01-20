@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_marginHorizontal="@dimen/margin_large"
+  android:orientation="vertical"
+  android:gravity="center">
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <TextView
+      android:id="@+id/title"
+      fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center_horizontal|center_vertical"
+      android:text="@string/confirm_reservation"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      android:textColor="@color/textColorPrimary"
+      tools:ignore="MissingPrefix" />
+    <ImageView
+      android:id="@+id/img_close"
+      android:layout_width="30dp"
+      android:layout_height="25dp"
+      android:layout_marginRight="5dp"
+      android:layout_gravity="right|center_vertical"
+      android:padding="7dp"
+      android:src="@drawable/ic_close_accent" />
+  </FrameLayout>
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1px"
+    android:background="@color/black"/>
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="@dimen/margin_normal"
+      android:orientation="vertical">
+      <TextView
+        android:id="@+id/tv_question_1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:textColor="@color/black"
+        fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+        android:text="@string/would_you_like_to_confirm_your_revervations_for"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size_big"
+        tools:ignore="MissingPrefix" />
+      <TextView
+        android:id="@+id/tv_confirm_question"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="4 adult(s) and 1 child(ren) on \n26 October 2020 at 06.30pm at Restaurant Name?"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size_big1"
+        android:textColor="@color/black"/>
+      <TextView
+        android:id="@+id/tv_cancel_warning"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/grey"/>
+
+    </LinearLayout>
+    <TextView
+      android:id="@+id/tv_confirm"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:gravity="center"
+      android:textColor="@color/white"
+      android:background="@color/colorAccent"
+      android:layout_marginTop="@dimen/margin_normal"
+      android:textAllCaps="true"
+      android:text="@string/confirm"/>
+</LinearLayout>

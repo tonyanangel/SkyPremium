@@ -1,0 +1,186 @@
+{
+  "id": 556,
+  "group_id": 11,
+  "default_billing": "273",
+  "default_shipping": "273",
+  "created_at": "2018-05-22 15:19:58",
+  "updated_at": "2018-08-17 03:43:57",
+  "created_in": "Singapore Store View",
+  "dob": "1992-10-14",
+  "email": "levister.g@skypremium.com",
+  "firstname": "Levister",
+  "lastname": "Gutierrez",
+  "prefix": "Mr",
+  "gender": 1,
+  "store_id": 1,
+  "website_id": 1,
+  "addresses": [
+    {
+      "id": 268,
+      "customer_id": 556,
+      "region": {
+        "region_code": null,
+        "region": null,
+        "region_id": 0
+      },
+      "region_id": 0,
+      "country_id": "701",
+      "street": [
+        "nxjzhhzz"
+      ],
+      "company": "D",
+      "telephone": "68688707",
+      "postcode": "94649",
+      "city": "hshsvvs",
+      "firstname": "Lev Delivery",
+      "lastname": "Address",
+      "prefix": "Mrs",
+      "custom_attributes": [
+        {
+          "attribute_code": "unit_number",
+          "value": "9867979"
+        },
+        {
+          "attribute_code": "address_order_crm",
+          "value": "address_1"
+        }
+      ]
+    },
+    {
+      "id": 273,
+      "customer_id": 556,
+      "region": {
+        "region_code": "bdjjf",
+        "region": "bdjjf",
+        "region_id": 0
+      },
+      "region_id": 0,
+      "country_id": "301",
+      "street": [
+        "bx"
+      ],
+      "company": "Sky op",
+      "telephone": "79565695",
+      "postcode": "98665",
+      "city": "bxhh",
+      "firstname": "seven",
+      "lastname": "seven",
+      "prefix": "Prof",
+      "default_shipping": true,
+      "default_billing": true,
+      "custom_attributes": [
+        {
+          "attribute_code": "address_order_crm",
+          "value": "address_3"
+        }
+      ]
+    }
+  ],
+  "disable_auto_group_change": 0,
+  "custom_attributes": [
+    {
+      "attribute_code": "avatar",
+      "value": null
+    },
+    {
+      "attribute_code": "current_server_time",
+      "value": "17-08-2018 13:27:37"
+    },
+    {
+      "attribute_code": "member_days_expiring",
+      "value": "+277"
+    },
+    {
+      "attribute_code": "referral_code",
+      "value": "Mwo31T"
+    },
+    {
+      "attribute_code": "name_on_card",
+      "value": "Lev Gutierrez"
+    },
+    {
+      "attribute_code": "member_number",
+      "value": "SG201805220001"
+    },
+    {
+      "attribute_code": "contact_number",
+      "value": "87528751"
+    },
+    {
+      "attribute_code": "member_status",
+      "value": "AC"
+    },
+    {
+      "attribute_code": "member_type",
+      "value": "SD"
+    },
+    {
+      "attribute_code": "salutation",
+      "value": "Mr"
+    },
+    {
+      "attribute_code": "address_street",
+      "value": "vzvbsjjc"
+    },
+    {
+      "attribute_code": "address_city",
+      "value": "bxnnx"
+    },
+    {
+      "attribute_code": "address_unit_number",
+      "value": "98995"
+    },
+    {
+      "attribute_code": "address_postalcode",
+      "value": "98965"
+    },
+    {
+      "attribute_code": "nationality",
+      "value": "305"
+    },
+    {
+      "attribute_code": "contact_country_code",
+      "value": "65"
+    },
+    {
+      "attribute_code": "address_country",
+      "value": "153"
+    },
+    {
+      "attribute_code": "language",
+      "value": "en"
+    },
+    {
+      "attribute_code": "currency",
+      "value": "SGD"
+    },
+    {
+      "attribute_code": "member_loyalty_point",
+      "value": "-1115.57"
+    },
+    {
+      "attribute_code": "contract_status",
+      "value": "AC"
+    },
+    {
+      "attribute_code": "member_expiry_date",
+      "value": "2019-05-22 00:00:00"
+    },
+    {
+      "attribute_code": "terms_and_condition",
+      "value": "1"
+    },
+    {
+      "attribute_code": "terms_of_use",
+      "value": "1"
+    },
+    {
+      "attribute_code": "privacy_notice",
+      "value": "1"
+    },
+    {
+      "attribute_code": "member_expiry_prompt",
+      "value": "0"
+    }
+  ]
+}

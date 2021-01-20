@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv"
+        style="@style/TextAppearance.AppCompat.Caption"
+        fontPath="@string/fonts_Lato_Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.1"
+        android:paddingLeft="8dp"
+        android:textAllCaps="true"
+        android:textColor="@color/orchid"
+        android:textSize="8sp"
+        android:visibility="invisible"
+        tools:text="Phone"
+        tools:visibility="visible" />
+
+  </RelativeLayout>
+
+  <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/edt"
+      style="@style/TextAppearance.AppCompat.Body1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@android:color/transparent"
+      android:fontFamily="sans-serif"
+      android:padding="8dp"
+      android:paddingBottom="8dp"
+      android:paddingTop="8dp"
+      tools:hint="Phone"
+      tools:text="09123456789" />
+
+  <View
+      android:id="@+id/v"
+      android:layout_width="match_parent"
+      android:layout_height="1.5px"
+      android:background="@color/brightGrey" />
+
+</LinearLayout>

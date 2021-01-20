@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+  <include layout="@layout/include_order_toolbar"/>
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/layout_root"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingPrefix">
+
+      <RelativeLayout
+          android:id="@+id/layout_thank_you"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/normal_padding"
+          android:background="#F9F9F9">
+
+        <TextView
+            android:id="@+id/txt_title_delivery_address"
+            fontPath="@string/fonts_Lato_Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider_proceed"
+            android:layout_marginBottom="@dimen/small_padding"
+            android:layout_marginRight="@dimen/large_padding"
+            android:letterSpacing="0.08"
+            android:text="@string/txt_title_delivery_address"
+            android:textAllCaps="true"
+            android:textColor="@color/orchid"
+            android:textSize="8sp"/>
+
+        <TextView
+            android:id="@+id/txt_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:letterSpacing="0.07"
+            android:text="@string/txt_print"
+            android:background="@drawable/ripple_effect"
+            android:textAllCaps="true"
+            android:textColor="@color/greyTransparent"
+            android:textSize="10sp"
+            fontPath="@string/fonts_Lato_Bold"/>
+
+        <TextView
+            android:id="@+id/txt_shipping_customer_name"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            fontPath="@string/fonts_Lato_Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_title_delivery_address"
+            android:layout_marginBottom="@dimen/small_padding"
+            android:layout_marginRight="@dimen/large_padding"
+            android:letterSpacing="0.05"
+            tools:text="@string/txt_person_name_address"
+            android:textColor="@color/textColorPrimary"/>
+
+
+
+        <TextView
+            android:id="@+id/txt_shipping_address"
+            fontPath="@string/fonts_Lato_Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_shipping_customer_name"
+          android:layout_marginBottom="8dp"
+            android:layout_marginRight="@dimen/large_padding"
+            android:letterSpacing="0.05"
+            android:lineSpacingMultiplier="1.4"
+            tools:text="@string/txt_address"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/textColorPrimary"/>
+        <TextView
+          android:id="@+id/txt_shipping_phone"
+          fontPath="@string/fonts_Lato_Regular"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+          android:layout_below="@+id/txt_shipping_address"
+          android:layout_marginBottom="@dimen/small_padding"
+          android:letterSpacing="0.05"
+          tools:text="@string/txt_delivery_phone"
+          android:textAppearance="@style/TextAppearance.AppCompat.Small"
+          android:textColor="@color/textColorPrimary"/>
+        <TextView
+            android:id="@+id/txt_title_billing"
+            fontPath="@string/fonts_Lato_Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_shipping_phone"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="@dimen/large_padding"
+            android:letterSpacing="0.08"
+            android:text="@string/txt_billing_address"
+            android:visibility="gone"
+            android:textAllCaps="true"
+            android:textColor="@color/orchid"
+            android:textSize="8sp"/>
+
+        <TextView
+            android:id="@+id/txt_billing_customer_name"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            fontPath="@string/fonts_Lato_Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txt_title_billing"
+            android:layout_marginBottom="@dimen/small_padding"
+            android:letterSpacing="0.05"
+            android:visibility="gone"
+            android:text="@string/txt_person_name_address"
+            android:textColor="@color/textColorPrimary"/>
+
+        <TextView
+            android:id="@+id/txt_billing_customer_address"
+            fontPath="@string/fonts_Lato_Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_billing_customer_name"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="@dimen/large_padding"
+            android:letterSpacing="0.05"
+            android:visibility="gone"
+            android:lineSpacingMultiplier="1.4"
+            android:text="@string/txt_address"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/textColorPrimary"/>
+        <TextView
+          android:id="@+id/txt_billing_customer_phone"
+          fontPath="@string/fonts_Lato_Regular"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/txt_billing_customer_address"
+          android:layout_marginBottom="@dimen/small_padding"
+          android:layout_marginRight="@dimen/large_padding"
+          android:letterSpacing="0.05"
+          android:text="@string/txt_delivery_phone"
+          android:visibility="gone"
+          android:textAppearance="@style/TextAppearance.AppCompat.Small"
+          android:textColor="@color/textColorPrimary"/>
+        <TextView
+            android:id="@+id/txt_title_payment_by"
+            fontPath="@string/fonts_Lato_Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_billing_customer_phone"
+            android:layout_marginBottom="@dimen/small_padding"
+            android:layout_marginRight="@dimen/large_padding"
+            android:letterSpacing="0.06"
+            android:text="@string/txt_title_payment_detail"
+            android:textAllCaps="true"
+            android:textColor="@color/orchid"
+            android:textSize="8sp"/>
+
+        <TextView
+            android:id="@+id/txt_credit_card"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            fontPath="@string/fonts_Lato_Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_title_payment_by"
+            android:letterSpacing="0.05"
+            android:text="@string/txt_visa_number"/>
+
+        <ImageView
+            android:id="@+id/img_visa"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/txt_title_payment_by"
+            android:layout_marginLeft="@dimen/normal_padding"
+            android:layout_toRightOf="@+id/txt_credit_card"
+            tools:src="@drawable/ic_master_pay"/>
+
+        <TextView
+            android:id="@+id/txt_processing_state"
+            style="@style/TextAppearance.AppCompat.Caption"
+            fontPath="@string/fonts_Lato_Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/txt_title_payment_by"
+            android:background="@drawable/rectangle_border_grey"
+            android:gravity="right"
+            android:paddingBottom="@dimen/extra_small_padding"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="@dimen/extra_small_padding"
+            tools:text="@string/txt_processing"
+            android:textColor="@color/textColorPrimary"/>
+
+      </RelativeLayout>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recycler_product"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/layout_thank_you"/>
+
+      <View
+          android:id="@+id/divider_payment"
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:layout_below="@+id/recycler_product"
+          android:background="@color/lightGrey"/>
+
+      <RelativeLayout
+          android:id="@+id/layout_amt_review"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/divider_payment"
+          android:background="@color/white"
+          android:paddingBottom="20dp"
+          android:paddingLeft="@dimen/normal_padding"
+          android:paddingRight="@dimen/normal_padding"
+          android:paddingTop="20dp">
+
+        <FrameLayout
+            android:id="@+id/layout_subtotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <TextView
+              android:id="@+id/txt_subtotal"
+              style="@style/TextAppearance.AppCompat.Caption"
+              fontPath="@string/fonts_Lato_Bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:letterSpacing="0.07"
+              android:text="@string/txt_subtotal"
+              android:textAllCaps="true"
+              android:textColor="@color/textColorPrimary"/>
+
+          <TextView
+              android:id="@+id/txt_amt_subtotal"
+              style="@style/TextAppearance.AppCompat.Subhead"
+              fontPath="@string/fonts_Lato_Bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="right|center_vertical"
+              android:text="@string/total_amount"
+              android:textColor="@color/textColorPrimary"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/layout_shipping_fee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/normal_padding"
+            android:layout_below="@+id/layout_subtotal">
+
+          <TextView
+              android:id="@+id/txt_shipping_fee"
+              style="@style/TextAppearance.AppCompat.Caption"
+              fontPath="@string/fonts_Lato_Bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:letterSpacing="0.07"
+              android:text="@string/txt_shipping_fee"
+              android:textAllCaps="true"
+              android:textColor="@color/textColorPrimary"/>
+
+          <TextView
+              android:id="@+id/txt_amt_shipping_fee"
+              style="@style/TextAppearance.AppCompat.Subhead"
+              fontPath="@string/fonts_Lato_Bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical|right"
+              tools:text="@string/total_amount"
+              android:textColor="@color/textColorPrimary"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/layout_delivery_fee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/normal_padding"
+            android:layout_below="@+id/layout_shipping_fee">
+
+          <TextView
+              android:id="@+id/txt_delivery_fee"
+              style="@style/TextAppearance.AppCompat.Caption"
+              fontPath="@string/fonts_Lato_Bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:letterSpacing="0.07"
+              android:text="@string/txt_delivery_fee"
+              android:textAllCaps="true"
+              android:textColor="@color/textColorPrimary"/>
+
+          <TextView
+              android:id="@+id/txt_amt_delivery_fee"
+              style="@style/TextAppearance.AppCompat.Subhead"
+              fontPath="@string/fonts_Lato_Bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical|right"
+              tools:text="@string/total_amount"
+              android:textColor="@color/textColorPrimary"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/layout_tax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_padding"
+            android:layout_below="@+id/layout_subtotal">
+
+          <TextView
+              android:id="@+id/txt_tax"
+              style="@style/TextAppearance.AppCompat.Caption"
+              fontPath="@string/fonts_Lato_Bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:letterSpacing="0.07"
+              android:text="@string/label_tax"
+              android:textAllCaps="true"
+              android:textColor="@color/textColorPrimary"/>
+
+          <TextView
+              android:id="@+id/txt_amt_tax"
+              style="@style/TextAppearance.AppCompat.Subhead"
+              fontPath="@string/fonts_Lato_Bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical|right"
+              tools:text="@string/total_amount"
+              android:textColor="@color/textColorPrimary"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/layout_discount"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/normal_padding"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_tax">
+
+          <TextView
+              android:id="@+id/txt_discount_type"
+              style="@style/TextAppearance.AppCompat.Caption"
+              fontPath="@string/fonts_Lato_Bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:letterSpacing="0.07"
+              android:text="@string/txt_title_loyalty"
+              android:textAllCaps="true"
+              android:textColor="@color/textColorPrimary"/>
+
+          <TextView
+              android:id="@+id/txt_amt_discount"
+              style="@style/TextAppearance.AppCompat.Subhead"
+              fontPath="@string/fonts_Lato_Bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical|right"
+              tools:text="@string/txt_amt_loyalty"
+              android:textColor="@color/textColorPrimary"/>
+
+        </FrameLayout>
+        <FrameLayout
+          android:id="@+id/layout_sky_dollar_earn"
+          android:layout_width="match_parent"
+          android:layout_marginTop="@dimen/normal_padding"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/layout_discount"
+          android:visibility="gone">
+
+          <TextView
+            android:id="@+id/txt_sky_dollar_earn"
+            style="@style/TextAppearance.AppCompat.Caption"
+            fontPath="@string/fonts_Lato_Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:letterSpacing="0.07"
+            android:text="@string/hint_loyalty_sky_earned"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorPrimary"/>
+
+          <TextView
+            android:id="@+id/txt_sky_dollar_amount"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            fontPath="@string/fonts_Lato_Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            tools:text="S$0.00"
+            android:textColor="@color/textColorPrimary"/>
+
+        </FrameLayout>
+
+      </RelativeLayout>
+
+      <View
+          android:id="@+id/divider_amount_review"
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:layout_below="@+id/layout_amt_review"
+          android:background="@color/lightGrey"/>
+
+      <RelativeLayout
+          android:id="@+id/layout_amt_total"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/divider_amount_review"
+          android:background="@color/white"
+          android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:id="@+id/txt_grand_total"
+            style="@style/TextAppearance.AppCompat.Caption"
+            fontPath="@string/fonts_Lato_Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.07"
+            android:text="@string/txt_grand_total"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorPrimary"/>
+
+        <TextView
+            android:id="@+id/txt_amt_grand_total"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            fontPath="@string/fonts_Lato_Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/txt_grand_total"
+            android:gravity="right|center_vertical"
+            tools:text="@string/txt_amt_gand_total"
+            android:textColor="@color/colorAccent"/>
+
+      </RelativeLayout>
+
+    </RelativeLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

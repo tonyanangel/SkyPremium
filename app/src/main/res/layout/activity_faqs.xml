@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    >
+
+  <include layout="@layout/include_toolbar_navigation"
+      />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="?actionBarSize"
+      android:background="@color/colorPrimary"
+      android:orientation="horizontal"
+      android:paddingLeft="16dp"
+      >
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:hint="@string/help"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        />
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="12dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_search_faq_accent"
+        />
+
+  </LinearLayout>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1px"
+      android:background="@color/dividerColor"
+      />
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      >
+
+    <ExpandableListView
+        android:id="@+id/elw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/llMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+      <ImageView
+          android:id="@+id/imgMessage"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:scaleType="fitCenter"
+          android:src="@drawable/img_faqs_empty"
+          />
+
+      <TextView
+          android:id="@+id/tvMessage"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:gravity="center"
+          android:textColor="@color/textColorSecondary"
+          fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+          tools:ignore="MissingPrefix"
+          tools:text="@string/network_error"
+          style="@style/TextAppearance.AppCompat.Subhead"
+          />
+
+      <TextView
+          android:id="@+id/tvMessageInfo"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:gravity="center"
+          android:text="@string/faq_not_found_message"
+          android:textColor="@color/textColorSecondary"
+          style="@style/TextAppearance.AppCompat.Caption"
+          />
+
+      <Button
+          android:id="@+id/btnMessage"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:visibility="gone"
+          tools:text="@string/try_again"
+          style="@style/Widget.AppCompat.Button.Colored"
+          />
+
+    </LinearLayout>
+
+  </RelativeLayout>
+
+</LinearLayout>

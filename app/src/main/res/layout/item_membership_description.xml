@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+  <EditText
+      android:id="@+id/edtDescription"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:gravity="top"
+      android:hint="Description (4000 characters max)\n\n\n"
+      android:maxLength="4000"
+      android:padding="16dp"
+      android:textColor="@color/textColorPrimary"
+      style="@style/TextAppearance.AppCompat.Body1"
+      />
+
+  <com.andrognito.kerningview.KerningTextView
+      android:id="@+id/tvSubmit"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:gravity="center"
+      android:text="Submit Request"
+      fontPath="@string/fonts_Lato_Bold"
+      tools:ignore="MissingPrefix"
+      style="@style/ButtonStyle"
+      />
+
+</LinearLayout>

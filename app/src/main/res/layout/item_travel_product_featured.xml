@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="160dp"
+    android:layout_height="235dp"
+    android:elevation="2dp"
+    android:foreground="?selectableItemBackground"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="220dp"
+      android:background="@color/colorPrimary"
+      android:orientation="vertical"
+      >
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/img_signin"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+        >
+
+      <FrameLayout
+          android:id="@+id/ly_icons"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+
+        <ImageView
+            android:id="@+id/iv_new"
+            android:layout_width="@dimen/size_product_icon"
+            android:layout_height="@dimen/size_product_icon"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/ic_new_product"
+            />
+
+        <ImageView
+            android:id="@+id/ivFav"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_favourite_border_accent"
+            />
+      </FrameLayout>
+
+      <TextView
+          android:id="@+id/tv_category"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ellipsize="end"
+          android:gravity="center"
+          android:maxLines="2"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="@dimen/text_size_pillar_name"
+          fontPath="@string/fonts_Adobe_Garamond_Pro_Regular"
+          tools:ignore="MissingPrefix"
+          tools:text="Fashion"
+          android:layout_above="@+id/tvTitle"
+          style="@style/TextAppearance.AppCompat.Caption"
+          />
+      <TextView
+          android:id="@+id/tvTitle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ellipsize="end"
+          android:gravity="center"
+          android:layout_centerInParent="true"
+          android:maxLines="2"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="@dimen/text_size_product_name"
+          tools:text="@string/sample_product_title"
+          style="@style/TextAppearance.AppCompat.Body1"
+          />
+
+      <TextView
+          android:id="@+id/tvSubTitle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:ellipsize="end"
+          android:layout_below="@+id/tvTitle"
+          android:gravity="center"
+          android:maxLines="2"
+          android:textAllCaps="true"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="@dimen/text_size_category_name"
+          tools:text="@string/sample_product_subtitle"
+          style="@style/TextAppearance.AppCompat.Caption"
+          />
+
+    </RelativeLayout>
+  </LinearLayout>
+
+
+  <ImageView
+      android:id="@+id/ivRank"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentEnd="true"
+      android:layout_gravity="bottom|start"
+      android:layout_marginRight="8dp"
+      android:layout_marginTop="4dp"
+      android:scaleType="fitCenter"
+      android:visibility="visible"
+      tools:src="@drawable/ic_featured_product"
+      />
+
+</RelativeLayout>
